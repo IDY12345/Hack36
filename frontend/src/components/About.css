@@ -1,0 +1,12 @@
+.About-Image
+{
+    height: 550px;
+}
+
+.Image-div
+{
+    /* align-items: center; */
+    width: 100%;
+    height: 550px;
+    border: solid black;
+}
