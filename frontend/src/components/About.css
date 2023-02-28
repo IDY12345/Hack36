@@ -1,12 +1,13 @@
 .About-Image
-{
+{   
+    margin-left: 500px;
     height: 550px;
 }
 
 .Image-div
 {
     /* align-items: center; */
-    width: 100%;
+    width: 99.7%;
     height: 550px;
     border: solid black;
 }
