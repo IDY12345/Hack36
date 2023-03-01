@@ -1,5 +1,6 @@
 .About-Image
-{   margin-top: 100px;
+{  
+    margin-top: 100px;
     margin-left: 500px;
     height: 550px;
 }
@@ -26,4 +27,14 @@
     font-size: 100px;
     color: aqua;
     text-align: center;
+}
+
+.Back-div
+{
+    background-color: black;
+}
+
+.Back-div.active
+{
+    background-color: whitesmoke;
 }
