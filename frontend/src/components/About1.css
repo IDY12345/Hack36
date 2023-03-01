@@ -1,0 +1,36 @@
+.About1
+{
+    height: 550px;
+    background-color: black;
+}
+.About-Info
+{
+    margin-left: 40px;
+    color: whitesmoke;
+    font-size: 35px;
+    width: 850px;
+    border: solid rgb(241, 31, 178);
+    border-radius: 15px;
+}
+
+.About-Info.active
+{
+    color: aqua;
+    border: solid rgb(36, 249, 68);
+}
+
+.About-Info1
+{
+    margin-left: 650px;
+    color: whitesmoke;
+    font-size: 35px;
+    width: 850px;
+    border: solid rgb(241, 31, 178);
+    border-radius: 15px;
+}
+
+.About-Info1.active
+{
+    color: aqua;
+    border: solid rgb(36, 249, 68);
+}
