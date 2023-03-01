@@ -1,5 +1,5 @@
 .About-Image
-{   
+{   margin-top: 100px;
     margin-left: 500px;
     height: 550px;
 }
@@ -8,6 +8,22 @@
 {
     /* align-items: center; */
     width: 99.7%;
-    height: 550px;
+    height: 950px;
     border: solid black;
+    background-color: black;
+    transition-duration: 0.8s;
+}
+
+.Image-div.active
+{
+    background-color: whitesmoke;
+    animation-delay: 0.8s;
+    transition-duration: 0.8s;
+}
+
+.presents
+{
+    font-size: 100px;
+    color: aqua;
+    text-align: center;
 }
