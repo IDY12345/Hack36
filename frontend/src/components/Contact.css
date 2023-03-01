@@ -1,0 +1,18 @@
+.Contact
+{
+    background-color: white;
+    display: flex;
+    height:650px;
+}
+
+.Mobile
+{
+    display: flex;
+}
+
+.Founder
+{
+    margin-left:100px;
+    border: solid rgb(255, 181, 44);
+    border-radius: 15px;
+}
