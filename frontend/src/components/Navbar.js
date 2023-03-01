@@ -11,7 +11,7 @@ function Navbar() {
             <div class="Navbar">
               <div>
                 <Link to="/">
-                  <img src='Assets\logo2.png' class="Logo" />
+                  <img src='Assets\logo2.png' class="Logo" alt="" />
                 </Link>
               </div>
               <div class="Home" title='Home'>
@@ -32,7 +32,6 @@ function Navbar() {
                 </div>
               </div>
             </div>
-            {/* <ConnectButton moralisAuth= {false}></ConnectButton> */}
           </nav>
           <AnimatedRoutes />
         </Router>

@@ -1,15 +1,17 @@
 .Navbar
 {
     /* background-image: linear-gradient(aqua,black); */
-    background-color:#380063;
+    background-color:#000000;
     width: 100%;
     height: 100px;
     display: flex;
     align-items: center;
+    position: fixed;
 }
 
 .Logo
 {
+    margin-left: 700px;
     height: 105px;
     width: 130px;
     cursor: pointer;
@@ -18,14 +20,14 @@
 .Home
 {
     align-items: center;
-    margin-left: 25px;
+    margin-left: 430px;
     
 }
 
 .Home-btn
 {
     color: white;
-    background-color: #380063;
+    background-color: #000000;
     border: transparent;
     font-size: 35px; 
     cursor: pointer;
@@ -71,7 +73,7 @@
 .About-btn
 {
     color: whitesmoke;
-    background-color:#380063;
+    background-color:#000000;
     border: none;
     font-size: 40px; 
     cursor: pointer;
@@ -108,7 +110,7 @@
 .Login-btn
 {
     color: whitesmoke;
-    background-color: #380063;
+    background-color: #000000;
     border: none;
     font-size: 35px; 
     cursor: pointer;
@@ -120,7 +122,7 @@
     display: none;
     position: absolute;
     right: 0;
-    background-color: #380063;
+    background-color: #000000;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -137,7 +139,7 @@
 .SignIn-btn
 {
     border: none !important;
-    background-color: #380063;
+    background-color: #000000;
     font-size: 20px;
     cursor: pointer;
     color: whitesmoke;
@@ -147,7 +149,7 @@
 .SignUp-btn
 {
     border: none !important;
-    background-color: #380063;
+    background-color: #000000;
     font-size: 20px;
     cursor: pointer;
     color: whitesmoke;
@@ -158,7 +160,7 @@
 
 .Login:hover .Login-Content {display: block;}
 
-.Login:hover .Login-btn {background-color: #380063;}
+.Login:hover .Login-btn {background-color: #000000;}
 .Search-div
 {
     margin-left: 25px;
@@ -199,3 +201,4 @@
 {
     margin-left: 5px;
 }
+
