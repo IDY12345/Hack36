@@ -22,7 +22,7 @@ function About() {
     }, [])
 
     return (
-        <div>
+        <div className='Contact-About'>
             <div className={colourChange ? 'Back-div' : 'Back-div active'}>
                 <div className={colourChange ? 'Image-div' : 'Image-div active'}>
                     <img src='Assets\logo1.png' className='About-Image' />

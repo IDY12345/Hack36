@@ -3,6 +3,7 @@
     background-color: white;
     display: flex;
     height:650px;
+    background-image: linear-gradient(black,white);
 }
 
 .Mobile
@@ -15,4 +16,21 @@
     margin-left:100px;
     border: solid rgb(255, 181, 44);
     border-radius: 15px;
+    transition-duration: 0.8s;
+    font-weight: 500;
 }
+
+.Founder.active
+{
+    background-color: black;
+    color: white;
+    transition-duration: 0.8s;
+}
+
+.Founder:hover{
+    background-color: rgb(240, 62, 62);
+    color:rgba(3,65,77,255);
+    border: solid black;
+    transition-duration: 0.8s;
+}
+
