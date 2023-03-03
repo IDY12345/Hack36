@@ -11,14 +11,12 @@
     width: 850px;
     border: solid rgb(241, 31, 178);
     border-radius: 15px;
-    transition-duration: 0.9s;
 }
 
 .About-Info.active
 {
     color: aqua;
     border: solid rgb(36, 249, 68);
-    transition-duration: 0.9s;
 }
 
 .About-Info1
@@ -29,12 +27,10 @@
     width: 850px;
     border: solid rgb(241, 31, 178);
     border-radius: 15px;
-    transition-duration: 0.9s;
 }
 
 .About-Info1.active
 {
     color: aqua;
     border: solid rgb(36, 249, 68);
-    transition-duration: 0.9s;
 }
