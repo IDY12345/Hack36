@@ -41,6 +41,7 @@
 
 .Contact-About
 {
-    height: 2190px;
+    height: 2390px;
     background-color: black;
+    background-image: linear-gradient(black,white,black,black,white);
 }
