@@ -2,10 +2,10 @@ import React,{useState,useEffect} from 'react'
 import './Contact.css'
 function Contact() {
     const [bgChange, setBgChange] = useState(false)
-
+    const [addTransition,setAddTransition]=useState(false)
     const Change=()=>
     {
-        if(window.scrollY>=1100)
+        if(window.scrollY>=700)
         {
             setBgChange(true)
         }
@@ -16,6 +16,7 @@ function Contact() {
         }
     }
 
+
     useEffect(() => {
       Change()
     
@@ -24,6 +25,16 @@ function Contact() {
     
   return (
     <div className='Contact'>
+        <div className={bgChange?'Founder1 active':'Founder'}>
+            <h3>Founder 2</h3>
+            <p>Bhavyapratap Singh</p>
+            <p>Email : bhavyapratapsingh240203@gmail.com</p>
+            <p className='Mobile'>Mobile : 9569218829</p>
+            <p>Github : </p>
+            <p>Linkedin : </p>
+            <p>Intsagram : </p>
+        </div>
+        <div className={bgChange?'Founder-Founder2':'Founder-Founder2 active'}>
         <div className={bgChange?'Founder active':'Founder'}>
             <h3>Founder 1</h3>
             <p>Ishaan Yeole</p>
@@ -33,16 +44,7 @@ function Contact() {
             <p>Linkedin : </p>
             <p>Intsagram : </p>
         </div>
-        <div className={bgChange?'Founder active':'Founder'}>
-            <h3>Founder 2</h3>
-            <p>Bhavyapratap Singh</p>
-            <p>Email : bhavyapratapsingh240203@gmail.com</p>
-            <p className='Mobile'>Mobile : 9569218829</p>
-            <p>Github : </p>
-            <p>Linkedin : </p>
-            <p>Intsagram : </p>
-        </div>
-        <div className={bgChange?'Founder active':'Founder'}>
+        <div className={bgChange?'Founder2 active':'Founder'}>
             <h3>Founder 3</h3>
             <p>Ninad Trivedi</p>
             <p>Email : -</p>
@@ -51,7 +53,8 @@ function Contact() {
             <p>Linkedin : </p>
             <p>Intsagram : </p>
         </div>
-        <div className={bgChange?'Founder active':'Founder'}>
+        </div>
+        <div className={bgChange?'Founder3 active':'Founder'}>
             <h3>Founder 4</h3>
             <p>Samruddhi Nimbalkar</p>
             <p>Email : samruddhinimbalkar3@gmail.com</p>

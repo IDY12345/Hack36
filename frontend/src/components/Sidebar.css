@@ -1,0 +1,17 @@
+.Sidebar-Nav
+{
+    margin-top: 100px;
+    width: 200px;
+    height: 613px;
+    border: solid black;
+    background-color: rgb(23, 22, 22);
+}
+
+.Register-btn
+{
+    background-color: black;
+    color: white;
+    border: solid white;
+    cursor: pointer;
+    font-size: 20px;
+}
