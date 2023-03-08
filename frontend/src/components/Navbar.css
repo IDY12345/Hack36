@@ -1,134 +1,123 @@
-.Navbar
-{
+.Navbar {
     /* background-image: linear-gradient(aqua,black); */
-    background-color:#000000;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
     width: 100%;
-    height: 100px;
+    height: 60px;
     display: flex;
     align-items: center;
-    position: fixed;
+    position: relative;
 }
 
-.Logo
-{
-    margin-left: 700px;
-    height: 105px;
-    width: 130px;
+.Logo {
+    margin-left: 730px;
     cursor: pointer;
-}
-
-.Home
-{
-    align-items: center;
-    margin-left: 430px;
-    
-}
-
-.Home-btn
-{
+    background-color: transparent;
     color: white;
-    background-color: #000000;
+    height: 60px;
+    border: none;
+}
+
+.Home {
+    align-items: center;
+    margin-left: 420px;
+
+}
+
+.Home-btn {
+    color: white;
+    background-color: transparent;
     border: transparent;
-    font-size: 35px; 
+    font-size: 25px;
     cursor: pointer;
     width: 50px;
 }
-.Shop
-{
+
+.Shop {
     align-items: center;
     margin-left: 50px;
 }
 
-.Shop-btn
-{
+.Shop-btn {
     color: whitesmoke;
-    background-color:#380063;
+    background-color: #380063;
     border: none;
     font-size: 40px;
     cursor: pointer;
     width: 50px;
 }
 
-.Contact
-{
+.Contact {
     align-items: center;
     margin-left: 50px;
 }
-.Contact-btn
-{
+
+.Contact-btn {
     color: whitesmoke;
-    background-color:#380063;
+    background-color: #380063;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    width: 50px;
+}
+
+.About {
+    align-items: center;
+    margin-left: 50px;
+}
+
+.About-btn {
+    color: whitesmoke;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    width: 50px
+}
+
+.Cart {
+    align-items: center;
+    margin-left: 50px;
+}
+
+.Cart-btn {
+    color: whitesmoke;
+    background-color: #380063;
     border: none;
     font-size: 35px;
     cursor: pointer;
     width: 50px;
 }
 
-.About
-{
+.Login {
     align-items: center;
     margin-left: 50px;
 }
 
-.About-btn
-{
-    color: whitesmoke;
-    background-color:#000000;
-    border: none;
-    font-size: 40px; 
-    cursor: pointer;
-    width:50px
-}
-
-.Cart
-{
-    align-items: center;
-    margin-left: 50px;
-}
-
-.Cart-btn
-{
-    color: whitesmoke;
-    background-color:#380063;
-    border: none;
-    font-size: 35px; 
-    cursor: pointer;
-    width:50px;
-}
-
-.Login
-{
-    align-items: center;
-    margin-left: 50px;
-}
-
-.Login{
+.Login {
     position: relative;
     display: inline-block;
 }
 
-.Login-btn
-{
+.Login-btn {
     color: whitesmoke;
-    background-color: #000000;
+    background-color: transparent;
     border: none;
-    font-size: 35px; 
+    font-size: 25px;
     cursor: pointer;
-    width:50px;
+    width: 50px;
 }
 
-.Login-Content
-{
+.Login-Content {
     display: none;
     position: absolute;
     right: 0;
     background-color: #000000;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
-.Login-Content a{
+.Login-Content a {
     color: whitesmoke;
     padding: 12px 16px;
     text-decoration: none;
@@ -136,8 +125,7 @@
     border: solid whitesmoke;
 }
 
-.SignIn-btn
-{
+.SignIn-btn {
     border: none !important;
     background-color: #000000;
     font-size: 20px;
@@ -146,8 +134,7 @@
     font-weight: 900;
 }
 
-.SignUp-btn
-{
+.SignUp-btn {
     border: none !important;
     background-color: #000000;
     font-size: 20px;
@@ -156,13 +143,19 @@
     font-weight: 900;
 }
 
-.Login-Content Link:hover {background-color: #ddd;}
+.Login-Content Link:hover {
+    background-color: #ddd;
+}
 
-.Login:hover .Login-Content {display: block;}
+.Login:hover .Login-Content {
+    display: block;
+}
 
-.Login:hover .Login-btn {background-color: #000000;}
-.Search-div
-{
+.Login:hover .Login-btn {
+    background-color: #000000;
+}
+
+.Search-div {
     margin-left: 25px;
     width: 780px;
     display: flex;
@@ -175,30 +168,28 @@
     border-radius: 10px;
 }
 
-.Search
-{
+.Search {
     background-color: #380063;
-    border:none;
+    border: none;
     width: 730px;
     height: 30px;
     font-size: 30px;
     margin-left: 10px;
 }
-.Search::placeholder
-{
+
+.Search::placeholder {
     color: whitesmoke;
 }
-.Search-div:active{
+
+.Search-div:active {
     background-color: rgba(0, 0, 0, 0.5);
 }
-.Search:focus
-{
+
+.Search:focus {
     outline: none;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-#Search-icon
-{
+#Search-icon {
     margin-left: 5px;
 }
-

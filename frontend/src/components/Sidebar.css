@@ -1,17 +1,42 @@
 .Sidebar-Nav
 {
-    margin-top: 100px;
     width: 200px;
     height: 613px;
     border: solid black;
     background-color: rgb(23, 22, 22);
+    
 }
 
 .Register-btn
 {
-    background-color: black;
+    background-color:rgb(23, 22, 22);
     color: white;
-    border: solid white;
     cursor: pointer;
     font-size: 20px;
+    border: none;
+    transition-duration: 0.8s;
+    margin-top: 40px;
+}
+
+.Offset-add
+{
+    background-color: rgb(23, 22, 22);
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 40px;
+    border: none;
+    transition-duration: 0.8s;
+}
+
+.Register-btn:hover
+{
+    color: #39FF14;
+    transition-duration: 0.8;
+}
+
+.Offset-add:hover
+{
+    color: #39FF14;
+    transition-duration: 0.8;
 }
