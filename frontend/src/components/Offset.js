@@ -2,7 +2,9 @@ import React from 'react'
 import './Offset.css'
 function Offset() {
   return (
-    <div className='Offset'>Offset</div>
+    <div className='Offset'>
+      
+    </div>
   )
 }
 
