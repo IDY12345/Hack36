@@ -48,7 +48,7 @@
     justify-content: space-evenly;
 }
 
-::placeholder {
+.Company-Name::placeholder {
     color: rgb(234, 227, 227);
 }
 
@@ -74,8 +74,7 @@
     background: transparent;
 }
 
-.Upload-btn
-{
+.Upload-btn {
     background-color: transparent;
     border: solid white;
     color: white;
@@ -105,6 +104,10 @@
     margin-top: 40px;
     display: flex;
     justify-content: center;
+}
+
+.Description::placeholder {
+    color: rgb(234, 227, 227);
 }
 
 .Description::placeholder {

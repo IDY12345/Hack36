@@ -1,4 +1,107 @@
 .Offset
 {
     position: absolute;
+    width: 100%;
+    justify-content: center;
+    background-image: url("C:\Users\HP\Documents\GitHub\Hack36\frontend\public\Assets\Go green.gif");
+    background-size: cover;
+}
+
+.Green
+{
+    text-align: center;
+}
+
+.Offset-info
+{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.Offset-Name
+{
+    width: 600px;
+    border:solid black;
+    border-radius: 10px;
+    height: 25px;
+    font-size: 25px;
+    color: black;
+    background-color: transparent;
+}
+
+
+
+::placeholder
+{
+    color: black;
+}
+
+.Offset-Name1
+{
+    width: 800px;
+    color: black;
+    height: 200px;
+    font-size: 25px;
+    border: solid black;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+.Product-Cost
+{
+    display: flex;
+    justify-content: center;
+}
+
+.Cost 
+{
+    width: 50px;
+    height: 20px;
+    border: solid black;
+    font-size: 20px;
+    background-color: transparent;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.Price
+{
+    font-size: 25px;
+}
+
+.Offset-info1
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.Offset-info2
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.Submit-btn1 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.Submit-btn1:hover
+{
+    opacity: 75%;
+}
+
+.Submit1 
+{
+    background-color: transparent;
+    font-size: 25px;
+    cursor: pointer;
+    border: solid black;
+    border-radius: 10px;
 }
