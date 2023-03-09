@@ -6,7 +6,8 @@ function Home() {
     <div className='Home1'>
       <Sidebar />
       <div className='Container'>
-
+          <img src="" className='Image1'/>
+          <h2>Company Name</h2>
       </div>
     </div>
   )

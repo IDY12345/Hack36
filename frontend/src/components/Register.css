@@ -1,5 +1,142 @@
-.Register
-{
+.Register {
     position: absolute;
-    margin-top: 100px;
+    width: 100%;
+    /* background-image: url("C:\Users\HP\Documents\GitHub\Hack36\frontend\public\Assets\purple-background-registration.png");
+    background-size: 'cover';
+    background-repeat: 'no-repeat'; */
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    --gradientColorZero: #a960ee;
+    --gradientColorOne: #ff333d;
+    --gradientColorTwo: #90e0ff;
+    --gradientColorThree: #ffcb57;
+    --gradientColorZeroTransparent: rgba(169, 96, 238, 0);
+    --gradientColorOneTransparent: rgba(255, 51, 61, 0);
+    --gradientColorTwoTransparent: rgba(144, 224, 255, 0);
+    --gradientColorThreeTransparent: rgba(255, 203, 87, 0);
+    --gradientAngle: var(--angleStrong);
+    --gradientHeight: calc(100% + var(--sectionPaddingTop) + var(--transformOriginX)*var(--sectionAngleSin));
+    --offsetX: var(--gutterWidth);
+    color: white;
+}
+
+.Register-Inner {
+    text-align: center;
+}
+
+.Basic {
+    text-align: start;
+    color: white;
+}
+
+.Basic-Details {
+    display: flex;
+    flex-direction: column;
+    text-align: inherit;
+}
+
+.Company-Name {
+    color: white;
+    border: solid white;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 600px;
+    background: transparent;
+}
+
+.Company-Info {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Company-Name::placeholder {
+    color: rgb(234, 227, 227);
+}
+
+.Company-Info1 {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    background: transparent;
+}
+
+.Certificate-Image {
+    margin-top: 20px;
+    width: 600px;
+    height: 250px;
+    border-radius: 10px;
+    border: solid white;
+    background: transparent;
+}
+
+.Image-add {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+}
+
+.Upload-btn {
+    background-color: transparent;
+    border: solid white;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.Description {
+    width: 1200px;
+    border: solid white;
+    border-radius: 10px;
+    height: 200px;
+    justify-content: flex-start;
+    font-size: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: transparent;
+    color: white;
+}
+
+.Company-Info2 {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.Description::placeholder {
+    color: rgb(234, 227, 227);
+}
+
+.Description::placeholder {
+    width: 1200px;
+    height: 200px;
+    font-size: 25px;
+    font-family: 'monospace';
+}
+
+.Submit-btn {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.Submit {
+    background-color: #1976d2;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.Submit:hover {
+    opacity: 75%;
+}
+
+.Owner {
+    margin-top: 40px;
 }

@@ -7,6 +7,7 @@ import SignUp from "./components/SignUp";
 import SignInSide from "./components/SignIn";
 import About from "./components/About";
 import RegisterCompany from "./components/RegisterCompany";
+import Offset from "./components/Offset";
 
 function AnimatedRoutes() {
     const location=useLocation();
@@ -18,6 +19,7 @@ function AnimatedRoutes() {
             <Route path="/SignIn" element={<SignInSide />} />
             <Route path="/" element={<About />} />
             <Route path="/Register" element={<RegisterCompany />} />
+            <Route path="/Offset" element={<Offset />} />
         </Routes>
     </AnimatePresence>
   )
