@@ -4,7 +4,9 @@
     width: 100%;
     justify-content: center;
     background-image: url("C:\Users\HP\Documents\GitHub\Hack36\frontend\public\Assets\Go green.gif");
+    /* background-image: linear-gradient(to right,#20BF55,#01BAEF); */
     background-size: cover;
+    
 }
 
 .Green

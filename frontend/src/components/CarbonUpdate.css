@@ -1,0 +1,72 @@
+.Carbon-Update
+{
+    width: 100%;
+    text-align: center;
+    background-image: url("C:\Users\HP\Documents\GitHub\Hack36\frontend\public\Assets\Background2.jpg");
+    height: 683px;
+    background-size: cover;
+}
+
+.Update
+{
+    display: flex;
+    font-size: 40px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.Carbon-info
+{
+    display: flex;
+    justify-content: center;
+  
+}
+
+.Limit
+{
+    font-size: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 500;
+    margin-left: 2px;
+    margin-top: 30px;
+}
+
+.Limit1
+{
+    width: 500px;
+    height: 30px;
+    border: solid black;
+    border-radius: 10px;
+    font-size: 29px;
+    margin-top: 22px;
+}
+
+.Metric-div
+{
+    display: flex;
+}
+
+.Carbon-info1
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Limit2
+{
+    width: 280px;
+    height: 30px;
+    border: solid black;
+    border-radius: 10px;
+    font-size: 29px;
+    margin-top: 22px;
+    margin-left: 10px;
+}
+
+::placeholder
+{
+    color: rgb(145, 139, 139);
+    font-size: 16px;
+    justify-content: center;
+    text-align: center;
+}

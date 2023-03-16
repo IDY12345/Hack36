@@ -1,12 +1,22 @@
 import React,{useState,useEffect} from 'react'
 import './Offset.css'
+import { collection } from 'firebase/firestore'
+import { db } from '../firebase'
+import { motion } from 'framer-motion'
+
 function Offset() {
+  const [companyName, setCompanyName] = useState("")
+  const [productName, setProductName] = useState("")
+  const [description, setDescription] = useState("")
+  const [cost, setCost] = useState("")
+  const [carbonReduction, setCarbonReduction] = useState("")
+  // const GreenCollectionRef=collection(db,"Green")
   const handleSubmit=()=>
   {
 
   }
   return (
-    <div className='Offset'>
+    <motion.div className='Offset' animate={{opacity:1}} initial={{opacity:0}} exit={{opacity:0}} transition={{duration:1}}>
       <h2 className='Green'>Green Organization Registration</h2>
       <div className='Offset-info'>
         <div>
@@ -38,7 +48,7 @@ function Offset() {
       <div className='Submit-btn1'>
         <button type='Submit' className='Submit1' onClick={handleSubmit}>Submit</button>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

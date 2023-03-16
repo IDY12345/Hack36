@@ -1,15 +1,19 @@
 import React from 'react'
 import './Home.css'
 import Sidebar from './Sidebar'
+import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 function Home() {
   return (
-    <div className='Home1'>
+    <motion.div className='Home1' animate={{ opacity: 1 }} initial={{ opacity: 0 }} exit={{ opacity: 0 }} transition={{ duration: 1 }}>
       <Sidebar />
-      <div className='Container'>
-          <img src="" className='Image1'/>
-          <h2>Company Name</h2>
-      </div>
-    </div>
+      <Link to="/OffsetBuy">
+        <button className='Container'>
+            <img src="Assets\logo.png" className='Image1' />
+            <h2>Company Name</h2>
+        </button>
+      </Link>
+    </motion.div>
   )
 }
 

@@ -10,6 +10,7 @@ import { storage,db } from "../firebase.js";
 import { v4 } from "uuid";
 import './Register.css';
 import {addDoc,collection} from "firebase/firestore";
+import { motion } from 'framer-motion';
 function RegisterCompany() {
   const [companyName, setCompanyName] = useState("");
   const [establishment, setEstablishment] = useState("");
@@ -50,7 +51,7 @@ function RegisterCompany() {
     console.log(`Company Name:${companyName},Contact:${companyConatct},email:${companyEmail},establishment: ${establishment}`);
   }
  return (
- <div className='Register'>
+ <motion.div className='Register' animate={{opacity:1}} initial={{opacity:0}} exit={{opacity:0}} transition={{duration:1}}>
       <h1 className='Register-Inner'>Register Company</h1>
       <div className='Basic-Details'>
         <h2 className='Basic'>Basics Details</h2>
@@ -146,7 +147,7 @@ function RegisterCompany() {
       <div className='Submit-btn'>
         <button type='Submit' className='Submit' onClick={handleSubmit}>Submit</button>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

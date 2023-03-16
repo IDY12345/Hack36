@@ -1,10 +1,11 @@
 .Register {
     position: absolute;
     width: 100%;
-    /* background-image: url("C:\Users\HP\Documents\GitHub\Hack36\frontend\public\Assets\purple-background-registration.png");
-    background-size: 'cover';
-    background-repeat: 'no-repeat'; */
+    /* /* background-image: url("C:\Users\HP\Documents\GitHub\Hack36\frontend\public\Assets\purple-background-registration.png"); */
     background-image: linear-gradient(to right, #434343 0%, black 100%);
+    /* background-image: url("C:\Users\HP\Documents\GitHub\Hack36\frontend\public\Assets\Back2.jpg"); */
+    background-size: 'cover';
+    background-repeat: 'no-repeat'; 
     --gradientColorZero: #a960ee;
     --gradientColorOne: #ff333d;
     --gradientColorTwo: #90e0ff;
@@ -17,6 +18,7 @@
     --gradientHeight: calc(100% + var(--sectionPaddingTop) + var(--transformOriginX)*var(--sectionAngleSin));
     --offsetX: var(--gutterWidth);
     color: white;
+
 }
 
 .Register-Inner {
