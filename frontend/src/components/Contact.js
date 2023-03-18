@@ -1,5 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import './Contact.css'
+import { motion } from 'framer-motion'
+
 function Contact() {
     const [bgChange, setBgChange] = useState(false)
     const [addTransition,setAddTransition]=useState(false)
@@ -24,7 +26,7 @@ function Contact() {
     }, [])
     
   return (
-    <div className='Contact'>
+    <motion.div className='Contact' animate={{opacity:1}} initial={{opacity:0}} exit={{opacity:0}} transition={{duration:1}}>
         <div className={bgChange?'Founder1 active':'Founder'}>
             <h3>Founder 2</h3>
             <p>Bhavyapratap Singh</p>
@@ -63,7 +65,7 @@ function Contact() {
             <p>Linkedin : </p>
             <p>Intsagram : </p>
         </div>
-    </div>
+    </motion.div>
   )
 }
 
