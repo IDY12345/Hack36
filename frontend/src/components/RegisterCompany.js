@@ -6,12 +6,13 @@ import {
   listAll,
   list,
 } from "firebase/storage";
-import { storage,db } from "../firebase.js";
+import { storage,firestore, app } from "../firebase.js";
 import { v4 } from "uuid";
 import './Register.css';
-import {addDoc,collection} from "firebase/firestore";
+import {Firestore, addDoc,collection, getFirestore} from "firebase/firestore";
 import { motion } from 'framer-motion';
 function RegisterCompany() {
+  const db=getFirestore(app)
   const [companyName, setCompanyName] = useState("");
   const [establishment, setEstablishment] = useState("");
   const [companyEmail, setCompanyEmail] = useState("");
@@ -20,7 +21,8 @@ function RegisterCompany() {
   const [DOB, setDOB] = useState("");
   const [contact,setContact]=useState("");
   const [email,setEmail]=useState("");
-  // const RegisterCompanyRef=collection(db,"")
+  const [CIN, setCIN] = useState("")
+  const RegisterCompanyRef=collection(db,"Register Company")
   const [imageUpload, setImageUpload] = useState(null);
   const [imageUrls, setImageUrls] = useState([]);
 
@@ -47,8 +49,8 @@ function RegisterCompany() {
 
   const handleSubmit=async()=>
   {
-    // await addDoc(RegisterCompanyRef,{companyName,companyEmail,companyConatct,establishment,name,contact,email,DOB})
-    console.log(`Company Name:${companyName},Contact:${companyConatct},email:${companyEmail},establishment: ${establishment}`);
+  const docRef= await addDoc(RegisterCompanyRef,{companyName,companyEmail,companyConatct,establishment,name,contact,email,DOB})
+    console.log(`Company Name:${companyName},Contact:${companyConatct},email:${companyEmail},establishment: ${establishment},CIN:${CIN} DocRef:${docRef.id}`);
   }
  return (
  <motion.div className='Register' animate={{opacity:1}} initial={{opacity:0}} exit={{opacity:0}} transition={{duration:1}}>
@@ -90,9 +92,9 @@ function RegisterCompany() {
       </div>
       <div className='Company-Info1'>
       <h3>CIN Number :  </h3>
-          <input type='text' placeholder='L12345MH2010KRD010234' required className='Company-Name' maxLength={21} onChange={(event)=>
+          <input type='text' placeholder='L12345MH2010KRD010234' required className='Company-Name'minLength={21} maxLength={21} onChange={(event)=>
           {
-          
+            setCIN(event.target.value)
           }} />
       </div>
       <div className='Company-Info2'>
