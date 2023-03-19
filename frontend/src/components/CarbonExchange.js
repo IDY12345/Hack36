@@ -4,7 +4,8 @@ import { motion } from 'framer-motion'
 function CarbonExchange() {
   return (
     <motion.div className='Carbon-Exchange' animate={{opacity:1}} initial={{opacity:0}} exit={{opacity:0}} transition={{duration:1}}>
-
+      <br></br>
+      <br></br>
     <span className='Exchange'> Carbon Credit Exchange Panel</span>
 
     <div className='List-Start'>
