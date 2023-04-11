@@ -70,3 +70,10 @@
     justify-content: center;
     text-align: center;
 }
+
+.Credits
+{
+    font-size: 25px;
+    font-weight: 500;
+    color: green;
+}

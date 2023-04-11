@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   ref,
   uploadBytes,
@@ -6,23 +6,23 @@ import {
   listAll,
   list,
 } from "firebase/storage";
-import { storage,firestore, app } from "../firebase.js";
+import { storage, firestore, app } from "../firebase.js";
 import { v4 } from "uuid";
 import './Register.css';
-import {Firestore, addDoc,collection, getFirestore} from "firebase/firestore";
+import { Firestore, addDoc, collection, getFirestore } from "firebase/firestore";
 import { motion } from 'framer-motion';
 function RegisterCompany() {
-  const db=getFirestore(app)
+  const db = getFirestore(app)
   const [companyName, setCompanyName] = useState("");
   const [establishment, setEstablishment] = useState("");
   const [companyEmail, setCompanyEmail] = useState("");
-  const [companyConatct,setCompanyContact]=useState("");
+  const [companyConatct, setCompanyContact] = useState(0);
   const [name, setName] = useState("");
   const [DOB, setDOB] = useState("");
-  const [contact,setContact]=useState("");
-  const [email,setEmail]=useState("");
+  const [contact, setContact] = useState(0);
+  const [email, setEmail] = useState("");
   const [CIN, setCIN] = useState("")
-  const RegisterCompanyRef=collection(db,"Register Company")
+  const RegisterCompanyRef = collection(db, "Register Company")
   const [imageUpload, setImageUpload] = useState(null);
   const [imageUrls, setImageUrls] = useState([]);
 
@@ -32,7 +32,7 @@ function RegisterCompany() {
     const imageRef = ref(storage, `images/${imageUpload.name + v4()}`);
     uploadBytes(imageRef, imageUpload).then((snapshot) => {
       getDownloadURL(snapshot.ref).then((url) => {
-        setImageUrls((prev) => [ url]);
+        setImageUrls((prev) => [url]);
       });
     });
   };
@@ -47,28 +47,25 @@ function RegisterCompany() {
     });
   }, []);
 
-  const handleSubmit=async()=>
-  {
-  const docRef= await addDoc(RegisterCompanyRef,{companyName,companyEmail,companyConatct,establishment,name,contact,email,DOB})
+  const handleSubmit = async () => {
+    const docRef = await addDoc(RegisterCompanyRef, { companyName, companyEmail, companyConatct, establishment, name, contact, email, DOB })
     console.log(`Company Name:${companyName},Contact:${companyConatct},email:${companyEmail},establishment: ${establishment},CIN:${CIN} DocRef:${docRef.id}`);
   }
- return (
- <motion.div className='Register' animate={{opacity:1}} initial={{opacity:0}} exit={{opacity:0}} transition={{duration:1}}>
+  return (
+    <motion.div className='Register' animate={{ opacity: 1 }} initial={{ opacity: 0 }} exit={{ opacity: 0 }} transition={{ duration: 1 }}>
       <h1 className='Register-Inner'>Register Company</h1>
       <div className='Basic-Details'>
         <h2 className='Basic'>Basics Details</h2>
         <div className='Company-Info'>
           <div>
             <h3>Company Name</h3>
-            <input type='text' placeholder='Company-Name' required className='Company-Name' onChange={(event)=>
-            {
+            <input type='text' placeholder='Company-Name' required className='Company-Name' onChange={(event) => {
               setCompanyName(event.target.value)
             }} />
           </div>
           <div>
             <h3>Establishment Date</h3>
-            <input type='date' placeholder='Establishment-Date' required className='Company-Name' onChange={(event)=>
-            {
+            <input type='date' placeholder='Establishment-Date' required className='Company-Name' onChange={(event) => {
               setEstablishment(event.target.value)
             }} />
           </div>
@@ -77,25 +74,22 @@ function RegisterCompany() {
       <div className='Company-Info'>
         <div>
           <h3>Company Email</h3>
-          <input type='email' placeholder='Company Email' required className='Company-Name' onChange={(event)=>
-          {
+          <input type='email' placeholder='Company Email' required className='Company-Name' onChange={(event) => {
             setCompanyEmail(event.target.value)
           }} />
         </div>
         <div>
           <h3>Company Contact </h3>
-          <input type='text' placeholder='9999999999' required className='Company-Name' maxLength={10} onChange={(event)=>
-          {
+          <input type='text' placeholder='9999999999' required className='Company-Name' maxLength={10} onChange={(event) => {
             setCompanyContact(event.target.value)
           }} />
         </div>
       </div>
       <div className='Company-Info1'>
-      <h3>CIN Number :  </h3>
-          <input type='text' placeholder='L12345MH2010KRD010234' required className='Company-Name'minLength={21} maxLength={21} onChange={(event)=>
-          {
-            setCIN(event.target.value)
-          }} />
+        <h3>CIN Number :  </h3>
+        <input type='text' placeholder='L12345MH2010KRD010234' required className='Company-Name' minLength={21} maxLength={21} onChange={(event) => {
+          setCIN(event.target.value)
+        }} />
       </div>
       <div className='Company-Info2'>
         <div>
@@ -115,15 +109,13 @@ function RegisterCompany() {
       <div className='Company-Info'>
         <div>
           <h3>Owner Name</h3>
-          <input type='text' placeholder='Owner-Name' required className='Company-Name' onChange={(event)=>
-          {
+          <input type='text' placeholder='Owner-Name' required className='Company-Name' onChange={(event) => {
             setName(event.target.value)
           }} />
         </div>
         <div>
           <h3>Date of Birth</h3>
-          <input type='date' placeholder='DOB' required className='Company-Name' onChange={(event)=>
-          {
+          <input type='date' placeholder='DOB' required className='Company-Name' onChange={(event) => {
             setDOB(event.target.value)
           }} />
         </div>
@@ -131,8 +123,7 @@ function RegisterCompany() {
       <div className='Company-Info1'>
         <div className='Image-add'>
           <h3>Email</h3>
-          <input type='email' placeholder='Email' required className='Company-Name' onChange={(event)=>
-          {
+          <input type='email' placeholder='Email' required className='Company-Name' onChange={(event) => {
             setEmail(event.target.value)
           }} />
         </div>
@@ -140,8 +131,7 @@ function RegisterCompany() {
       <div className='Company-Info1'>
         <div className='Image-add'>
           <h3>Contact</h3>
-          <input type='text' placeholder='9876543210' required className='Company-Name' maxLength={10} onChange={(event)=>
-          {
+          <input type='text' placeholder='9876543210' required className='Company-Name' maxLength={10} onChange={(event) => {
             setContact(event.target.value)
           }} />
         </div>
