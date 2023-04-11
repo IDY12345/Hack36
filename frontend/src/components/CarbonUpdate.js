@@ -23,6 +23,7 @@ function CarbonUpdate() {
       <br></br>
       <span className='Update'>UPDATE ! ! ! !</span>
       <div className='Carbon-Register'>
+        <div>Company Name : </div>
       <div className='Carbon-info'>
         <div> 
           <div className='Metric-div'>
