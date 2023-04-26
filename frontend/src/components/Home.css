@@ -17,9 +17,18 @@
 
 .Image1
 {
-    width: 230px;
+    width: 250px;
     height: 75%;
-    border-top-right-radius: 25px;
-    border-top-left-radius: 25px;
+    border-top-right-radius: 22.5px;
+    border-top-left-radius: 22.5px;
     border: none;
+}
+
+.Company-button
+{
+    width: 250px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
