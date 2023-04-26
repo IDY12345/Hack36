@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 function Contact() {
     const [bgChange, setBgChange] = useState(false)
-    const [addTransition,setAddTransition]=useState(false)
+    // const [addTransition,setAddTransition]=useState(false)
     const Change=()=>
     {
         if(window.scrollY>=700)
@@ -65,6 +65,7 @@ function Contact() {
             <p>Linkedin : </p>
             <p>Intsagram : </p>
         </div>
+        
     </motion.div>
   )
 }
