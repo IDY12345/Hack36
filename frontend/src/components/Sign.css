@@ -1,0 +1,23 @@
+.Login-meta
+{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 92vh;
+}
+
+
+.Login-button
+{
+    width: 250px;
+    justify-content: center;
+    color: black;
+    align-items: center;
+    height: 30px;
+    font-size: 20px;
+    background-color: rgb(37, 202, 239);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}

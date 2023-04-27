@@ -1,33 +1,43 @@
 .Register {
-    position: absolute;
+    position: fixed;
     width: 100%;
-    /* /* background-image: url("C:\Users\HP\Documents\GitHub\Hack36\frontend\public\Assets\purple-background-registration.png"); */
-    background-image: linear-gradient(to right, #434343 0%, black 100%);
-    /* background-image: url("C:\Users\HP\Documents\GitHub\Hack36\frontend\public\Assets\Back2.jpg"); */
+    background-image: url("C:\Users\HP\Documents\GitHub\Hack36\frontend\public\Assets\back-purple.png");
     background-size: 'cover';
     background-repeat: 'no-repeat'; 
-    --gradientColorZero: #a960ee;
-    --gradientColorOne: #ff333d;
-    --gradientColorTwo: #90e0ff;
-    --gradientColorThree: #ffcb57;
-    --gradientColorZeroTransparent: rgba(169, 96, 238, 0);
-    --gradientColorOneTransparent: rgba(255, 51, 61, 0);
-    --gradientColorTwoTransparent: rgba(144, 224, 255, 0);
-    --gradientColorThreeTransparent: rgba(255, 203, 87, 0);
-    --gradientAngle: var(--angleStrong);
-    --gradientHeight: calc(100% + var(--sectionPaddingTop) + var(--transformOriginX)*var(--sectionAngleSin));
-    --offsetX: var(--gutterWidth);
-    color: white;
+    color: black;
+    height: 655px;
+    overflow-y: auto;
+    margin-bottom: 105px;
+}
 
+.Register-transparent
+{
+    background-color: rgb(255, 244, 244,0.4);
+    width: 75%;
+    position: absolute;
+    margin-left: 12.5%;
+    border-radius: 25px;
+    overflow-y: auto;
+    height: 1658px;
+    margin-bottom: 105px;
+}
+
+.Register-absolute
+{
+    position: relative;
+    overflow-y: auto;
 }
 
 .Register-Inner {
     text-align: center;
+    color: rgb(16, 115, 16);
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .Basic {
-    text-align: start;
-    color: white;
+    color: black;
+    text-align: center;
 }
 
 .Basic-Details {
@@ -37,12 +47,28 @@
 }
 
 .Company-Name {
-    color: white;
-    border: solid white;
+    color: black;
+    border: solid black;
     font-size: 20px;
     border-radius: 10px;
-    width: 600px;
-    background: transparent;
+    width: 300px;
+    background: rgba(47,38,103,255);
+}
+
+.CIN
+{
+    color: black;
+    border: solid black;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 300px;
+    background: rgba(47,38,103,255);
+    height: 30px;
+}
+
+.CIN::placeholder
+{
+    color: black;
 }
 
 .Company-Info {
@@ -51,14 +77,20 @@
 }
 
 .Company-Name::placeholder {
-    color: rgb(234, 227, 227);
+    color: black;
+    font-weight: 750;
 }
 
 .Company-Info1 {
     margin-top: 40px;
-    display: flex;
-    justify-content: center;
+    margin-left: 420px;
     background: transparent;
+    
+}
+
+.CIN-No
+{
+    margin-left: 90px;
 }
 
 .Certificate-Image {
@@ -66,7 +98,7 @@
     width: 600px;
     height: 250px;
     border-radius: 10px;
-    border: solid white;
+    border: solid black;
     background: transparent;
 }
 
@@ -91,15 +123,16 @@
 }
 
 .Description {
-    width: 1200px;
-    border: solid white;
+    width: 900px;
+    border: solid black;
     border-radius: 10px;
     height: 200px;
     justify-content: flex-start;
-    font-size: 25px;
+    font-size: 20px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background: transparent;
-    color: white;
+    color: black;
+    background: rgba(47,38,103,255);
 }
 
 .Company-Info2 {
@@ -109,18 +142,18 @@
 }
 
 .Description::placeholder {
-    color: rgb(234, 227, 227);
+    color: black;
 }
 
 .Description::placeholder {
-    width: 1200px;
+    width: 900px;
     height: 200px;
     font-size: 25px;
     font-family: 'monospace';
 }
 
 .Submit-btn {
-    margin-top: 20px;
+    margin-top: 60px;
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
@@ -132,7 +165,7 @@
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    color: white;
+    color: black;
 }
 
 .Submit:hover {

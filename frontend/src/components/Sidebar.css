@@ -2,14 +2,14 @@
 {
     width: 200px;
     height: 713px;
-    border: solid black;
-    background-color: rgb(23, 22, 22);
+    border: solid rgba(47,38,103,255);
+    background-color: rgba(47,38,103,255);
     
 }
 
 .Register-btn
 {
-    background-color:rgb(23, 22, 22);
+    background-color:rgba(47,38,103,255);
     color: white;
     cursor: pointer;
     font-size: 20px;
@@ -20,7 +20,7 @@
 
 .Offset-add
 {
-    background-color: rgb(23, 22, 22);
+    background-color: rgba(47,38,103,255);
     color: white;
     cursor: pointer;
     font-size: 20px;

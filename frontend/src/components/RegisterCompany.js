@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react'
-import {
-  ref,
-  uploadBytes,
-  getDownloadURL,
-  listAll,
-  list,
-} from "firebase/storage";
-import { storage, firestore, app } from "../firebase.js";
-import { v4 } from "uuid";
+import React, { useState} from 'react'
+// import {
+//   ref,
+//   uploadBytes,
+//   getDownloadURL,
+//   listAll,
+//   list,
+// } from "firebase/storage";
+import {  app } from "../firebase.js";
+// import { v4 } from "uuid";
 import './Register.css';
-import { Firestore, addDoc, collection, getFirestore } from "firebase/firestore";
+import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { motion } from 'framer-motion';
 function RegisterCompany() {
   const db = getFirestore(app)
@@ -23,29 +23,29 @@ function RegisterCompany() {
   const [email, setEmail] = useState("");
   const [CIN, setCIN] = useState("")
   const RegisterCompanyRef = collection(db, "Register Company")
-  const [imageUpload, setImageUpload] = useState(null);
-  const [imageUrls, setImageUrls] = useState([]);
+  // const [imageUpload, setImageUpload] = useState(null);
+  // const [imageUrls, setImageUrls] = useState([]);
 
-  const imagesListRef = ref(storage, "images/");
-  const uploadFile = () => {
-    if (imageUpload == null) return;
-    const imageRef = ref(storage, `images/${imageUpload.name + v4()}`);
-    uploadBytes(imageRef, imageUpload).then((snapshot) => {
-      getDownloadURL(snapshot.ref).then((url) => {
-        setImageUrls((prev) => [url]);
-      });
-    });
-  };
-  useEffect(() => {
+  // const imagesListRef = ref(storage, "images/");
+  // const uploadFile = () => {
+  //   if (imageUpload == null) return;
+  //   const imageRef = ref(storage, `images/${imageUpload.name + v4()}`);
+  //   uploadBytes(imageRef, imageUpload).then((snapshot) => {
+  //     getDownloadURL(snapshot.ref).then((url) => {
+  //       setImageUrls((prev) => [url]);
+  //     });
+  //   });
+  // };
+  // useEffect(() => {
 
-    listAll(imagesListRef).then((response) => {
-      response.items.forEach((item) => {
-        getDownloadURL(item).then((url) => {
-          setImageUrls((prev) => [...prev, url]);
-        });
-      });
-    });
-  }, []);
+  //   listAll(imagesListRef).then((response) => {
+  //     response.items.forEach((item) => {
+  //       getDownloadURL(item).then((url) => {
+  //         setImageUrls((prev) => [...prev, url]);
+  //       });
+  //     });
+  //   });
+  // }, []);
 
   const handleSubmit = async () => {
     const docRef = await addDoc(RegisterCompanyRef, { companyName, companyEmail, companyConatct, establishment, name, contact, email, DOB })
@@ -53,6 +53,10 @@ function RegisterCompany() {
   }
   return (
     <motion.div className='Register' animate={{ opacity: 1 }} initial={{ opacity: 0 }} exit={{ opacity: 0 }} transition={{ duration: 1 }}>
+      <br></br>
+      <div className='Register-transparent'>
+        <div className='Register-absolute'>
+          <br></br>
       <h1 className='Register-Inner'>Register Company</h1>
       <div className='Basic-Details'>
         <h2 className='Basic'>Basics Details</h2>
@@ -86,8 +90,8 @@ function RegisterCompany() {
         </div>
       </div>
       <div className='Company-Info1'>
-        <h3>CIN Number :  </h3>
-        <input type='text' placeholder='L12345MH2010KRD010234' required className='Company-Name' minLength={21} maxLength={21} onChange={(event) => {
+        <h3 className='CIN-No'>CIN Number :  </h3>
+        <input type='text' placeholder='L12345MH2010KRD010234' required className='CIN' minLength={21} maxLength={21} onChange={(event) => {
           setCIN(event.target.value)
         }} />
       </div>
@@ -139,6 +143,10 @@ function RegisterCompany() {
       <div className='Submit-btn'>
         <button type='Submit' className='Submit' onClick={handleSubmit}>Submit</button>
       </div>
+      </div>
+      <br></br>
+      </div>
+   
     </motion.div>
   )
 }

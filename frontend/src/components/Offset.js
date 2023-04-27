@@ -1,7 +1,7 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState} from 'react'
 import './Offset.css'
 import { addDoc, collection, getFirestore } from 'firebase/firestore'
-import { app, db } from '../firebase'
+import { app } from '../firebase'
 import { motion } from 'framer-motion'
 
 function Offset() {

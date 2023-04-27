@@ -4,7 +4,7 @@ import { ethers } from "ethers"
 import * as PushApi from "@pushprotocol/restapi"
 import { Chat } from "@pushprotocol/uiweb";
 
-function Chat() {
+function Chat1() {
     const provider = new ethers.providers.Web3Provider(window.ethereum)
     const signer = provider.getSigner()
 
@@ -21,4 +21,4 @@ function Chat() {
     )
 }
 
-export default Chat
+export default Chat1

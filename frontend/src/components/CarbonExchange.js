@@ -11,7 +11,7 @@ function CarbonExchange() {
     <div className='List-Start'>
       <span className='Name-div'>Company Name</span>
       <span className='Name-div'>Carbon Credits
-      <img src="Assets\Credits2.png" className='credits-image'/></span>
+      <img src="Assets\Credits2.png" className='credits-image' alt='' /></span>
       <span className='Name-div'>Price(Eth)</span>
     </div>
     <div className='Button-Buy'>

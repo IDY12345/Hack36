@@ -1,6 +1,5 @@
 .Navbar {
-    /* background-image: linear-gradient(aqua,black); */
-    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    background-color: rgba(47,38,103,255);
     width: 100%;
     height: 60px;
     display: flex;
@@ -8,13 +7,18 @@
     position: relative;
 }
 
+.Logo-Nav
+{
+    margin-left: 740px;
+}
+
 .Logo {
-    margin-left: 730px;
     cursor: pointer;
     background-color: transparent;
     color: white;
     height: 60px;
     border: none;
+    width: 100px;
 }
 
 .Home {
