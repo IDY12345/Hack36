@@ -1,10 +1,9 @@
-
 import { ethers } from 'ethers'
-// import { providers, utils ,ethers} from 'ethers';
-
-import React from 'react'
+import './Sign.css'
+import React ,{useState} from 'react'
 
 async function handleLogin() {
+
     if (!window.ethereum) {
         window.alert("Please add a wallet")
         return
@@ -17,12 +16,12 @@ async function handleLogin() {
     console.log(address)
 }
 function Login() {
-
+    const [isAuth, setIsAuth] = useState(false)
     handleLogin()
 
     return (
-        <div>
-            <button onClick={handleLogin}>Login with wallet</button>
+        <div className='Login-meta'>
+            <button onClick={handleLogin} className='Login-button'>Login with wallet</button>
         </div>
     )
 }

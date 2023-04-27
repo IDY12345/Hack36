@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react"
-import SignInSide from "./components/SignIn"
+import React from "react"
 import Navbar from "./components/Navbar"
 
 export default function App() {
