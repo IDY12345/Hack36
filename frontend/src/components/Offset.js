@@ -20,6 +20,8 @@ function Offset() {
   }
   return (
     <motion.div className='Offset' animate={{opacity:1}} initial={{opacity:0}} exit={{opacity:0}} transition={{duration:1}}>
+      <link href="https://fonts.cdnfonts.com/css/post-no-bills-colombo" rel="stylesheet"></link>
+      <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'></link>
       <h2 className='Green'>Green Organization Registration</h2>
       <div className='Offset-info'>
         <div>
@@ -46,7 +48,7 @@ function Offset() {
           setCost(event.target.value)
         }} />
           </div>
-          <p className='Price'>Eth</p>
+          <p className='Price1'>Eth</p>
         </div>
       </div>
       <div className='Offset-info1'>
