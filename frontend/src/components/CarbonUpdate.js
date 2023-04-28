@@ -21,11 +21,12 @@ function CarbonUpdate() {
     <motion.div className='Carbon-Update' animate={{opacity:1}} initial={{opacity:0}} exit={{opacity:0}} transition={{duration:1}}>
       <br></br>
       <br></br>
+      <div className='Update-transparent'>
       <span className='Update'>UPDATE ! ! ! !</span>
       <div className='Carbon-Register'>
         <div>Company Name : </div>
       <div className='Carbon-info'>
-        <div> 
+        <div className=' '> 
           <div className='Metric-div'>
           <input className='Limit1' placeholder='Limit of Carbon Emmission Designated to your Company' type='text'   pattern="[0-9]*" required onChange={(event) => {
           setDesignated(event.target.value)
@@ -59,6 +60,7 @@ function CarbonUpdate() {
       </div>
       <div className='Submit-btn'>
       <button type='Submit' className='Submit1' onClick={handleSubmit}>Submit</button>
+      </div>
       </div>
       </div>
     </motion.div>

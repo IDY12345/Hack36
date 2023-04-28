@@ -11,6 +11,7 @@ import {  app } from "../firebase.js";
 import './Register.css';
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 function RegisterCompany() {
   const db = getFirestore(app)
   const [companyName, setCompanyName] = useState("");
@@ -23,6 +24,7 @@ function RegisterCompany() {
   const [email, setEmail] = useState("");
   const [CIN, setCIN] = useState("")
   const RegisterCompanyRef = collection(db, "Register Company")
+  let navigate=useNavigate()
   // const [imageUpload, setImageUpload] = useState(null);
   // const [imageUrls, setImageUrls] = useState([]);
 
@@ -48,8 +50,10 @@ function RegisterCompany() {
   // }, []);
 
   const handleSubmit = async () => {
+
     const docRef = await addDoc(RegisterCompanyRef, { companyName, companyEmail, companyConatct, establishment, name, contact, email, DOB })
     console.log(`Company Name:${companyName},Contact:${companyConatct},email:${companyEmail},establishment: ${establishment},CIN:${CIN} DocRef:${docRef.id}`);
+    navigate("/Home")
   }
   return (
     <motion.div className='Register' animate={{ opacity: 1 }} initial={{ opacity: 0 }} exit={{ opacity: 0 }} transition={{ duration: 1 }}>
@@ -124,15 +128,15 @@ function RegisterCompany() {
           }} />
         </div>
       </div>
-      <div className='Company-Info1'>
+      <div className='Company-Info'>
         <div className='Image-add'>
           <h3>Email</h3>
           <input type='email' placeholder='Email' required className='Company-Name' onChange={(event) => {
             setEmail(event.target.value)
           }} />
         </div>
-      </div>
-      <div className='Company-Info1'>
+      {/* </div>
+      <div className='Company-Info1'> */}
         <div className='Image-add'>
           <h3>Contact</h3>
           <input type='text' placeholder='9876543210' required className='Company-Name' maxLength={10} onChange={(event) => {

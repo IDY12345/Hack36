@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './About.css'
 import About1 from './About1';
 import Contact from './Contact';
+import Branch from './Branch';
 
 function About() {
     const [colourChange, setColourChange] = useState(false)
@@ -22,6 +23,7 @@ function About() {
     }, [])
 
     return (
+        <div className='Branch'>
         <div className='Contact-About'>
             <div className={colourChange ? 'Back-div' : 'Back-div active'}>
                 <div className={colourChange ? 'Image-div' : 'Image-div active'}>
@@ -31,6 +33,8 @@ function About() {
                 <About1 />                
             </div>
             <Contact />
+        </div>
+        <Branch />
         </div>
     )
 }
