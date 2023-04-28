@@ -127,9 +127,10 @@
 
 .Submit1 
 {
-    background-color: transparent;
+    background-color: black;
     font-size: 25px;
     cursor: pointer;
     border: solid black;
     border-radius: 10px;
+    color: white;
 }

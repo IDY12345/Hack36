@@ -19,12 +19,13 @@ function CarbonUpdate() {
   }
   return (
     <motion.div className='Carbon-Update' animate={{opacity:1}} initial={{opacity:0}} exit={{opacity:0}} transition={{duration:1}}>
+      <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'></link>
       <br></br>
       <br></br>
       <div className='Update-transparent'>
       <span className='Update'>UPDATE ! ! ! !</span>
       <div className='Carbon-Register'>
-        <div>Company Name : </div>
+        <div className='Name-Comp'>Company Name : </div>
       <div className='Carbon-info'>
         <div className=' '> 
           <div className='Metric-div'>

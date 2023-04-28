@@ -161,12 +161,12 @@
 }
 
 .Submit {
-    background-color: #1976d2;
+    background-color: black;
     font-size: 25px;
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    color: black;
+    color: white;
 }
 
 .Submit:hover {
