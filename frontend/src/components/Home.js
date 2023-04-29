@@ -27,7 +27,7 @@ function Home() {
         
       <Link to="/OffsetBuy">
         <div className='Container'>
-            <img src="Assets\logo.png" className='Image1' alt="" />
+            <img src="Assets\logo1.png" className='Image1' alt="" />
             <button className='Company-button'><h2></h2></button>
           </div>
       </Link>
