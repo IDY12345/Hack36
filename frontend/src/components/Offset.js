@@ -52,7 +52,7 @@ function Offset() {
         </div>
       </div>
       <div className='Offset-info1'>
-        <p className='Price'>Carbon Emission Reduction compared to other similar products</p>
+        <p className='Price2'>Carbon Emission Reduction compared to other similar products</p>
         <div className='Offset-info2'>
           <input placeholder='10000' className='Cost' type='text' onChange={(event) => {
           setCarbonReduction(event.target.value)

@@ -6,33 +6,14 @@ function Branch() {
     <div >
         <br></br>
         <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
+        <br></br> 
         <div className='Branch-add'>
         <div>
-            
         <img src='Assets\Branch.jpg' alt='' />
         </div>
-        <div>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-        <img src='Assets\Branch1.jpg' alt='' />
-        </div> 
+
+
+
         </div>
     </div>
   )

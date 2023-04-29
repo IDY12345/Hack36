@@ -30,7 +30,7 @@
     border:solid black;
     border-radius: 10px;
     height: 25px;
-    font-size: 25px;
+    font-size: 17px;
     color: black;
     background-color: transparent;
 }
@@ -42,6 +42,7 @@
     color: #ff0000;
     opacity: 0.6;
     font-weight: bold;
+    text-align: center;
 }
 
 .Offset-Name1
@@ -49,7 +50,7 @@
     width: 600px;
     color: black;
     height: 200px;
-    font-size: 25px;
+    font-size: 20px;
     border: solid black;
     border-radius: 10px;
     background-color: transparent;
@@ -66,6 +67,7 @@
     color: #ff0000;
     opacity: 0.6;
     font-weight: bold;
+    text-align: center;
 }
 
 .Cost 
@@ -97,6 +99,14 @@
 {
     margin-top: 26px;
     font-size: 22px;
+}
+
+.Price2
+{
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: oblique;
+    font-weight: bold;
 }
 
 .Offset-info1

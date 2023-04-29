@@ -54,6 +54,7 @@
     width: 300px;
     height: 35px;
     background-color: #421d88;
+    
 }
 
 .CIN
@@ -70,6 +71,7 @@
 .CIN::placeholder
 {
     color: whitesmoke;
+    opacity: 0.5;
 }
 
 .Company-Info {
@@ -79,7 +81,8 @@
 
 .Company-Name::placeholder {
     color: whitesmoke;
-    font-weight: 750;
+    font-weight: 400;
+    opacity: 0.5;
 }
 
 .Company-Info1 {
@@ -144,6 +147,7 @@
 
 .Description::placeholder {
     color: whitesmoke;
+    opacity: 0.5;
 }
 
 .Description::placeholder {
@@ -161,16 +165,17 @@
 }
 
 .Submit {
-    background-color: black;
+    background-color: #252525;
     font-size: 25px;
     cursor: pointer;
     border: none;
     border-radius: 5px;
     color: white;
+    opacity: 75%;
 }
 
 .Submit:hover {
-    opacity: 75%;
+    opacity: 100%;
 }
 
 .Owner {
