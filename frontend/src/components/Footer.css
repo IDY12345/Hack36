@@ -82,3 +82,10 @@
     width: 100%;
   }
 }
+
+.Footer
+{
+  height: 800px;
+  background-color: black;
+  color: white;
+}

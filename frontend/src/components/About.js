@@ -3,6 +3,7 @@ import './About.css'
 import About1 from './About1';
 import Contact from './Contact';
 import Branch from './Branch';
+import Footer from './Footer';
 
 function About() {
     const [colourChange, setColourChange] = useState(false)
@@ -31,6 +32,7 @@ function About() {
                 </div>         
             </div>
             <Branch />
+            <Footer />
         </div>
     )
 }

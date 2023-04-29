@@ -53,10 +53,11 @@
 // </footer> 
 
 import React from 'react'
+import './Footer.css'
 
 function Footer() {
   return (
-    <div>Footer</div>
+    <div className='Footer'>Footer</div>
   )
 }
 
