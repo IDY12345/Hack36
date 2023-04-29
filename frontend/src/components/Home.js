@@ -16,7 +16,9 @@ function Home() {
     };
 
     getPosts();
+    
   })
+  console.log(organisation)
   return (
     <motion.div className='Home1' animate={{ opacity: 1 }} initial={{ opacity: 0 }} exit={{ opacity: 0 }} transition={{ duration: 1 }}>
       <Sidebar />
@@ -28,7 +30,7 @@ function Home() {
       <Link to="/OffsetBuy">
         <div className='Container'>
             <img src="Assets\logo1.png" className='Image1' alt="" />
-            <button className='Company-button'><h2></h2></button>
+            <button className='Company-button'><h2>Name</h2></button>
           </div>
       </Link>
      
