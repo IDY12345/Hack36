@@ -1,199 +1,159 @@
 .Navbar {
-    background-color: rgba(47,38,103,255);
+    background-color: #75975e;
     width: 100%;
-    height: 60px;
+    height: 500px;
     display: flex;
-    align-items: center;
+
     position: relative;
+    justify-content: space-evenly;
+}
+
+.Services
+{
+    color: White;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#drop
+{
+    margin-left: 10px;
+}
+
+.Navigation-Tools
+{
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    margin-top: 5%;
+}
+
+.Services-btn {
+    color: whitesmoke;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100px;
+    display: flex;
+}
+
+.Services-Content {
+    display: none;
+    position: absolute;
+    left: inherit;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.Services-Content a{
+    color: whitesmoke;
+    padding: 12px 16px;
+    display: block;
+    border: solid 0.5px gray;
+    
+}
+
+.Service1 {
+    border: none !important;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    color: #75975e;
+    font-weight: 500;
+    height: 15px;
+}
+
+.Service2 {
+    border: none !important;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    color: #75975e;
+    font-weight: 500;
+}
+
+.Service3
+{
+    border: none !important;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    color: #75975e;
+    font-weight: 500;
+}
+
+.Services-Content Link:hover {
+    background-color: #ddd;
+}
+
+.Services:hover .Services-Content {
+    display: block;
+    transition-duration: 2s;
+    transition: 1s;
+}
+
+.Services:hover .Services-btn {
+    background-color: transparent;
 }
 
 .Logo-Nav
 {
-    margin-left: 740px;
+    display: flex;
 }
 
 .Logo {
     cursor: pointer;
     background-color: transparent;
     color: white;
-    height: 60px;
+    height: 200px;
     border: none;
-    width: 100px;
+    width: 300px;    
+    align-items: center;
+}
+
+.Logo-btn
+{
+    background-color: transparent;
+    border: None;
+    color: white;
 }
 
 .Home {
     align-items: center;
-    margin-left: 420px;
-
 }
 
 .Home-btn {
     color: white;
     background-color: transparent;
     border: transparent;
-    font-size: 25px;
+    font-size: 16px;
     cursor: pointer;
-    width: 50px;
-}
-
-.Shop {
-    align-items: center;
-    margin-left: 50px;
-}
-
-.Shop-btn {
-    color: whitesmoke;
-    background-color: #380063;
-    border: none;
-    font-size: 40px;
-    cursor: pointer;
-    width: 50px;
-}
-
-.Contact {
-    align-items: center;
-    margin-left: 50px;
-}
-
-.Contact-btn {
-    color: whitesmoke;
-    background-color: #380063;
-    border: none;
-    font-size: 25px;
-    cursor: pointer;
-    width: 50px;
+    
 }
 
 .About {
     align-items: center;
-    margin-left: 50px;
+   
 }
 
 .About-btn {
     color: whitesmoke;
     background-color: transparent;
     border: none;
-    font-size: 30px;
+    font-size: 16px;
     cursor: pointer;
     width: 50px
 }
 
-.Cart {
-    align-items: center;
-    margin-left: 50px;
-}
-
-.Cart-btn {
-    color: whitesmoke;
-    background-color: #380063;
-    border: none;
-    font-size: 35px;
-    cursor: pointer;
-    width: 50px;
-}
-
-.Login {
-    align-items: center;
-    margin-left: 50px;
-}
-
-.Login {
-    position: relative;
-    display: inline-block;
-}
-
-.Login-btn {
-    color: whitesmoke;
-    background-color: transparent;
-    border: none;
-    font-size: 25px;
-    cursor: pointer;
-    width: 50px;
-}
-
-.Login-Content {
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: #000000;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.Login-Content a {
-    color: whitesmoke;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    border: solid whitesmoke;
-}
-
 .SignIn-btn {
     border: none !important;
-    background-color: #000000;
-    font-size: 20px;
+    font-size: 16px;
     cursor: pointer;
+    font-weight: 500;
     color: whitesmoke;
-    font-weight: 900;
-}
-
-.SignUp-btn {
-    border: none !important;
-    background-color: #000000;
-    font-size: 20px;
-    cursor: pointer;
-    color: whitesmoke;
-    font-weight: 900;
-}
-
-.Login-Content Link:hover {
-    background-color: #ddd;
-}
-
-.Login:hover .Login-Content {
-    display: block;
-}
-
-.Login:hover .Login-btn {
-    background-color: #000000;
-}
-
-.Search-div {
-    margin-left: 25px;
-    width: 780px;
-    display: flex;
-    align-items: center;
-    height: 50px;
-    font-size: 35px;
-    color: whitesmoke;
-    border: solid;
-    border-color: whitesmoke;
-    border-radius: 10px;
-}
-
-.Search {
-    background-color: #380063;
-    border: none;
-    width: 730px;
-    height: 30px;
-    font-size: 30px;
-    margin-left: 10px;
-}
-
-.Search::placeholder {
-    color: whitesmoke;
-}
-
-.Search-div:active {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.Search:focus {
-    outline: none;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-#Search-icon {
-    margin-left: 5px;
+    background-color: transparent;
+    
 }

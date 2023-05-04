@@ -31,7 +31,6 @@ function About() {
                     <p className='presents'>Presents</p>
                 </div>         
             </div>
-            <Branch />
             <Footer />
         </div>
     )

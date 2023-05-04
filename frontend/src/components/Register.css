@@ -1,7 +1,7 @@
 .Register {
     position: fixed;
     width: 100%;
-    background-image: url("https://firebasestorage.googleapis.com/v0/b/hack36-83483.appspot.com/o/back-purple.png?alt=media&token=9c30ee69-1a14-4e4d-a7b3-38223fb457ff");
+    /* background-image: url("https://firebasestorage.googleapis.com/v0/b/hack36-83483.appspot.com/o/back-purple.png?alt=media&token=9c30ee69-1a14-4e4d-a7b3-38223fb457ff"); */
     background-size: 'cover';
     background-repeat: 'no-repeat'; 
     color: black;
@@ -12,13 +12,13 @@
 
 .Register-transparent
 {
-    background-color: rgb(255, 244, 244,0.4);
+    background-color: rgb(230, 224, 224);
     width: 75%;
     position: absolute;
     margin-left: 12.5%;
     border-radius: 25px;
     overflow-y: auto;
-    height: 1558px;
+    height: 888px;
     margin-bottom: 105px;
 }
 
@@ -30,7 +30,7 @@
 
 .Register-Inner {
     text-align: center;
-    color: rgb(16, 115, 16);
+    color: black;
     font-weight: 900;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -47,30 +47,30 @@
 }
 
 .Company-Name {
-    color: whitesmoke;
+    color: gray;
     border: solid black;
     font-size: 20px;
     border-radius: 40px;
     width: 300px;
     height: 35px;
-    background-color: #421d88;
+    background-color: white;
     
 }
 
 .CIN
 {
-    color: whitesmoke;
+    color: gray;
     border: solid black;
     font-size: 20px;
     border-radius: 40px;
     width: 300px;
-    background-color: #421d88;
+    background-color: white;
     height: 35px;
 }
 
 .CIN::placeholder
 {
-    color: whitesmoke;
+    color: gray;
     opacity: 0.5;
 }
 
@@ -80,7 +80,7 @@
 }
 
 .Company-Name::placeholder {
-    color: whitesmoke;
+    color: gray;
     font-weight: 400;
     opacity: 0.5;
 }
@@ -136,7 +136,7 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background: transparent;
     color: black;
-    background: #421d88;
+    background: white;
 }
 
 .Company-Info2 {
@@ -146,7 +146,7 @@
 }
 
 .Description::placeholder {
-    color: whitesmoke;
+    color: gray;
     opacity: 0.5;
 }
 
@@ -181,4 +181,20 @@
 .Owner {
     margin-top: 40px;
     text-align: center;
+}
+
+.Error
+{
+    color: red;
+}
+
+.Not-Error
+{
+    color: black;
+}
+
+.Star
+{
+    color: rgb(240, 33, 33);
+    font-size: 23px;
 }

@@ -21,7 +21,7 @@ function Home() {
   console.log(organisation)
   return (
     <motion.div className='Home1' animate={{ opacity: 1 }} initial={{ opacity: 0 }} exit={{ opacity: 0 }} transition={{ duration: 1 }}>
-      <Sidebar />
+      {/* <Sidebar /> */}
       <div>
       {/* {
       organisation.map((post)=>

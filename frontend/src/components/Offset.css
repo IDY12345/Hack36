@@ -4,11 +4,23 @@
     width: 100%;
     justify-content: center;
 
-    background-image: url("https://firebasestorage.googleapis.com/v0/b/hack36-83483.appspot.com/o/Banner.jpg?alt=media&token=7d403549-24d7-4d1f-bcb2-cbb1573bb479");
+    /* background-image: url("https://firebasestorage.googleapis.com/v0/b/hack36-83483.appspot.com/o/Banner.jpg?alt=media&token=7d403549-24d7-4d1f-bcb2-cbb1573bb479"); */
     /* background-image: linear-gradient(to right,#20BF55,#01BAEF); */
 
     background-size: cover;
     
+}
+
+.Dewang
+{
+    background-color: whitesmoke;
+    width: 75%;
+    position: absolute;
+    margin-left: 12.5%;
+    border-radius: 25px;
+    overflow-y: auto;
+    height: 788px;
+    margin-bottom: 105px;
 }
 
 .Green
@@ -41,7 +53,7 @@
 
 .Offset-Name::placeholder
 {
-    color: #ff0000;
+    color: gray;
     opacity: 0.6;
     font-weight: bold;
     text-align: center;
@@ -66,7 +78,7 @@
 
 .Offset-Name1::placeholder
 {
-    color: #ff0000;
+    color: gray;
     opacity: 0.6;
     font-weight: bold;
     text-align: center;
@@ -87,7 +99,7 @@
 
 .Cost::placeholder
 {
-    color: black;
+    color: gray;
 }
 
 .Price
