@@ -17,7 +17,7 @@ function CarbonExchange() {
     <div className='Button-Buy'>
     <div className='List'>
       <span className='Name-div'>Tata Group of Steel & Cement</span>
-      <span className='Name-div'>100</span>
+      <span className='Name-div'><span className='Dewang'>100</span><img src="Assets\carbon_credits1-removebg-preview.png" className='credits-image' alt='' /></span>
       <span className='Name-div'>200 Eth</span>
     </div>
     <span><button className='Buy-btn'>Buy Now</button></span>

@@ -16,24 +16,26 @@ function Home() {
     };
 
     getPosts();
+    
   })
+  console.log(organisation)
   return (
     <motion.div className='Home1' animate={{ opacity: 1 }} initial={{ opacity: 0 }} exit={{ opacity: 0 }} transition={{ duration: 1 }}>
-      <Sidebar />
+      {/* <Sidebar /> */}
       <div>
-      {
+      {/* {
       organisation.map((post)=>
-      {
-        return(
+      { */}
+        
       <Link to="/OffsetBuy">
         <div className='Container'>
-            <img src="Assets\logo.png" className='Image1' alt="" />
-            <button className='Company-button'><h2>{post.id}</h2></button>
+            <img src="Assets\logo1.png" className='Image1' alt="" />
+            <button className='Company-button'><h2>Name</h2></button>
           </div>
       </Link>
-     ) 
-     })
-     }
+     
+     {/* })
+     } */}
   
      </div>
     </motion.div>

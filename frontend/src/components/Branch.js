@@ -1,19 +1,20 @@
 import React from 'react'
+import './Branch.css'
 
 function Branch() {
   return (
-    <div>
+    <div >
         <br></br>
         <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <img src='Assets\istockphoto-1312618186-612x612.jpg' alt='' />
+        <br></br> 
+        <div className='Branch-add'>
+        <div>
+        <img src='Assets\Branch.jpg' alt='' />
+        </div>
+
+
+
+        </div>
     </div>
   )
 }

@@ -2,8 +2,8 @@
 {
     width: 100%;
     text-align: center;
-    background-image: url("C:\Users\HP\Documents\GitHub\Hack36\frontend\public\Assets\Background2.jpg");
-    height: 683px;
+    /* background-image: url("https://firebasestorage.googleapis.com/v0/b/hack36-83483.appspot.com/o/Background2.jpg?alt=media&token=25afa991-e83f-4b40-bb52-a20c63cf3147"); */
+    height: 653px;
     background-size: cover;
 }
 
@@ -13,6 +13,25 @@
     font-size: 40px;
     justify-content: center;
     margin-bottom: 50px;
+    font-family: 'Acme';
+}
+
+.Update-transparent
+{
+    background-color: whitesmoke;
+    width: 75%;
+    position: absolute;
+    margin-left: 12.5%;
+    border-radius: 25px;
+    overflow-y: auto;
+    height: 488px;
+    margin-bottom: 105px;
+}
+
+.Name-Comp
+{
+    font-size: 25px;
+    font-family: 'Acme';
 }
 
 .Carbon-info
@@ -29,16 +48,37 @@
     font-weight: 500;
     margin-left: 2px;
     margin-top: 30px;
+    font-family: 'Acme';
+}
+
+.Limit::placeholder
+{
+    color: gray;
+    opacity: 0.6;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    align-items: center;
 }
 
 .Limit1
 {
-    width: 500px;
+    width: 450px;
     height: 30px;
     border: solid black;
     border-radius: 10px;
     font-size: 29px;
     margin-top: 22px;
+}
+
+.Limit1::placeholder
+{
+    color: gray;
+    opacity: 0.6;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    align-items: center;
 }
 
 .Metric-div
@@ -54,7 +94,7 @@
 
 .Limit2
 {
-    width: 280px;
+    width: 250px;
     height: 30px;
     border: solid black;
     border-radius: 10px;
@@ -63,17 +103,25 @@
     margin-left: 10px;
 }
 
-::placeholder
+.Limit2::placeholder
 {
-    color: rgb(145, 139, 139);
     font-size: 16px;
-    justify-content: center;
+    color: gray;
+    opacity: 0.6;
+    font-weight: bold;
     text-align: center;
+    align-items: center;
+}
+
+.Carbon-credits
+{
+    margin-top: 50px;
 }
 
 .Credits
 {
+    margin-top: 10px;
     font-size: 25px;
-    font-weight: 500;
-    color: green;
+    font-weight: 800;
+    color: black;
 }

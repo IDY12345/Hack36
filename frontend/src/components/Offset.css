@@ -3,15 +3,31 @@
     position: absolute;
     width: 100%;
     justify-content: center;
-    background-image: url("C:\Users\HP\Documents\GitHub\Hack36\frontend\public\Assets\Go green.gif");
+
+    /* background-image: url("https://firebasestorage.googleapis.com/v0/b/hack36-83483.appspot.com/o/Banner.jpg?alt=media&token=7d403549-24d7-4d1f-bcb2-cbb1573bb479"); */
     /* background-image: linear-gradient(to right,#20BF55,#01BAEF); */
+
     background-size: cover;
     
+}
+
+.Dewang
+{
+    background-color: whitesmoke;
+    width: 75%;
+    position: absolute;
+    margin-left: 12.5%;
+    border-radius: 25px;
+    overflow-y: auto;
+    height: 788px;
+    margin-bottom: 105px;
 }
 
 .Green
 {
     text-align: center;
+    font-family: 'Acme';
+    font-size: 40px;
 }
 
 .Offset-info
@@ -24,28 +40,31 @@
 
 .Offset-Name
 {
-    width: 600px;
+    width: 300px;
     border:solid black;
     border-radius: 10px;
     height: 25px;
-    font-size: 25px;
+    font-size: 17px;
     color: black;
     background-color: transparent;
 }
 
 
 
-::placeholder
+.Offset-Name::placeholder
 {
-    color: black;
+    color: gray;
+    opacity: 0.6;
+    font-weight: bold;
+    text-align: center;
 }
 
 .Offset-Name1
 {
-    width: 800px;
+    width: 600px;
     color: black;
     height: 200px;
-    font-size: 25px;
+    font-size: 20px;
     border: solid black;
     border-radius: 10px;
     background-color: transparent;
@@ -57,6 +76,14 @@
     justify-content: center;
 }
 
+.Offset-Name1::placeholder
+{
+    color: gray;
+    opacity: 0.6;
+    font-weight: bold;
+    text-align: center;
+}
+
 .Cost 
 {
     width: 50px;
@@ -64,17 +91,40 @@
     border: solid black;
     font-size: 20px;
     background-color: transparent;
-    margin-top: 30px;
+    margin-top: 26px;
+    margin-left: 10px;
+    margin-right: 10px;
     border-radius: 10px;
+}
+
+.Cost::placeholder
+{
+    color: gray;
 }
 
 .Price
 {
     font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: oblique;
+}
+
+.Price1
+{
+    margin-top: 26px;
+    font-size: 22px;
+}
+
+.Price2
+{
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: oblique;
+    font-weight: bold;
 }
 
 .Offset-info1
-{
+{  
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -101,9 +151,11 @@
 
 .Submit1 
 {
-    background-color: transparent;
+    background-color: black;
     font-size: 25px;
     cursor: pointer;
     border: solid black;
     border-radius: 10px;
+    color: white;
 }
+
