@@ -42,13 +42,15 @@
     display: flex;
     width: 400px;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .credits-image
 {
     margin-left: 5px;
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 10px;
 }
 
 .Button-Buy
@@ -75,4 +77,9 @@
 {
     opacity: 60%;
     cursor: pointer;
+}
+
+.Dewang
+{
+    margin-top: 10px;
 }
