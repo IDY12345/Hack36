@@ -40,6 +40,14 @@ function Offset() {
         {/* <div className='Cloud' >
         <motion.img src='Assets\Cloud1.png' alt='' height={100} transition={{ duration: 60 }} initial={{ x: 0}} animate={{x:1260}} />
       </div> */}
+
+      
+      <div className='Offset-info'>
+        <div>
+          <input type='text' placeholder='Company Name' required className='Offset-Name' onChange={(event) => {
+          setCompanyName(event.target.value)
+        }} />
+
         {/* <div className='Cloud-bottom'> */}
         <div className='Offset-info'>
           <div>
@@ -52,6 +60,7 @@ function Offset() {
               setProductName(event.target.value)
             }} />
           </div>
+
         </div>
         <div className='Offset-info'>
           <textarea placeholder='Product Description' required className='Offset-Name1' onChange={(event) => {
