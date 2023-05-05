@@ -2,9 +2,9 @@ import { ethers } from 'ethers'
 import './Sign.css'
 import React, { useState } from 'react'
 import { initializeApp } from "firebase/app";
-import { getFirestore, doc, setDoc, addDoc } from "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
 import { collection, query, where, onSnapshot } from "firebase/firestore";
-import { firestore } from "../firebase"
+
 
 
 const firebaseConfig = {
