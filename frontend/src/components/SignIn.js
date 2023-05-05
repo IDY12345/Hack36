@@ -1,6 +1,30 @@
 import { ethers } from 'ethers'
 import './Sign.css'
-import React ,{useState} from 'react'
+import React, { useState } from 'react'
+import { initializeApp } from "firebase/app";
+import { getFirestore, doc, setDoc, addDoc } from "firebase/firestore";
+import { collection, query, where, onSnapshot } from "firebase/firestore";
+import { firestore } from "../firebase"
+
+
+const firebaseConfig = {
+    apiKey: "AIzaSyBU4EKHBp5L7GTOl7eCDVqMYed_ZMA99QA",
+    authDomain: "hack36-83483.firebaseapp.com",
+    projectId: "hack36-83483",
+    storageBucket: "hack36-83483.appspot.com",
+    messagingSenderId: "568739059463",
+    appId: "1:568739059463:web:cf5878aa066dd2fd2517a2",
+    measurementId: "G-843SRHH96X"
+};
+const app = initializeApp(firebaseConfig);
+
+const db = getFirestore(app);
+
+const provider = new ethers.providers.Web3Provider(window.ethereum)
+const signer = provider.getSigner()
+const message = "You agree to login with your mask "
+
+
 
 async function handleLogin() {
 
@@ -8,16 +32,33 @@ async function handleLogin() {
         window.alert("Please add a wallet")
         return
     }
-    const provider = new ethers.providers.Web3Provider(window.ethereum)
-    const signer = provider.getSigner()
-    const message = "You agree to login with your mask "
-    const signature = await signer.signMessage(message)
-    const address = ethers.utils.verifyMessage(message, signature)
-    console.log(address)
+    try {
+        const signature = await signer.signMessage(message)
+        const wallet_address = await signer.getAddress()
+        const q = await query(collection(db, "user_signup",), where("signature", "==", signature.toString()));
+        const unsubscribe = onSnapshot(q, (querySnapshot) => {
+            const user = [];
+            querySnapshot.forEach((doc) => {
+                user.push(doc.data());
+            });
+            if (user.length === 0) {
+                window.alert("No user exist")
+            }
+            else {
+                const db_address = ethers.utils.verifyMessage(message, user[0].signature)
+                if (db_address === wallet_address) {
+                    window.alert("Logged In")
+                }
+            }
+        });
+    } catch (error) {
+        console.log(error)
+    }
+
+
 }
 function Login() {
     const [isAuth, setIsAuth] = useState(false)
-    handleLogin()
 
     return (
         <div className='Login-meta'>
