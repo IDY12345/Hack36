@@ -43,7 +43,7 @@ function Offset() {
       {/* <div className='Cloud' >
         <motion.img src='Assets\Cloud1.png' alt='' height={100} transition={{ duration: 60 }} initial={{ x: 0}} animate={{x:1260}} />
       </div> */}
-      <div className='Cloud-bottom'>
+      
       <div className='Offset-info'>
         <div>
           <input type='text' placeholder='Company Name' required className='Offset-Name' onChange={(event) => {

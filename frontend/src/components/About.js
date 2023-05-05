@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './About.css'
-import About1 from './About1';
-import Contact from './Contact';
-import Branch from './Branch';
 import Footer from './Footer';
 
 function About() {
