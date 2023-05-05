@@ -1,24 +1,24 @@
 .Register {
-    position: fixed;
+    position: relative;
     width: 100%;
     /* background-image: url("https://firebasestorage.googleapis.com/v0/b/hack36-83483.appspot.com/o/back-purple.png?alt=media&token=9c30ee69-1a14-4e4d-a7b3-38223fb457ff"); */
     background-size: 'cover';
     background-repeat: 'no-repeat'; 
     color: black;
-    height: 655px;
+    height: 855px;
     overflow-y: auto;
     margin-bottom: 105px;
 }
 
 .Register-transparent
 {
-    background-color: rgb(230, 224, 224);
+    background-color: rgba(254, 219, 91,0.4);
     width: 75%;
-    position: absolute;
+    position: relative;
     margin-left: 12.5%;
     border-radius: 25px;
     overflow-y: auto;
-    height: 888px;
+    height: 1488px;
     margin-bottom: 105px;
 }
 

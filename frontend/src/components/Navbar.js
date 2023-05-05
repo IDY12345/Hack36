@@ -11,18 +11,17 @@ function Navbar() {
 
         <nav>
           <div className="Navbar">
-            <div className='Logo-Nav'>
-              <Link to="/">
+            <div className='Logo-Navigation'>
+              <div className='Logo-Nav'>
                 <img src='Assets\logo3.png' class="Logo" alt="" />
                 <button className='Logo-btn'>Pioneers</button>
-              </Link>
+              </div>
             </div>
             <div className='Navigation-Tools'>
               <div className='Services' title='Services'>
                 <button className='Services-btn'>
                   Services <i class="fa fa-caret-down" aria-hidden="true" id='drop'></i>
                 </button>
-
                 <div className="Services-Content">
                   <Link to="/Register"><button className="Service1">Register Company</button></Link>
                   <Link to="/Offset"><button className="Service2">Green Organisation Registration</button></Link>
