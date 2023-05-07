@@ -2,7 +2,6 @@
 {
     width: 100%;
     text-align: center;
-    /* background-image: url("https://firebasestorage.googleapis.com/v0/b/hack36-83483.appspot.com/o/Background2.jpg?alt=media&token=25afa991-e83f-4b40-bb52-a20c63cf3147"); */
     height: 653px;
     background-size: cover;
 }
@@ -18,7 +17,7 @@
 
 .Update-transparent
 {
-    background-color: whitesmoke;
+    background-color: rgba(254, 219, 91,0.4);
     width: 75%;
     position: absolute;
     margin-left: 12.5%;
@@ -65,7 +64,7 @@
 {
     width: 450px;
     height: 30px;
-    border: solid black;
+    border: solid 1px black;
     border-radius: 10px;
     font-size: 29px;
     margin-top: 22px;
@@ -96,7 +95,7 @@
 {
     width: 250px;
     height: 30px;
-    border: solid black;
+    border: solid 1px black;
     border-radius: 10px;
     font-size: 29px;
     margin-top: 22px;

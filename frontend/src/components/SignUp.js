@@ -1,4 +1,4 @@
-import * as React from 'react';
+import  React,{useEffect} from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -9,7 +9,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { initializeApp } from "firebase/app";
 import { getFirestore, doc, setDoc, addDoc } from "firebase/firestore";
 import { ethers } from 'ethers';
@@ -42,8 +42,17 @@ function Copyright(props) {
 
 const theme = createTheme();
 
-export default function SignUp() {
+export default function SignUp({isAuth}) {
 
+  const navigate=useNavigate()
+
+  useEffect(()=>
+  {
+      if(isAuth)
+      {
+          navigate("/Home")
+      }
+  },[])
 
   const handleSubmit = async (event) => {
     event.preventDefault()

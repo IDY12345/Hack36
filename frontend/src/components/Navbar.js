@@ -2,7 +2,18 @@ import React from 'react'
 import { BrowserRouter as Router, Link } from 'react-router-dom'
 import './Navbar.css'
 import AnimatedRoutes from '../AnimatedRoutes'
-function Navbar() {
+
+
+function Navbar({setIsAuth,isAuth}) {
+
+  const signUserOut=()=>
+  {
+    localStorage.clear();
+    setIsAuth(false);
+    window.location.pathname="/SignIn";
+  }
+
+console.log(isAuth)
   return (
     <div>
       <Router>
@@ -15,7 +26,9 @@ function Navbar() {
                 <button className='Logo-btn'>Pioneers</button>
               </div>
               <div className='Navigation-Tools'>
-                <div className='Services' title='Services'>
+                 {
+                 !isAuth?(<></>):( 
+              <div className='Services' title='Services'>
                   <button className='Services-btn'>
                     Services <i class="fa fa-caret-down" aria-hidden="true" id='drop'></i>
                   </button>
@@ -23,11 +36,13 @@ function Navbar() {
                   <div className="Services-Content">
                     <Link to="/Register"><button className="Service1">Register Company</button></Link>
                     <Link to="/Offset"><button className="Service2">Green Organisation Registration</button></Link>
-                    <Link to="/CarbonUpdate"><button className="Service3">Carbon Credits Update</button></Link>
                   </div>
-                </div>
+                 </div>
+                )} 
                 <div className="Home" title='Home'>
+                  {!isAuth ?(<></>) :( 
                   <Link to="/Home" className="Home-btn-link"><button class="Home-btn">Home</button></Link>
+                   )} 
                 </div>
                 <div className="About" title='About'>
                   <Link to="/">
@@ -35,11 +50,27 @@ function Navbar() {
                   </Link>
                 </div>
                 <div className="Login" title='Login'>
+                  {isAuth?(<></>):(
                   <Link to="/SignIn"><button className="SignIn-btn">Login</button></Link>
+                  )}
                 </div>
                 <div >
-                <Link to="/SignUp"><button className='SignIn-btn'>Sign Up</button></Link>
-              </div>
+                {isAuth?(<></>):(
+                  <Link to="/SignUp"><button className='SignIn-btn'>Sign Up</button></Link>
+                  )}
+                </div>
+                {!isAuth?(<></>):(
+                <div className='Profile' >
+                  <button className='Profile-btn' title='Profile'><i class="fa-solid fa-user"></i></button>
+
+                  <div className='Profile-Content'>
+                    <Link to="/Profile"><button className='Profile1'>Profile</button></Link>
+                    <Link to="/Edit-Profile"><button className='Profile2'>Edit Profile</button></Link>
+                    <Link to="/CarbonUpdate"><button className='Profile3'>Carbon Credits Update</button></Link>
+                    <Link to="/SignIn"><button className='Profile4'  onClick={signUserOut}>Logout</button></Link>
+                  </div>
+                </div>
+                )}
               </div>
 
             </div>
@@ -48,7 +79,7 @@ function Navbar() {
             </div>
           </div>
         </nav>
-        <AnimatedRoutes />
+        <AnimatedRoutes  setIsAuth={setIsAuth} isAuth={isAuth} />
       </Router>
     </div>
   )

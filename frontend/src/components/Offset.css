@@ -3,17 +3,12 @@
     position: absolute;
     width: 100%;
     justify-content: center;
-
-    /* background-image: url("https://firebasestorage.googleapis.com/v0/b/hack36-83483.appspot.com/o/Banner.jpg?alt=media&token=7d403549-24d7-4d1f-bcb2-cbb1573bb479"); */
-    /* background-image: linear-gradient(to right,#20BF55,#01BAEF); */
-
     background-size: cover;
-    
 }
 
 .Dewang
 {
-    background-color: whitesmoke;
+    background-color: rgba(254, 219, 91,0.3);
     width: 75%;
     position: absolute;
     margin-left: 12.5%;
@@ -41,12 +36,12 @@
 .Offset-Name
 {
     width: 300px;
-    border:solid black;
+    border:solid 1px black;
     border-radius: 10px;
     height: 25px;
     font-size: 17px;
     color: black;
-    background-color: transparent;
+    background-color: white;
 }
 
 
@@ -65,9 +60,9 @@
     color: black;
     height: 200px;
     font-size: 20px;
-    border: solid black;
+    border: solid 1px black;
     border-radius: 10px;
-    background-color: transparent;
+    background-color: white;
 }
 
 .Product-Cost
@@ -88,9 +83,9 @@
 {
     width: 50px;
     height: 20px;
-    border: solid black;
+    border: solid 1px black;
     font-size: 20px;
-    background-color: transparent;
+    background-color: white;
     margin-top: 26px;
     margin-left: 10px;
     margin-right: 10px;
@@ -120,7 +115,7 @@
     font-size: 25px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-style: oblique;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .Offset-info1

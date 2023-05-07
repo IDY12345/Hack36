@@ -1,11 +1,9 @@
 .Register {
     position: relative;
     width: 100%;
-    /* background-image: url("https://firebasestorage.googleapis.com/v0/b/hack36-83483.appspot.com/o/back-purple.png?alt=media&token=9c30ee69-1a14-4e4d-a7b3-38223fb457ff"); */
     background-size: 'cover';
     background-repeat: 'no-repeat'; 
     color: black;
-    height: 855px;
     overflow-y: auto;
     margin-bottom: 105px;
 }
@@ -18,7 +16,7 @@
     margin-left: 12.5%;
     border-radius: 25px;
     overflow-y: auto;
-    height: 1488px;
+    height: 988px;
     margin-bottom: 105px;
 }
 
@@ -48,7 +46,7 @@
 
 .Company-Name {
     color: gray;
-    border: solid black;
+    border: solid 1px black;
     font-size: 20px;
     border-radius: 40px;
     width: 300px;
@@ -60,7 +58,7 @@
 .CIN
 {
     color: gray;
-    border: solid black;
+    border: solid 1px black;
     font-size: 20px;
     border-radius: 40px;
     width: 300px;
@@ -102,7 +100,7 @@
     width: 600px;
     height: 250px;
     border-radius: 10px;
-    border: solid black;
+    border: solid 1px black;
     background: transparent;
 }
 
@@ -128,7 +126,7 @@
 
 .Description {
     width: 900px;
-    border: solid black;
+    border: solid 1px black;
     border-radius: 10px;
     height: 200px;
     justify-content: flex-start;
