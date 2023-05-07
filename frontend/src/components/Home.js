@@ -2,14 +2,22 @@ import React, { useState,useEffect } from 'react'
 import './Home.css'
 import Sidebar from './Sidebar'
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { getFirestore,getDocs } from 'firebase/firestore'
 import { app } from '../firebase'
-function Home() {
+function Home({isAuth}) {
+  console.log(isAuth)
+  const navigate= useNavigate()
   const [organisation, setOrganisation] = useState([])
   const db=getFirestore(app)
   const offsetBuyRef=(db,"Green");
   useEffect(() => {
+
+    if(!isAuth)
+    {
+      navigate("/SignIn")
+    }
+
     const getPosts = async () => {
       const data = await getDocs(offsetBuyRef);
       setOrganisation(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));

@@ -1,10 +1,11 @@
 import { ethers } from 'ethers'
 import './Sign.css'
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { collection, query, where, onSnapshot } from "firebase/firestore";
-
+import { firestore } from "../firebase"
+import { useNavigate } from 'react-router-dom';
 
 
 // const firebaseConfig = {
@@ -57,8 +58,17 @@ import { collection, query, where, onSnapshot } from "firebase/firestore";
 
 
 // }
-function Login() {
-    const [isAuth, setIsAuth] = useState(false)
+
+
+function Login({setIsAuth,isAuth}) {
+
+    useEffect(()=>
+    {
+        if(isAuth)
+        {
+            navigate("/Home")
+        }
+    },[])
 
     const firebaseConfig = {
         apiKey: "AIzaSyBU4EKHBp5L7GTOl7eCDVqMYed_ZMA99QA",
@@ -70,17 +80,16 @@ function Login() {
         measurementId: "G-843SRHH96X"
     };
     const app = initializeApp(firebaseConfig);
-    
+
     const db = getFirestore(app);
-    
+
     const provider = new ethers.providers.Web3Provider(window.ethereum)
     const signer = provider.getSigner()
     const message = "You agree to login with your mask "
-    
-    
-    
-    async function handleLogin() {
-    
+
+    const navigate= useNavigate()
+
+         async function handleLogin() {
         if (!window.ethereum) {
             window.alert("Please add a wallet")
             return
@@ -100,17 +109,20 @@ function Login() {
                 else {
                     const db_address = ethers.utils.verifyMessage(message, user[0].signature)
                     if (db_address === wallet_address) {
-                        setIsAuth(true)
+                        localStorage.setItem("isAuth", true);
+                        setIsAuth(true);
                         console.log(isAuth)
+                        navigate("/Home")
                         window.alert("Logged In")
+                        console.log(wallet_address)
                     }
                 }
             });
         } catch (error) {
             console.log(error)
         }
-    
-    
+
+
     }
     return (
         <div className='Login-meta'>
@@ -118,5 +130,6 @@ function Login() {
         </div>
     )
 }
+
 
 export default Login
