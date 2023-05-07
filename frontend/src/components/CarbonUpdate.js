@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import './CarbonUpdate.css'
 import { motion } from 'framer-motion'
 import { addDoc, collection, getFirestore } from 'firebase/firestore'
@@ -14,6 +14,15 @@ function CarbonUpdate({isAuth}) {
   const updateCollectionRef=collection(db,"Update");
   const [error, setError] = useState(false)
   const navigate=useNavigate()
+
+  useEffect(()=>
+  {
+    if(!isAuth)
+    {
+      navigate("/SignIn")
+    }
+  },[])
+
   const handleSubmit=(e)=>
   {
     e.preventDefault();

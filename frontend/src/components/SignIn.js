@@ -1,6 +1,6 @@
 import { ethers } from 'ethers'
 import './Sign.css'
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { collection, query, where, onSnapshot } from "firebase/firestore";
@@ -58,8 +58,17 @@ import { useNavigate } from 'react-router-dom';
 
 
 // }
+
+
 function Login({setIsAuth,isAuth}) {
 
+    useEffect(()=>
+    {
+        if(isAuth)
+        {
+            navigate("/Home")
+        }
+    },[])
 
     const firebaseConfig = {
         apiKey: "AIzaSyBU4EKHBp5L7GTOl7eCDVqMYed_ZMA99QA",
@@ -80,8 +89,7 @@ function Login({setIsAuth,isAuth}) {
 
     const navigate= useNavigate()
 
-    async function handleLogin() {
-
+         async function handleLogin() {
         if (!window.ethereum) {
             window.alert("Please add a wallet")
             return
@@ -106,6 +114,7 @@ function Login({setIsAuth,isAuth}) {
                         console.log(isAuth)
                         navigate("/Home")
                         window.alert("Logged In")
+                        console.log(wallet_address)
                     }
                 }
             });
@@ -121,5 +130,6 @@ function Login({setIsAuth,isAuth}) {
         </div>
     )
 }
+
 
 export default Login

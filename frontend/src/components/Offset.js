@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import './Offset.css'
 import { addDoc, collection, getFirestore } from 'firebase/firestore'
 import { app } from '../firebase'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 
-function Offset() {
+function Offset({isAuth}) {
   const db = getFirestore(app)
   const [companyName, setCompanyName] = useState("")
   const [productName, setProductName] = useState("")
@@ -15,6 +15,15 @@ function Offset() {
   const GreenCollectionRef = collection(db, "Green")
   const [error, setError] = useState(false)
   const navigate = useNavigate()
+  useEffect(()=>
+  {
+    if(!isAuth)
+    {
+      navigate("/SignIn")
+    }
+  },[])
+
+
   const handleSubmit = (e) => {
     e.preventDefault()
     if (companyName.length === 0 && productName.length === 0 && description.length === 0 && cost.length === 0 && carbonReduction.length === 0) {

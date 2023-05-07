@@ -18,7 +18,7 @@ function AnimatedRoutes({setIsAuth,isAuth}) {
     <AnimatePresence>
         <Routes location={location} key={location.pathname}>
             <Route path="/Home" element={<Home isAuth={isAuth} />}/>
-            <Route path="/SignUp" element={<SignUp />} />
+            <Route path="/SignUp" element={<SignUp isAuth={isAuth}/>} />
             <Route path="/SignIn" element={<Login setIsAuth={setIsAuth} isAuth={isAuth}/>} />
             <Route path="/" element={<About isAuth={isAuth} />} />
             <Route path="/Register" element={<RegisterCompany isAuth={isAuth} />} />

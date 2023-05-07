@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 // import {
 //   ref,
 //   uploadBytes,
@@ -12,7 +12,7 @@ import './Register.css';
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-function RegisterCompany() {
+function RegisterCompany({isAuth}) {
   const db = getFirestore(app)
   const [companyName, setCompanyName] = useState("");
   const [establishment, setEstablishment] = useState("");
@@ -27,6 +27,14 @@ function RegisterCompany() {
   const RegisterCompanyRef = collection(db, "Register Company")
   const [errorName, setErrorName] = useState(false)
   let navigate = useNavigate()
+
+  useEffect(()=>
+  {
+    if(!isAuth)
+    {
+      navigate("/SignIn")
+    }
+  },[])
   // const [imageUpload, setImageUpload] = useState(null);
   // const [imageUrls, setImageUrls] = useState([]);
 
