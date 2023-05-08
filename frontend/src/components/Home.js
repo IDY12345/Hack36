@@ -1,6 +1,5 @@
 import React, { useState,useEffect } from 'react'
 import './Home.css'
-import Sidebar from './Sidebar'
 import { motion } from 'framer-motion'
 import { Link, useNavigate } from 'react-router-dom'
 import { getFirestore,getDocs } from 'firebase/firestore'

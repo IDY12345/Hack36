@@ -59,6 +59,9 @@ import { useNavigate } from 'react-router-dom';
 
 // }
 
+// export const w_a=signer.getAddress()
+
+
 
 function Login({setIsAuth,isAuth}) {
 
@@ -82,10 +85,12 @@ function Login({setIsAuth,isAuth}) {
     const app = initializeApp(firebaseConfig);
 
     const db = getFirestore(app);
-
     const provider = new ethers.providers.Web3Provider(window.ethereum)
     const signer = provider.getSigner()
+
     const message = "You agree to login with your mask "
+
+    // console.log(w_a);
 
     const navigate= useNavigate()
 
@@ -115,6 +120,7 @@ function Login({setIsAuth,isAuth}) {
                         navigate("/Home")
                         window.alert("Logged In")
                         console.log(wallet_address)
+                        return wallet_address
                     }
                 }
             });
@@ -122,6 +128,7 @@ function Login({setIsAuth,isAuth}) {
             console.log(error)
         }
 
+       
 
     }
     return (
@@ -130,6 +137,5 @@ function Login({setIsAuth,isAuth}) {
         </div>
     )
 }
-
 
 export default Login

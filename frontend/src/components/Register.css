@@ -6,11 +6,12 @@
     color: black;
     overflow-y: auto;
     margin-bottom: 105px;
+    background-color: #C1BBBB;
 }
 
 .Register-transparent
 {
-    background-color: rgba(254, 219, 91,0.4);
+    background-color: white;
     width: 75%;
     position: relative;
     margin-left: 12.5%;
