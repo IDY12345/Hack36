@@ -2511,6 +2511,11 @@
     protobufjs "^7.0.0"
     yargs "^16.2.0"
 
+"@huddle01/huddle01-iframe@^0.0.9":
+  version "0.0.9"
+  resolved "https://registry.npmjs.org/@huddle01/huddle01-iframe/-/huddle01-iframe-0.0.9.tgz"
+  integrity sha512-Zx4o/ySo58WejAMW2BB9jxTHhqST1cx0i4sr/DSC4odhpn9xRLpTeUPkb1ZSx97l4qNbOCoLZmJoAnjUGQy41w==
+
 "@huddle01/react@^0.0.10":
   version "0.0.10"
   resolved "https://registry.npmjs.org/@huddle01/react/-/react-0.0.10.tgz"
@@ -12370,7 +12375,7 @@ react-transition-group@^4.4.5:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-"react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.1", "react@^16.x || ^17.x || ^18.x", "react@^17.0.0 || ^18.0.0", react@^18.0.0, react@^18.2.0, "react@>= 16", "react@>= 16.8.0", react@>=15.0.0, react@>=16.6.0, react@>=16.8, react@>=16.8.0, react@>=17.0.0, "react@0.14 || 15 || 16 || 17 || 18", react@18.2.0:
+"react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.1", "react@^16.x || ^17.x || ^18.x", "react@^17.0.0 || ^18.0.0", react@^18.0.0, react@^18.2.0, "react@>= 16", "react@>= 16.8.0", react@>=15.0.0, react@>=16, react@>=16.6.0, react@>=16.8, react@>=16.8.0, react@>=17.0.0, "react@0.14 || 15 || 16 || 17 || 18", react@18.2.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==

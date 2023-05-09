@@ -6,6 +6,7 @@ import React, { useState,useEffect } from 'react'
 //   listAll,
 //   list,
 // } from "firebase/storage";
+import {ethers} from "ethers"
 import { app } from "../firebase.js";
 // import { v4 } from "uuid";
 import './Register.css';
@@ -13,6 +14,10 @@ import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 function RegisterCompany({isAuth}) {
+  const provider = new ethers.providers.Web3Provider(window.ethereum)
+  const signer = provider.getSigner()
+  const wallet_address=signer.getAddress();
+  // const wall=w_a;
   const db = getFirestore(app)
   const [companyName, setCompanyName] = useState("");
   const [establishment, setEstablishment] = useState("");
@@ -68,7 +73,7 @@ function RegisterCompany({isAuth}) {
 
 
     if (companyName && establishment && companyEmail && companyConatct && CIN && name && DOB && contact && email) {
-      const docRef = await addDoc(RegisterCompanyRef, { companyName, companyEmail, companyConatct, establishment, name, contact, email, DOB })
+      const docRef = await addDoc(RegisterCompanyRef, { companyName, companyEmail, companyConatct, establishment, name, contact, email, DOB ,wallet_address})
       console.log(`Company Name:${companyName},Contact:${companyConatct},email:${companyEmail},establishment: ${establishment},CIN:${CIN} DocRef:${docRef.id}`);
       navigate("/Home")
     }
