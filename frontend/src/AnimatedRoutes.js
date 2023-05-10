@@ -1,7 +1,7 @@
 import { AnimatePresence } from "framer-motion";
-import React,{useState} from "react";
+import React, { useState } from "react";
 
-import { useLocation,Routes,Route } from "react-router-dom";
+import { useLocation, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import SignUp from "./components/SignUp";
 import About from "./components/About";
@@ -11,6 +11,7 @@ import CarbonExchange from "./components/CarbonExchange";
 import CarbonUpdate from "./components/CarbonUpdate";
 import OffsetDescription from "./components/OffsetDescription";
 import Login from "./components/SignIn";
+<<<<<<< HEAD
 import CarbonCredits from "./components/CarbonCredits";
 import Climate from "./components/Climate";
 function AnimatedRoutes({setIsAuth,isAuth}) {
@@ -31,6 +32,26 @@ function AnimatedRoutes({setIsAuth,isAuth}) {
             <Route path="/CarbonCredits" element={<CarbonCredits />} />
             <Route path="/Climate" element={<Climate />} />
         </Routes>
+=======
+import VideoChat from "./VideoChat";
+function AnimatedRoutes({ setIsAuth, isAuth }) {
+  // const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"))
+  const location = useLocation();
+  return (
+    <AnimatePresence>
+      <Routes location={location} key={location.pathname}>
+        <Route path="/Home" element={<Home isAuth={isAuth} />} />
+        <Route path="/SignUp" element={<SignUp isAuth={isAuth} />} />
+        <Route path="/SignIn" element={<Login setIsAuth={setIsAuth} isAuth={isAuth} />} />
+        <Route path="/" element={<About isAuth={isAuth} />} />
+        <Route path="/Register" element={<RegisterCompany isAuth={isAuth} />} />
+        <Route path="/Offset" element={<Offset isAuth={isAuth} />} />
+        <Route path="/CarbonExchange" element={<CarbonExchange isAuth={isAuth} />} />
+        <Route path="/CarbonUpdate" element={<CarbonUpdate isAuth={isAuth} />} />
+        <Route path="/OffsetBuy" element={<OffsetDescription isAuth={isAuth} />} />
+        <Route path="/VideoChat" element={<VideoChat />}></Route>
+      </Routes>
+>>>>>>> be0c1f67b249de5405be25b6c0627aa25b87e6c2
     </AnimatePresence>
   )
 }
