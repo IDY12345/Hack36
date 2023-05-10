@@ -7,7 +7,6 @@ import { collection, query, where, onSnapshot } from "firebase/firestore";
 import { firestore } from "../firebase"
 import { useNavigate } from 'react-router-dom';
 
-
 // const firebaseConfig = {
 //     apiKey: "AIzaSyBU4EKHBp5L7GTOl7eCDVqMYed_ZMA99QA",
 //     authDomain: "hack36-83483.firebaseapp.com",
@@ -59,8 +58,6 @@ import { useNavigate } from 'react-router-dom';
 
 // }
 
-// export const w_a=signer.getAddress()
-
 
 
 function Login({setIsAuth,isAuth}) {
@@ -90,11 +87,9 @@ function Login({setIsAuth,isAuth}) {
 
     const message = "You agree to login with your mask "
 
-    // console.log(w_a);
-
+   
     const navigate= useNavigate()
-
-         async function handleLogin() {
+      async function handleLogin() {
         if (!window.ethereum) {
             window.alert("Please add a wallet")
             return
@@ -127,9 +122,6 @@ function Login({setIsAuth,isAuth}) {
         } catch (error) {
             console.log(error)
         }
-
-       
-
     }
     return (
         <div className='Login-meta'>

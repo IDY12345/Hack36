@@ -1,5 +1,5 @@
 .Register {
-    position: relative;
+    position: absolute;
     width: 100%;
     background-size: 'cover';
     background-repeat: 'no-repeat'; 
@@ -11,21 +11,13 @@
 
 .Register-transparent
 {
-    background-color: white;
+    background-color: #ebebeb;
     width: 75%;
-    position: relative;
     margin-left: 12.5%;
     border-radius: 25px;
-    overflow-y: auto;
-    height: 988px;
     margin-bottom: 105px;
 }
 
-.Register-absolute
-{
-    position: relative;
-    overflow-y: auto;
-}
 
 .Register-Inner {
     text-align: center;

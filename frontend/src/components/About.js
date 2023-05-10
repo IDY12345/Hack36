@@ -25,7 +25,7 @@ function About() {
             <div className={colourChange ? 'Back-div' : 'Back-div active'}>
                 <div className={colourChange ? 'Image-div' : 'Image-div active'}>
                     <img src='Assets\logo1.png' className='About-Image' alt="" />
-                    <p className='presents'>Presents</p>
+                    <p className={colourChange?'presents':'presents active'}>Carbon Credit Marketplace</p>
                 </div>         
             </div>
             <Footer />

@@ -11,6 +11,8 @@ import CarbonExchange from "./components/CarbonExchange";
 import CarbonUpdate from "./components/CarbonUpdate";
 import OffsetDescription from "./components/OffsetDescription";
 import Login from "./components/SignIn";
+import CarbonCredits from "./components/CarbonCredits";
+import Climate from "./components/Climate";
 function AnimatedRoutes({setIsAuth,isAuth}) {
     // const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"))
     const location=useLocation();
@@ -26,6 +28,8 @@ function AnimatedRoutes({setIsAuth,isAuth}) {
             <Route path="/CarbonExchange" element={<CarbonExchange isAuth={isAuth} />} />
             <Route path="/CarbonUpdate" element={<CarbonUpdate isAuth={isAuth} />} />
             <Route path="/OffsetBuy" element={<OffsetDescription isAuth={isAuth} />} />
+            <Route path="/CarbonCredits" element={<CarbonCredits />} />
+            <Route path="/Climate" element={<Climate />} />
         </Routes>
     </AnimatePresence>
   )

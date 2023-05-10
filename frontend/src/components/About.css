@@ -1,7 +1,7 @@
 .About-Image
 {  
     margin-top: 100px;
-    margin-left: 500px;
+    margin-left: 32%;
     height: 550px;
 }
 
@@ -10,8 +10,8 @@
     /* align-items: center; */
     width: 99.7%;
     height: 950px;
-    border: solid black;
-    background-color: black;
+    border: none;
+    background-color: white;
     transition-duration: 0.8s;
 }
 
@@ -24,9 +24,15 @@
 
 .presents
 {
-    font-size: 100px;
-    color: aqua;
+    font-size: 22px;
+    font-weight: 700;
+    color: black;
     text-align: center;
+}
+
+.presents.active
+{
+    color: black;
 }
 
 .Back-div
@@ -41,6 +47,5 @@
 
 .Contact-About
 {
-    height: 2390px;
     background-color: black;
 }
