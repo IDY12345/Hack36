@@ -1,5 +1,4 @@
-.Offset
-{
+.Offset {
     position: absolute;
     width: 100%;
     justify-content: center;
@@ -7,8 +6,7 @@
     background-color: #C1BBBB;
 }
 
-.Dewang
-{
+.Dewang {
     background-color: #ebebeb;
     width: 75%;
     position: relative;
@@ -19,25 +17,22 @@
     margin-bottom: 105px;
 }
 
-.Green
-{
+.Green {
     text-align: center;
     font-family: 'Acme';
     font-size: 40px;
 }
 
-.Offset-info
-{
+.Offset-info {
     margin-top: 40px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
-.Offset-Name
-{
+.Offset-Name {
     width: 300px;
-    border:solid 1px black;
+    border: solid 1px black;
     border-radius: 10px;
     height: 25px;
     font-size: 17px;
@@ -47,16 +42,14 @@
 
 
 
-.Offset-Name::placeholder
-{
+.Offset-Name::placeholder {
     color: gray;
     opacity: 0.6;
     font-weight: bold;
     text-align: center;
 }
 
-.Offset-Name1
-{
+.Offset-Name1 {
     width: 600px;
     color: black;
     height: 200px;
@@ -66,22 +59,19 @@
     background-color: white;
 }
 
-.Product-Cost
-{
+.Product-Cost {
     display: flex;
     justify-content: center;
 }
 
-.Offset-Name1::placeholder
-{
+.Offset-Name1::placeholder {
     color: gray;
     opacity: 0.6;
     font-weight: bold;
     text-align: center;
 }
 
-.Cost 
-{
+.Cost {
     width: 50px;
     height: 20px;
     border: solid 1px black;
@@ -93,41 +83,35 @@
     border-radius: 10px;
 }
 
-.Cost::placeholder
-{
+.Cost::placeholder {
     color: gray;
 }
 
-.Price
-{
+.Price {
     font-size: 25px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-style: oblique;
 }
 
-.Price1
-{
+.Price1 {
     margin-top: 26px;
     font-size: 22px;
 }
 
-.Price2
-{
+.Price2 {
     font-size: 25px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-style: oblique;
     font-weight: 500;
 }
 
-.Offset-info1
-{  
+.Offset-info1 {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-.Offset-info2
-{
+.Offset-info2 {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -140,13 +124,11 @@
     margin-bottom: 80px;
 }
 
-.Submit-btn1:hover
-{
+.Submit-btn1:hover {
     opacity: 75%;
 }
 
-.Submit1 
-{
+.Submit1 {
     background-color: black;
     font-size: 25px;
     cursor: pointer;
@@ -154,4 +136,3 @@
     border-radius: 10px;
     color: white;
 }
-

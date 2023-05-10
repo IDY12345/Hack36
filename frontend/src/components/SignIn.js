@@ -1,6 +1,6 @@
 import { ethers } from 'ethers'
 import './Sign.css'
-import React, { useState,useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { collection, query, where, onSnapshot } from "firebase/firestore";
@@ -60,15 +60,13 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-function Login({setIsAuth,isAuth}) {
+function Login({ setIsAuth, isAuth }) {
 
-    useEffect(()=>
-    {
-        if(isAuth)
-        {
+    useEffect(() => {
+        if (isAuth) {
             navigate("/Home")
         }
-    },[])
+    }, [])
 
     const firebaseConfig = {
         apiKey: "AIzaSyBU4EKHBp5L7GTOl7eCDVqMYed_ZMA99QA",
@@ -87,9 +85,9 @@ function Login({setIsAuth,isAuth}) {
 
     const message = "You agree to login with your mask "
 
-   
-    const navigate= useNavigate()
-      async function handleLogin() {
+
+    const navigate = useNavigate()
+    async function handleLogin() {
         if (!window.ethereum) {
             window.alert("Please add a wallet")
             return

@@ -2,17 +2,16 @@
     /* background-color: #03485E; */
     background-image: url("C:\Users\HP\Documents\GitHub\Hack36\frontend\public\Assets\fog.jpg");
     width: 100%;
-    height: 240px;
+    height: 340px;
     position: relative;
     background-size: cover;
     /* justify-content: space-evenly; */
 }
 
-.Navbar-transparent
-{
-    width:100%;
-    height: 240px;
-    background-color: rgba(0, 0, 0,0.6);
+.Navbar-transparent {
+    width: 100%;
+    height: 340px;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .Logo-Navigation {
@@ -25,13 +24,13 @@
     margin-left: 23%;
     font-size: 30px;
     display: flex;
-    margin-bottom: 40%;
+    margin-top: 5%;
+    /* margin-bottom: 20%; */
 }
 
 .The {
     margin-left: 2%;
     font-weight: 700;
-
 }
 
 .Services {
@@ -148,7 +147,7 @@
     /* color: ; */
     font-size: 50px;
     cursor: pointer;
-    background-image: radial-gradient(black, white,0.4);
+    background-image: radial-gradient(black, white, 0.4);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "Poppins";

@@ -1,6 +1,6 @@
 .footer {
   width: 100%;
-  background-color: black;
+  background-color: #353535;
 }
 .footer .col {
   width: 190px;
@@ -86,6 +86,6 @@
 .Footer
 {
   height: 400px;
-  background-color: black;
+  background-color: #353535;
   color: white;
 }

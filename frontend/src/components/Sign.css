@@ -1,5 +1,4 @@
-.Login-meta
-{
+.Login-meta {
     width: 100%;
     justify-content: center;
     display: flex;
@@ -9,8 +8,7 @@
 }
 
 
-.Login-button
-{
+.Login-button {
     width: 250px;
     color: white;
     height: 30px;

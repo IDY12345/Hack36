@@ -1,12 +1,19 @@
-.About-Image
-{  
+.About-Image {
     margin-top: 100px;
     margin-left: 32%;
     height: 550px;
+
 }
 
-.Image-div
-{
+
+.Name-Company {
+    font-size: 100px;
+    margin-top: 0.001%;
+    text-align: center;
+
+}
+
+.Image-div {
     /* align-items: center; */
     width: 99.7%;
     height: 950px;
@@ -15,37 +22,31 @@
     transition-duration: 0.8s;
 }
 
-.Image-div.active
-{
+.Image-div.active {
     background-color: whitesmoke;
     animation-delay: 0.8s;
     transition-duration: 0.8s;
 }
 
-.presents
-{
+.presents {
     font-size: 22px;
     font-weight: 700;
     color: black;
     text-align: center;
 }
 
-.presents.active
-{
+.presents.active {
     color: black;
 }
 
-.Back-div
-{
+.Back-div {
     background-color: black;
 }
 
-.Back-div.active
-{
+.Back-div.active {
     background-color: whitesmoke;
 }
 
-.Contact-About
-{
+.Contact-About {
     background-color: black;
 }

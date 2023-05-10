@@ -2,15 +2,14 @@
     position: absolute;
     width: 100%;
     background-size: 'cover';
-    background-repeat: 'no-repeat'; 
+    background-repeat: 'no-repeat';
     color: black;
     overflow-y: auto;
     margin-bottom: 105px;
     background-color: #C1BBBB;
 }
 
-.Register-transparent
-{
+.Register-transparent {
     background-color: #ebebeb;
     width: 75%;
     margin-left: 12.5%;
@@ -45,11 +44,10 @@
     width: 300px;
     height: 35px;
     background-color: white;
-    
+
 }
 
-.CIN
-{
+.CIN {
     color: gray;
     border: solid 1px black;
     font-size: 20px;
@@ -59,8 +57,7 @@
     height: 35px;
 }
 
-.CIN::placeholder
-{
+.CIN::placeholder {
     color: gray;
     opacity: 0.5;
 }
@@ -80,11 +77,10 @@
     margin-top: 40px;
     margin-left: 420px;
     background: transparent;
-    
+
 }
 
-.CIN-No
-{
+.CIN-No {
     margin-left: 90px;
 }
 
@@ -174,18 +170,15 @@
     text-align: center;
 }
 
-.Error
-{
+.Error {
     color: red;
 }
 
-.Not-Error
-{
+.Not-Error {
     color: black;
 }
 
-.Star
-{
+.Star {
     color: rgb(240, 33, 33);
     font-size: 23px;
 }
