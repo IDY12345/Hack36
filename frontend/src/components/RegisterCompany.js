@@ -10,14 +10,13 @@ import {ethers} from "ethers"
 import { app } from "../firebase.js";
 // import { v4 } from "uuid";
 import './Register.css';
-import { addDoc, collection, getFirestore } from "firebase/firestore";
+import { addDoc, collection, getFirestore,setDoc ,doc} from "firebase/firestore";
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 function RegisterCompany({isAuth}) {
   const provider = new ethers.providers.Web3Provider(window.ethereum)
   const signer = provider.getSigner()
-  const wallet_address=signer.getAddress();
-  // const wall=w_a;
+  
   const db = getFirestore(app)
   const [companyName, setCompanyName] = useState("");
   const [establishment, setEstablishment] = useState("");
@@ -40,40 +39,18 @@ function RegisterCompany({isAuth}) {
       navigate("/SignIn")
     }
   },[])
-  // const [imageUpload, setImageUpload] = useState(null);
-  // const [imageUrls, setImageUrls] = useState([]);
-
-  // const imagesListRef = ref(storage, "images/");
-  // const uploadFile = () => {
-  //   if (imageUpload == null) return;
-  //   const imageRef = ref(storage, `images/${imageUpload.name + v4()}`);
-  //   uploadBytes(imageRef, imageUpload).then((snapshot) => {
-  //     getDownloadURL(snapshot.ref).then((url) => {
-  //       setImageUrls((prev) => [url]);
-  //     });
-  //   });
-  // };
-  // useEffect(() => {
-
-  //   listAll(imagesListRef).then((response) => {
-  //     response.items.forEach((item) => {
-  //       getDownloadURL(item).then((url) => {
-  //         setImageUrls((prev) => [...prev, url]);
-  //       });
-  //     });
-  //   });
-  // }, []);
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const accounts = await provider.listAccounts();
+    const account1=accounts[0]
+    console.log(account1)
     if (companyName.length === 0 && establishment.length === 0 && companyEmail.length === 0 && companyConatct.length === 0 && CIN.length === 0 && name.length === 0 && DOB.length === 0 && contact.length === 0 && email.length === 0) {
       setError(true);
     }
 
-
-
     if (companyName && establishment && companyEmail && companyConatct && CIN && name && DOB && contact && email) {
-      const docRef = await addDoc(RegisterCompanyRef, { companyName, companyEmail, companyConatct, establishment, name, contact, email, DOB ,wallet_address})
+      const docRef = await addDoc(RegisterCompanyRef, { companyName, companyEmail, companyConatct, establishment, name, contact, email, DOB,account1})
       console.log(`Company Name:${companyName},Contact:${companyConatct},email:${companyEmail},establishment: ${establishment},CIN:${CIN} DocRef:${docRef.id}`);
       navigate("/Home")
     }

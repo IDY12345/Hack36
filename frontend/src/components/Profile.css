@@ -1,0 +1,265 @@
+.Profile-Outer {
+    width: 100%;
+    height: 1500px;
+    background-color: #C1BBBB;
+}
+
+.Profile-Outer.active
+{
+    display: none;
+}
+
+.Profile-Inner {
+    position: absolute;
+    background-color: white;
+    width: 90%;
+    height: 1400px;
+    border-radius: 20px;
+    display: flex;
+    margin-left: 5%;
+    margin-top: 50px;
+}
+
+.Profile-Pro {
+    position: absolute;
+    margin-left: 50%;
+    font-family: PT Serif;
+}
+
+.Company-Profile {
+    position: absolute;
+    margin-left: 4.5%;
+    margin-top: 20%;
+}
+
+.Circle {
+    position: absolute;
+    margin-left: 4.5%;
+    margin-top: 5%;
+    width: 12%;
+    height: 12%;
+    border: solid #000000;
+    border-radius: 50%;
+}
+
+.Edit-Profile-Pro {
+    position: absolute;
+    width: 150px;
+    height: 28px;
+    font-size: 20px;
+    background-color: #44924C;
+    color: white;
+    margin-top: 30%;
+    margin-left: 5%;
+    border-radius: 10px;
+    border: solid 1px black;
+    cursor: pointer;
+}
+
+.Line {
+    position: absolute;
+    height: 100%;
+    border: solid 1px #a1a1a1;
+    border-radius: 5px;
+    margin-left: 20.5%;
+}
+
+.Basics {
+    margin-top: 15%;
+    margin-left: 21%;
+}
+
+.Name-of-the-company {
+    font-size: 20px;
+}
+
+.Name-Box {
+    width: 500px;
+    height: 25px;
+    border: solid 1px black;
+    border-radius: 5px;
+    background-color: #E5E5E5;
+    color: gray;
+}
+
+.Since {
+    position: absolute;
+    margin-top: 24%;
+    margin-left: 8%;
+}
+
+.Details {
+    margin-left: 17%;
+}
+
+.Social-Links {
+    margin-top: 30%;
+    margin-left: 21%;
+}
+
+.Line1 {
+    position: absolute;
+    width: 79.4%;
+    /* height: ; */
+    border: solid 1px #a1a1a1;
+    border-radius: 5px;
+    margin-left: 20.5%;
+    margin-top: 73%;
+}
+
+.Line-Top {
+    position: absolute;
+    width: 79.4%;
+    border: solid 1px #a1a1a1;
+    border-radius: 5px;
+    margin-left: 20.5%;
+    margin-top: 5%;
+}
+
+.Update-Button-div {
+    position: absolute;
+    margin-top: 97%;
+    margin-left: 50%;
+}
+
+.Update-Button {
+    width: 200px;
+    height: 25px;
+    font-size: 20px;
+    background-color: #44924C;
+    color: white;
+    border-radius: 10px;
+    border: solid 1px black;
+    cursor: pointer;
+}
+
+.Carbon-Credits-Update {
+    position: absolute;
+    margin-top: 75%;
+    margin-left: 48%;
+}
+
+.Last-Month {
+    position: absolute;
+    margin-left: 25%;
+    margin-top: 79%;
+}
+
+.LMCE {
+    font-size: 20px;
+}
+
+.Last {
+    width: 350px;
+    height: 22px;
+    justify-content: baseline;
+    font-size: 18px;
+    border-radius: 5px;
+    border: solid 1px black;
+    background-color: #E5E5E5;
+
+}
+
+.Last::placeholder {
+    font-size: 15px;
+}
+
+.First-Month {
+    position: absolute;
+    margin-left: 65%;
+    margin-top: 79%;
+}
+
+.CC-Update {
+    position: absolute;
+    margin-top: 88%;
+    margin-left: 48%;
+    display: flex;
+}
+
+.Image {
+    margin-top: 5%;
+}
+
+.Total-Carbon-Credits {
+    position: absolute;
+    margin-top: 35%;
+    margin-left: 2.4%;
+    width: 220px;
+    height: 120px;
+    background-color: #000000;
+    border-radius: 10px;
+}
+
+.BCS {
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    margin-left: 7%;
+}
+
+.BCS1 {
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+    margin-left: 7%;
+}
+
+.Credit-Number {
+    margin-left: 30%;
+}
+
+.CN {
+    background: -webkit-linear-gradient(#00fff0, #ffffff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 00px;
+    display: flex;
+}
+
+.CN-btn {
+    background-color: #44924C;
+    color: white;
+    border: none;
+    font-size: 19px;
+    width: 70px;
+    border-radius: 10px;
+    margin-left: 4%;
+    cursor: pointer;
+}
+
+.CN-Logo {
+    margin-top: 4px;
+}
+
+.Total-Ethereum {
+    position: absolute;
+    margin-top: 46%;
+    margin-left: 2.4%;
+    width: 220px;
+    height: 120px;
+    background-color: #b0b0b0;
+    border-radius: 10px;
+}
+
+.Sell-Panel {
+    position: absolute;
+    margin-top: 57%;
+    margin-left: 2.4%;
+    width: 220px;
+    height: 120px;
+    background-color: #DADADA;
+    border-radius: 10px;
+}
+
+.Sell-Box
+{
+
+    background-color: black;
+    width: 600px;
+    height: 400px;
+    margin-top: 900px;
+    margin-left: 50%;
+}

@@ -1,0 +1,67 @@
+.Founder-Tree
+{
+    width: 100%;
+    height: 1600px;
+}
+
+.Founder-Outer
+{
+    justify-content: space-evenly;
+    display: flex;
+}
+
+.Founder-Box1
+{
+    width: 600px;
+    height: 350px;
+    background-image: linear-gradient(135deg,black 30%,#CEFFA7);
+    /* background-image: radial-gradient(black,#CEFFA7); */
+    border-radius: 10px;
+    margin-top: 7.5%;
+}
+
+.Circle1
+{
+    width: 200px;
+    height: 200px;
+    border: solid 4px white;
+    margin-left: 5%;
+    border-radius: 50%;
+    margin-top: 12.5%;
+}
+
+.Founder-Image
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.Founder-Info
+{
+    display: flex;
+}
+
+.Founder-Details
+{
+    margin-left: 8%;
+    color: white;
+}
+
+h1{
+    text-align: center;
+}
+
+.Founder-Name
+{
+    margin-top: 15%;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.Founder-Name1
+{
+    margin-top: 2%;
+    font-size: 20px;
+    font-weight: 600;
+}

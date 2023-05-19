@@ -8,13 +8,15 @@ import About from "./components/About";
 import RegisterCompany from "./components/RegisterCompany";
 import Offset from "./components/Offset";
 import CarbonExchange from "./components/CarbonExchange";
-import CarbonUpdate from "./components/CarbonUpdate";
 import OffsetDescription from "./components/OffsetDescription";
 import Login from "./components/SignIn";
 import CarbonCredits from "./components/CarbonCredits";
 import Climate from "./components/Climate";
 import VideoChat from "./VideoChat";
-function AnimatedRoutes({ setIsAuth, isAuth }) {
+import Profile from "./components/Profile";
+import EditProfile from "./components/EditProfile";
+import Founders from "./components/Founders";
+function AnimatedRoutes({ setIsAuth, isAuth,setNavbar,navbar }) {
   // const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"))
   const location = useLocation();
   return (
@@ -27,11 +29,13 @@ function AnimatedRoutes({ setIsAuth, isAuth }) {
         <Route path="/Register" element={<RegisterCompany isAuth={isAuth} />} />
         <Route path="/Offset" element={<Offset isAuth={isAuth} />} />
         <Route path="/CarbonExchange" element={<CarbonExchange isAuth={isAuth} />} />
-        <Route path="/CarbonUpdate" element={<CarbonUpdate isAuth={isAuth} />} />
         <Route path="/OffsetBuy" element={<OffsetDescription isAuth={isAuth} />} />
         <Route path="/CarbonCredits" element={<CarbonCredits />} />
         <Route path="/Climate" element={<Climate />} />
         <Route path="/VideoChat" element={<VideoChat />}></Route>
+        <Route path="/Profile" element={<Profile isAuth={isAuth} />} />
+        <Route path="Edit-Profile" element={<EditProfile />} />
+        <Route path="/Founders" element={<Founders />} /> 
       </Routes>
     </AnimatePresence>
   )

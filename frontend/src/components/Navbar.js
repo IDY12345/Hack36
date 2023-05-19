@@ -4,7 +4,7 @@ import './Navbar.css'
 import AnimatedRoutes from '../AnimatedRoutes'
 import { ConnectButton } from "web3uikit"
 
-function Navbar({ setIsAuth, isAuth }) {
+function Navbar({ setIsAuth, isAuth,setNavbar,navbar }) {
 
   const signUserOut = () => {
     localStorage.clear();
@@ -18,6 +18,7 @@ function Navbar({ setIsAuth, isAuth }) {
       <Router>
 
         <nav>
+          {!navbar?(
           <div className="Navbar">
             <div className='Navbar-transparent'>
               <div className='Logo-Navigation'>
@@ -76,7 +77,6 @@ function Navbar({ setIsAuth, isAuth }) {
                       <div className='Profile-Content'>
                         <Link to="/Profile"><button className='Profile1'>Profile</button></Link>
                         <Link to="/Edit-Profile"><button className='Profile2'>Edit Profile</button></Link>
-                        <Link to="/CarbonUpdate"><button className='Profile3'>Carbon Credits Update</button></Link>
                         <Link to="/SignIn"><button className='Profile4' onClick={signUserOut}>Logout</button></Link>
                       </div>
                     </div>
@@ -87,9 +87,9 @@ function Navbar({ setIsAuth, isAuth }) {
                 <p className='The'>The</p> <p className='The'>One</p>    <p className='The'>Stop</p>    <p className='The'>Destination</p>     <p className='The'>For</p>     <p className='The'>All</p>    <p className='The'>Carbon</p>    <p className='The'>Trades.</p>
               </div>
             </div>
-          </div>
+          </div>):(<div></div>)}
         </nav>
-        <AnimatedRoutes setIsAuth={setIsAuth} isAuth={isAuth} />
+        <AnimatedRoutes setIsAuth={setIsAuth} isAuth={isAuth} setNavbar={setNavbar} navbar={navbar} />
       </Router>
     </div>
   )

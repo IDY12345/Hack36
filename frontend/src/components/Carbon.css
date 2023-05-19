@@ -3,83 +3,31 @@
     display: flex;
     justify-content: center;
     font-size: 50px;
+    font-family: Poppins;
+    font-weight: 600;
 }
 
 .Carbon-Exchange
 {
     height: 763px;
-    background-image: url("https://firebasestorage.googleapis.com/v0/b/hack36-83483.appspot.com/o/Back%20Panel1.jpg?alt=media&token=6bbd2e0e-2c41-4f53-9127-3e518eec55cb");
+    /* background-image: url("https://firebasestorage.googleapis.com/v0/b/hack36-83483.appspot.com/o/Back%20Panel1.jpg?alt=media&token=6bbd2e0e-2c41-4f53-9127-3e518eec55cb"); */
     /* background-image: url("C:\Users\HP\Documents\GitHub\Hack36\frontend\public\Assets\Carbon.gif"); */
     background-size: cover;
 }
 
-.List-Start
+.Table
 {
-    margin-top: 50px;
-    font-size: 25px;
-    width: 70%;
-    display: flex;
-    justify-content:space-between;
-    margin-left: 100px;
-    font-weight: 800;
-}
-
-.List 
-{
-    margin-top: 25px;
-    width:70%;
-    display: flex;
-    justify-content: space-between;
-    margin-left: 100px;
-    font-size: 22px;
-    font-weight: 600;
-    border: solid black;
+    width: 90%;
+    height: 800px;
+    border: solid 5px black;
     border-radius: 10px;
+    margin-left: 5%;
+    margin-top: 10%;
 }
 
-.Name-div
+.Row1
 {
-    display: flex;
-    width: 400px;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.credits-image
-{
-    margin-left: 5px;
-    width: 45px;
-    height: 45px;
-    margin-bottom: 10px;
-}
-
-.Button-Buy
-{
-    display: flex;
-
-
-}
-
-.Buy-btn
-{
-    margin-top: 28px;
-    font-size: 20px;
-    margin-left: 10px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: black;
-    color: white;
-    cursor: pointer;
-    border-radius: 10px;
-    width: 200px;
-}
-
-.List:hover
-{
-    opacity: 60%;
-    cursor: pointer;
-}
-
-.Dewang
-{
-    margin-top: 10px;
+    width: 100%;
+    border-bottom: solid 3px black;
+    height: 80px;
 }
