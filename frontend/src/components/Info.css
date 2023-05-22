@@ -1,7 +1,32 @@
 .Info-Component
 {
     width: 100%;
-    height: 1600px;
+    height: 2200px;
+}
+
+.The-Box
+{
+    width: 100%;
+    height: 500px;
+}
+
+.Who-are-we
+{
+    width: 65%;
+    margin-left: 15%;
+}
+
+.Who
+{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.Who-Info
+{
+    font-size: 35px;
+    color: #AD00FF;
+    font-family: Rasa;
 }
 
 .Box-1
@@ -78,4 +103,18 @@
     margin-top: 3%;
     margin-left: 55%;
     border-radius: 20px;
+}
+
+.Info1
+{
+    margin-left: 1%;
+    color: white;
+    font-size: 22px;
+}
+
+.Info2
+{
+    margin-left: 1%;
+    color: white;
+    font-size: 25px;
 }

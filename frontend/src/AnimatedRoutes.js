@@ -1,6 +1,5 @@
 import { AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
-
 import { useLocation, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import SignUp from "./components/SignUp";
@@ -16,6 +15,7 @@ import VideoChat from "./VideoChat";
 import Profile from "./components/Profile";
 import EditProfile from "./components/EditProfile";
 import Founders from "./components/Founders";
+import BuyPanel from "./components/BuyPanel";
 function AnimatedRoutes({ setIsAuth, isAuth,setNavbar,navbar }) {
   // const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"))
   const location = useLocation();
@@ -34,8 +34,9 @@ function AnimatedRoutes({ setIsAuth, isAuth,setNavbar,navbar }) {
         <Route path="/Climate" element={<Climate />} />
         <Route path="/VideoChat" element={<VideoChat />}></Route>
         <Route path="/Profile" element={<Profile isAuth={isAuth} />} />
-        <Route path="Edit-Profile" element={<EditProfile />} />
-        <Route path="/Founders" element={<Founders />} /> 
+        <Route path="Edit-Profile" element={<EditProfile isAuth={isAuth}/>} />
+        <Route path="/Founders" element={<Founders />} />
+        <Route path="/Buypanel" element={<BuyPanel /> } />
       </Routes>
     </AnimatePresence>
   )

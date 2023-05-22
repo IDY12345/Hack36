@@ -27,10 +27,12 @@ function Navbar({ setIsAuth, isAuth,setNavbar,navbar }) {
                   <button className='Logo-btn'>PIONEERS</button>
                 </div>
                 <div className='Navigation-Tools'>
-                  <div className="About" title='About'>
-                    <Link to="/">
-                      <button className="About-btn">About</button>
-                    </Link>
+                  <div className="Services" title='About'>
+                      <button className="Services-btn">About <i class="fa fa-caret-down" aria-hidden="true" id='drop'></i></button>
+                        <div className='Services-Content'>                          
+                          <Link to="/"><button className="Service1">Our Services</button></Link>
+                          <Link to="/Founders"><button className="Service2">Our Team</button></Link>
+                          </div>
                   </div>
                   <div className='Home' title='Climate-Information'>
                     <Link to="/Climate">
@@ -77,7 +79,8 @@ function Navbar({ setIsAuth, isAuth,setNavbar,navbar }) {
                       <div className='Profile-Content'>
                         <Link to="/Profile"><button className='Profile1'>Profile</button></Link>
                         <Link to="/Edit-Profile"><button className='Profile2'>Edit Profile</button></Link>
-                        <Link to="/SignIn"><button className='Profile4' onClick={signUserOut}>Logout</button></Link>
+                        <Link to="/CarbonExchange"><button className='Profile3'>Carbon Exchange Panel</button></Link>
+                        <button className='Profile4' onClick={signUserOut}>Logout</button>
                       </div>
                     </div>
                   )}

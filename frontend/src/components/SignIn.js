@@ -6,6 +6,7 @@ import { getFirestore } from "firebase/firestore";
 import { collection, query, where, onSnapshot } from "firebase/firestore";
 import { firestore } from "../firebase"
 import { useNavigate } from 'react-router-dom';
+import Footer from './Footer'
 
 // const firebaseConfig = {
 //     apiKey: "AIzaSyBU4EKHBp5L7GTOl7eCDVqMYed_ZMA99QA",
@@ -110,7 +111,7 @@ function Login({ setIsAuth, isAuth }) {
                         localStorage.setItem("isAuth", true);
                         setIsAuth(true);
                         console.log(isAuth)
-                        navigate("/Home")
+                        navigate("/Register")
                         window.alert("Logged In")
                         console.log(wallet_address)
                         return wallet_address
@@ -122,8 +123,10 @@ function Login({ setIsAuth, isAuth }) {
         }
     }
     return (
-        <div className='Login-meta'>
-            <button onClick={handleLogin} className='Login-button'>Login with wallet</button>
+        <div>
+            <div className='Login-meta'>
+                <button onClick={handleLogin} className='Login-button'>Login with wallet</button>
+            </div>
         </div>
     )
 }

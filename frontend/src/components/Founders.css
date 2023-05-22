@@ -1,7 +1,7 @@
 .Founder-Tree
 {
     width: 100%;
-    height: 1600px;
+    height: 1800px;
 }
 
 .Founder-Outer
@@ -12,12 +12,19 @@
 
 .Founder-Box1
 {
-    width: 600px;
-    height: 350px;
-    background-image: linear-gradient(135deg,black 30%,#CEFFA7);
-    /* background-image: radial-gradient(black,#CEFFA7); */
+    width: 650px;
+    height: 400px;
+    background-image: linear-gradient(135deg,black 30%,#44572c);
     border-radius: 10px;
     margin-top: 7.5%;
+}
+
+.Circle-Info
+{
+    width: 300px;
+    height: 400px;
+    border-right: solid 2px white;
+    color: white;
 }
 
 .Circle1
@@ -25,7 +32,7 @@
     width: 200px;
     height: 200px;
     border: solid 4px white;
-    margin-left: 5%;
+    margin-left: 15%;
     border-radius: 50%;
     margin-top: 12.5%;
 }
@@ -44,7 +51,8 @@
 
 .Founder-Details
 {
-    margin-left: 8%;
+    width: 350px;
+    margin-left: 4%;
     color: white;
 }
 
@@ -54,9 +62,10 @@ h1{
 
 .Founder-Name
 {
-    margin-top: 15%;
+    margin-top: 10%;
     font-size: 20px;
     font-weight: 600;
+    text-align: center;
 }
 
 .Founder-Name1
@@ -64,4 +73,15 @@ h1{
     margin-top: 2%;
     font-size: 20px;
     font-weight: 600;
+}
+.Designation-div
+{
+    width: 350px;
+    margin-left: 25%;
+}
+.Designation
+{
+    text-align: center;
+    width: 150px;
+    font-size: 17px;
 }

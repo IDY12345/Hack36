@@ -1,19 +1,15 @@
 .Offset {
-    position: absolute;
     width: 100%;
-    justify-content: center;
-    background-size: cover;
+    overflow-y: auto;
     background-color: #C1BBBB;
 }
 
 .Dewang {
     background-color: #ebebeb;
     width: 75%;
-    position: relative;
     margin-left: 12.5%;
     border-radius: 25px;
-    overflow-y: auto;
-    height: 788px;
+
     margin-bottom: 105px;
 }
 
