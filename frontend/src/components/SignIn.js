@@ -1,12 +1,12 @@
 import { ethers } from 'ethers'
 import './Sign.css'
-import React, { useState,useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { collection, query, where, onSnapshot } from "firebase/firestore";
 import { firestore } from "../firebase"
 import { useNavigate } from 'react-router-dom';
-
+import Footer from './Footer'
 
 // const firebaseConfig = {
 //     apiKey: "AIzaSyBU4EKHBp5L7GTOl7eCDVqMYed_ZMA99QA",
@@ -59,19 +59,15 @@ import { useNavigate } from 'react-router-dom';
 
 // }
 
-// export const w_a=signer.getAddress()
 
 
+function Login({ setIsAuth, isAuth }) {
 
-function Login({setIsAuth,isAuth}) {
-
-    useEffect(()=>
-    {
-        if(isAuth)
-        {
+    useEffect(() => {
+        if (isAuth) {
             navigate("/Home")
         }
-    },[])
+    }, [])
 
     const firebaseConfig = {
         apiKey: "AIzaSyBU4EKHBp5L7GTOl7eCDVqMYed_ZMA99QA",
@@ -91,11 +87,9 @@ function Login({setIsAuth,isAuth}) {
 
     const message = "You agree to login with your mask "
 
-    // console.log(w_a);
 
-    const navigate= useNavigate()
-
-         async function handleLogin() {
+    const navigate = useNavigate()
+    async function handleLogin() {
         if (!window.ethereum) {
             window.alert("Please add a wallet")
             return
@@ -118,7 +112,7 @@ function Login({setIsAuth,isAuth}) {
                         localStorage.setItem("isAuth", true);
                         setIsAuth(true);
                         console.log(isAuth)
-                        navigate("/Home")
+                        navigate("/Register")
                         window.alert("Logged In")
                         console.log(wallet_address)
                         return wallet_address
@@ -128,13 +122,12 @@ function Login({setIsAuth,isAuth}) {
         } catch (error) {
             console.log(error)
         }
-
-       
-
     }
     return (
-        <div className='Login-meta'>
-            <button onClick={handleLogin} className='Login-button'>Login with wallet</button>
+        <div>
+            <div className='Login-meta'>
+                <button onClick={handleLogin} className='Login-button'>Login with wallet</button>
+            </div>
         </div>
     )
 }

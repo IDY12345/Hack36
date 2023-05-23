@@ -1,37 +1,32 @@
 .Register {
-    position: relative;
     width: 100%;
-    background-size: 'cover';
-    background-repeat: 'no-repeat'; 
     color: black;
     overflow-y: auto;
-    margin-bottom: 105px;
     background-color: #C1BBBB;
 }
 
-.Register-transparent
-{
-    background-color: white;
-    width: 75%;
-    position: relative;
-    margin-left: 12.5%;
+.Register-transparent {
+    background-color: #ffffff;
+    width: 90%;
+    margin-left: 5%;
     border-radius: 25px;
-    overflow-y: auto;
-    height: 988px;
     margin-bottom: 105px;
 }
 
-.Register-absolute
-{
-    position: relative;
-    overflow-y: auto;
-}
 
 .Register-Inner {
     text-align: center;
     color: black;
-    font-weight: 900;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: PT Serif;
+    font-size: 40px;
+}
+
+.Register-Company-Title
+{
+    width: 100%;
+    height: 10%;
+    color: black;
+    border-bottom: solid 2px black;
 }
 
 .Basic {
@@ -45,30 +40,38 @@
     text-align: inherit;
 }
 
+.Register-Company-Name
+{
+    margin-left: 15%;
+}
+
+.Company-Name-Title
+{
+    font-size: 25px;
+}
+
 .Company-Name {
     color: gray;
-    border: solid 1px black;
+    border: solid 2px black;
     font-size: 20px;
-    border-radius: 40px;
-    width: 300px;
+    border-radius: 10px;
+    width: 800px;
     height: 35px;
     background-color: white;
-    
+
 }
 
-.CIN
-{
+.CIN {
     color: gray;
-    border: solid 1px black;
+    border: solid 2px black;
     font-size: 20px;
-    border-radius: 40px;
-    width: 300px;
+    border-radius: 10px;
+    width: 800px;
     background-color: white;
     height: 35px;
 }
 
-.CIN::placeholder
-{
+.CIN::placeholder {
     color: gray;
     opacity: 0.5;
 }
@@ -88,11 +91,10 @@
     margin-top: 40px;
     margin-left: 420px;
     background: transparent;
-    
+
 }
 
-.CIN-No
-{
+.CIN-No {
     margin-left: 90px;
 }
 
@@ -164,7 +166,7 @@
 }
 
 .Submit {
-    background-color: #252525;
+    background-color: #44924C;
     font-size: 25px;
     cursor: pointer;
     border: none;
@@ -177,23 +179,32 @@
     opacity: 100%;
 }
 
+.Owner-Name-Details
+{
+    border-top: solid 2px black;
+    margin-top: 2%;
+}
+
 .Owner {
     margin-top: 40px;
     text-align: center;
 }
 
-.Error
-{
+.Error {
     color: red;
 }
 
-.Not-Error
-{
+.Not-Error {
     color: black;
 }
 
-.Star
-{
+.Star {
     color: rgb(240, 33, 33);
     font-size: 23px;
+}
+
+.Social-Media-Company
+{
+    border-top: solid 2px black;
+    margin-top: 2%;
 }

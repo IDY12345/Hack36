@@ -1,0 +1,71 @@
+.Carbon-Credits-Update
+{
+    border-top: solid 1px black;
+    margin-top: 5%;
+}
+
+.LMCE
+{
+    margin-left: 5%;
+    width: 500px;
+}
+
+.LMCE-Input
+{
+    width: 350px;
+    height: 22px;
+    justify-content: baseline;
+    font-size: 18px;
+    border-radius: 5px;
+    border: solid 1px black;
+    background-color: #E5E5E5;
+}
+
+.CCU
+{
+    margin-left: 33%;
+}
+
+.Input-Flex
+{
+    display: flex;
+}
+
+.Carbon-Credits-Info-Profile
+{
+    margin-left: 33%;
+    display: flex;
+    margin-top: 2%;
+}
+
+.CCCCC
+{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.Zero
+{
+    margin-left: 10px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.CC-LOGO
+{
+    margin-top: 4%;
+    margin-left: 1%;
+}
+
+.Update-btn {
+    width: 200px;
+    height: 25px;
+    font-size: 20px;
+    background-color: #44924C;
+    color: white;
+    border-radius: 10px;
+    border: solid 1px black;
+    cursor: pointer;
+    margin-left: 35%;
+    margin-top: 2%;
+}

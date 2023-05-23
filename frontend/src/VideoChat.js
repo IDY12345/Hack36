@@ -16,9 +16,10 @@ const iframeConfig = {
 function VideoChat() {
     return (
         <div>
+            <div className='Logo-Hide'></div>
             <HuddleIframe config={iframeConfig} style={{ position: "relative", left: "-100px", top: "-100px" }} />
             <div className='button-container'>
-                <Link to="/home"><Button variant="contained" color="error"> Return to home </Button> </Link>
+                <Link to="/OffsetBuy"><Button variant="contained" color="error"> Return to home </Button></Link>
             </div>
 
         </div>

@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+
+.Graph
+{
+  width: 800px;
+}
+
+.Bar
+{
+  width: 100%;
+  margin-left: 20%;
+}
