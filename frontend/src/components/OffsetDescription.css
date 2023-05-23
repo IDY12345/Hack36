@@ -1,7 +1,100 @@
 .VideoChatIcon {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    padding: 25px;
+    font-size: 30px;
+    color: white;
+    margin-left: 40%;
+}
 
+.Description-Box
+{
+    width: 50%;
+    height: 600px;
+    margin-left: 25%;
+    margin-top: 5%;
+    border-radius: 20px;
+    color: white;
+    background-image: linear-gradient(135deg,black 30%,#44572c);
+}
+
+.Navigation-Panel
+{
+    width: 100%;
+    height: 8%;
+    border-bottom: solid 2px white;
+    display: flex;
+}
+
+.Company-Panel
+{
+    width: 30%;
+    border-right: solid 2px white;
+    height: 100%;
+}
+
+.Company-Name-Panel
+{
+    text-align: center;
+}
+
+.Company-Panel2
+{
+    width: 20%;
+    border-right: solid 2px white;
+    height: 100%;
+}
+
+.Product-Image
+{
+    width: 45%;
+    height: 60%;
+    border: solid 2px white;
+    border-radius: 50%;
+    margin-left: 10%;
+    margin-top: 10%;
+    background-color: white;
+}
+
+.Description-Flex
+{
+    width:100%;
+    height: 100%;
+    display: flex;
+}
+
+.Product-Description-Description
+{
+    margin-left: 5%;
+}
+
+.Product-Name-Description
+{
+    font-size: 40px;
+}
+
+.Description-Description
+{
+    font-size: 20px;
+    height: 40%;
+    
+}
+
+.Cost-Description
+{
+    font-size: 30px;
+}
+
+#dots
+{
+    color: black;
+}
+
+.Buy-Now-Description
+{
+    width: 100px;
+    height: 30px;
+    margin-left: 10%;
+    border-radius: 10px;
+    border: solid white;
+    background-color: #A7FE62;
+    font-size: 15px;
+    font-weight: 900;
 }

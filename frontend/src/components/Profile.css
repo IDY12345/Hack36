@@ -1,0 +1,200 @@
+.Profile-Outer {
+    width: 100%;
+    height: 1100px;
+    background-color: #C1BBBB;
+}
+
+.Profile-Outer.active
+{
+    display: none;
+}
+
+.Profile-Inner {
+    position: absolute;
+    background-color: white;
+    width: 90%;
+    height: 1000px;
+    border-radius: 20px;
+    display: flex;
+    margin-left: 5%;
+    margin-top: 50px;
+}
+
+.Profile-Photo-Panel
+{
+    width: 20%;
+    height: 100%;
+    border-right: solid 1px black;
+}
+
+.Profile-Image
+{
+    width: 70%;
+    height: 20%;
+    border: solid 3px black;
+    border-radius: 50%;
+    margin-left: 15%;
+    margin-top: 20%;
+}
+
+.Establishment-Date
+{
+    text-align: center;
+}
+
+.Edit-Button-Profile
+{
+    width: 150px;
+    height: 28px;
+    font-size: 20px;
+    background-color: #44924C;
+    color: white;
+    margin-top: 5%;
+    margin-left: 22.5%;
+    border-radius: 10px;
+    border: solid 1px black;
+    cursor: pointer;
+}
+
+.Total-Carbon-Credits
+{
+    width: 90%;
+    height: 15%;
+    margin-left: 5%;
+    margin-top: 5%;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.BCC{
+    font-size: 19px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.Number-CC
+{
+    margin-left: 30%;
+    display: flex;
+}
+
+.CC-Total
+{
+    background: linear-gradient(#00fff0, #ffffff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.CN-Logo {
+    margin-top: 25px;
+    margin-left: 10%;
+}
+
+.ETW
+{
+    width: 90%;
+    height: 15%;
+    margin-left: 5%;
+    margin-top: 5%;
+    color: black;
+    background-color: #b0b0b0;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.ETW1
+{
+    width: 90%;
+    height: 15%;
+    margin-left: 5%;
+    margin-top: 5%;
+    color: black;
+    background-color: #DADADA;
+    border-radius: 10px;
+    font-weight: 900;
+}
+
+.Eth
+{
+    margin-top: 29px;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left: 10%;
+    color: black;
+}
+
+.CC-Total1
+{
+    font-weight: bold;
+    font-size: 25px;
+    color: black;
+}
+
+.CN-btn {
+    background-color: #44924C;
+    color: white;
+    border: none;
+    font-size: 19px;
+    width: 70px;
+    border-radius: 10px;
+    margin-left: 35%;
+    margin-top: 10%;
+    cursor: pointer;
+}
+
+.Panel-Flex
+{
+    width: 100%;
+    display: flex;
+}
+
+.Profile-Pro-Flex
+{
+    width: 80%;
+}
+
+.Profile-Name
+{
+    width: 100%;
+    height: 8%;
+    border-bottom: solid 1px black;
+}
+
+.Profile-H2
+{
+    font-size: 30px;
+    font-family: serif;
+    margin-left: 40%;
+    margin-top: 5%;
+}
+
+.Basic
+{
+    text-align: left;
+    margin-left: 5%;
+}
+
+.Name-of-the-company {
+    font-size: 20px;
+}
+
+.Name-Box {
+    width: 500px;
+    height: 25px;
+    border: solid 1px black;
+    border-radius: 5px;
+    background-color: #E5E5E5;
+    color: gray;
+}
+
+.Social-Links {
+    border-top: solid 1px black;
+    margin-top: 5%;
+}
+.Social-Links-Pro
+{
+    margin-left: 5%;
+}

@@ -1,0 +1,38 @@
+.Carbon-Credits-Page
+{
+    width: 100%;
+    height: 3600px;
+}
+
+.Logo-Carbon
+{
+    margin-left: 32.5%;
+
+}
+
+.CC-1
+{
+    font-size: 90px;
+    font-weight: bolder;
+    /* font-family: Poppins; */
+    text-align: center;
+    margin-top: 1px;
+}
+
+.Carbon-Credits-Info-div
+{
+    width: 60%;
+    margin-left: 20%;
+}
+
+.Carbon-Credits-Info
+{
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.Factory-Image
+{
+    width: 50%;
+    margin-left: 25%;
+}
