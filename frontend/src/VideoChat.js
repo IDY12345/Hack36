@@ -18,8 +18,7 @@ function VideoChat() {
         <div>
             <HuddleIframe config={iframeConfig} style={{ position: "relative", left: "-100px", top: "-100px" }} />
             <div className='button-container'>
-                <Link to="/home"><Button variant="contained" color="error"> Return to home </Button></Link>
-
+                <Link to="/home"><Button variant="contained" color="error"> Return to home </Button> </Link>
             </div>
 
         </div>

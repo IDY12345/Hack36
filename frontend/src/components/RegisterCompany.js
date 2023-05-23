@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 // import {
 //   ref,
 //   uploadBytes,
@@ -6,17 +6,18 @@ import React, { useState,useEffect } from 'react'
 //   listAll,
 //   list,
 // } from "firebase/storage";
-import {ethers} from "ethers"
+import { ethers } from "ethers"
 import { app } from "../firebase.js";
 // import { v4 } from "uuid";
 import './Register.css';
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-function RegisterCompany({isAuth}) {
+import axios from 'axios'
+function RegisterCompany({ isAuth }) {
   const provider = new ethers.providers.Web3Provider(window.ethereum)
   const signer = provider.getSigner()
-  const wallet_address=signer.getAddress();
+  const wallet_address = signer.getAddress();
   // const wall=w_a;
   const db = getFirestore(app)
   const [companyName, setCompanyName] = useState("");
@@ -31,15 +32,14 @@ function RegisterCompany({isAuth}) {
   const [error, setError] = useState(false)
   const RegisterCompanyRef = collection(db, "Register Company")
   const [errorName, setErrorName] = useState(false)
+  const [sinVerified, setCinVerified] = useState(false)
   let navigate = useNavigate()
 
-  useEffect(()=>
-  {
-    if(!isAuth)
-    {
+  useEffect(() => {
+    if (!isAuth) {
       navigate("/SignIn")
     }
-  },[])
+  }, [])
   // const [imageUpload, setImageUpload] = useState(null);
   // const [imageUrls, setImageUrls] = useState([]);
 
@@ -66,14 +66,42 @@ function RegisterCompany({isAuth}) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (companyName.length === 0 && establishment.length === 0 && companyEmail.length === 0 && companyConatct.length === 0 && CIN.length === 0 && name.length === 0 && DOB.length === 0 && contact.length === 0 && email.length === 0) {
-      setError(true);
+    const options = {
+      method: 'POST',
+      url: 'https://mca-corporate-verifications1.p.rapidapi.com/MCA/Detailed_search',
+      headers: {
+        'content-type': 'application/json',
+        'X-RapidAPI-Key': '4335290962msha7a7b91d666684bp1652ccjsnf92e4eee5a05',
+        'X-RapidAPI-Host': 'mca-corporate-verifications1.p.rapidapi.com'
+      },
+      data: {
+        method: 'CINvalidate',
+        txn_id: '609f5942-9c57-4f45-8b61-6baf76c86d54',
+        clientid: 'RapidAPI_MCA',
+        cin: CIN.toString()
+      }
+    };
+
+    try {
+      const response = await axios.request(options);
+      console.log(response.data);
+      if (response.data.Failed) {
+        window.alert("Entered CIN ID is Invalid")
+      }
+      else {
+        if (companyName.length === 0 && establishment.length === 0 && companyEmail.length === 0 && companyConatct.length === 0 && CIN.length === 0 && name.length === 0 && DOB.length === 0 && contact.length === 0 && email.length === 0) {
+          setError(true);
+        }
+        window.alert("Success")
+      }
+    } catch (error) {
+      console.error(error);
     }
 
 
 
     if (companyName && establishment && companyEmail && companyConatct && CIN && name && DOB && contact && email) {
-      const docRef = await addDoc(RegisterCompanyRef, { companyName, companyEmail, companyConatct, establishment, name, contact, email, DOB ,wallet_address})
+      const docRef = await addDoc(RegisterCompanyRef, { companyName, companyEmail, companyConatct, establishment, name, contact, email, DOB, wallet_address })
       console.log(`Company Name:${companyName},Contact:${companyConatct},email:${companyEmail},establishment: ${establishment},CIN:${CIN} DocRef:${docRef.id}`);
       navigate("/Home")
     }

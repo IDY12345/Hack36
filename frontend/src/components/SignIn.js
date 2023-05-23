@@ -87,6 +87,7 @@ function Login({setIsAuth,isAuth}) {
     const db = getFirestore(app);
     const provider = new ethers.providers.Web3Provider(window.ethereum)
     const signer = provider.getSigner()
+    
 
     const message = "You agree to login with your mask "
 
