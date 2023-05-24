@@ -2,7 +2,6 @@ import React from 'react'
 import { BrowserRouter as Router, Link } from 'react-router-dom'
 import './Navbar.css'
 import AnimatedRoutes from '../AnimatedRoutes'
-import { ConnectButton } from "web3uikit"
 
 function Navbar({ setIsAuth, isAuth,setNavbar,navbar }) {
 

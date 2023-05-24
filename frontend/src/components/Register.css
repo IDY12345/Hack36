@@ -13,6 +13,11 @@
     margin-bottom: 105px;
 }
 
+.Register-transparent.active
+{
+    display: none;
+}
+
 
 .Register-Inner {
     text-align: center;

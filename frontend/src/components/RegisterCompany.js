@@ -6,18 +6,18 @@ import React, { useState, useEffect } from 'react'
 //   listAll,
 //   list,
 // } from "firebase/storage";
+import axios from 'axios'
 import { ethers } from "ethers"
 import { app } from "../firebase.js";
 // import { v4 } from "uuid";
 import './Register.css';
-import { addDoc, collection, getFirestore, setDoc, doc } from "firebase/firestore";
+import { addDoc, collection, getFirestore,setDoc ,doc, getDocs} from "firebase/firestore";
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios'
-function RegisterCompany({ isAuth }) {
+import { response } from 'express';
+function RegisterCompany({isAuth,userRegistered,setUserRegistered}) {
   const provider = new ethers.providers.Web3Provider(window.ethereum)
   const signer = provider.getSigner()
-
   const wallet_address = signer.getAddress();
   // const wall=w_a;
   const db = getFirestore(app)
@@ -36,15 +36,14 @@ function RegisterCompany({ isAuth }) {
   const [error, setError] = useState(false)
   const RegisterCompanyRef = collection(db, "Register Company")
   const [errorName, setErrorName] = useState(false)
-  const [sinVerified, setCinVerified] = useState(false)
   let navigate = useNavigate()
 
   useEffect(() => {
     if (!isAuth) {
       navigate("/SignIn")
     }
-  }, [])
-
+  },[])
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     const accounts = await provider.listAccounts();
@@ -74,7 +73,7 @@ function RegisterCompany({ isAuth }) {
         window.alert("Entered CIN ID is Invalid")
       }
       else {
-        if (companyName.length === 0 && establishment.length === 0 && companyEmail.length === 0 && companyConatct.length === 0 && CIN.length === 0 && name.length === 0 && DOB.length === 0 && contact.length === 0 && email.length === 0 && webLink.length === 0 && twitter.length === 0 && linkedin.length === 0) {
+        if (companyName.length === 0 && establishment.length === 0 && companyEmail.length === 0 && companyConatct.length === 0 && CIN.length === 0 && name.length === 0 && DOB.length === 0 && contact.length === 0 && email.length === 0 && webLink.length === 0 && twitter.length === 0 && linkedin.length === 0 ) {
           setError(true);
         }
         window.alert("Success")
@@ -86,16 +85,19 @@ function RegisterCompany({ isAuth }) {
     if (companyName && establishment && companyEmail && companyConatct && CIN && name && DOB && contact && email && webLink && twitter && linkedin) {
       const docRef = await addDoc(RegisterCompanyRef, { companyName, companyEmail, companyConatct, establishment, name, contact, email, DOB, account1, date, webLink, linkedin, twitter })
       console.log(`Company Name:${companyName},Contact:${companyConatct},email:${companyEmail},establishment: ${establishment},CIN:${CIN} DocRef:${docRef.id}`);
+      setUserRegistered(true);
       navigate("/Home")
     }
-  }
+  } 
+
   return (
     <motion.div className='Register' animate={{ opacity: 1 }} initial={{ opacity: 0 }} exit={{ opacity: 0 }} transition={{ duration: 1 }}>
+      {!userRegistered?(
       <form onSubmit={handleSubmit}>
         <br></br>
         <br></br>
         <br></br>
-        <div className='Register-transparent'>
+        <div className={'Register-transparent'}>
           <div className='Register-absolute'>
             <br></br>
             <div className='Register-Company-Title'>
@@ -198,6 +200,7 @@ function RegisterCompany({ isAuth }) {
 
         </div>
       </form>
+      ):(<><h1>You Have Already Registered Your Company</h1></>)}
     </motion.div>
   )
 }

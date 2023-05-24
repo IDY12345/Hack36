@@ -5,6 +5,9 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { collection, query, where, onSnapshot } from "firebase/firestore";
 import { firestore } from "../firebase"
+import {app} from "../firebase"
+import './Register.css';
+import { addDoc,setDoc ,doc, getDocs} from "firebase/firestore";
 import { useNavigate } from 'react-router-dom';
 import Footer from './Footer'
 
@@ -61,26 +64,33 @@ import Footer from './Footer'
 
 
 
-function Login({ setIsAuth, isAuth }) {
+function Login({ setIsAuth, isAuth,setUserRegistered}) {
+    const [userList, setUserList] = useState([])
+
+    const db = getFirestore(app);
+    const RegisterCompanyRef = collection(db, "Register Company")
 
     useEffect(() => {
         if (isAuth) {
             navigate("/Home")
         }
+
+        const RegisteredCompanies=async()=>
+        {
+          const data=await getDocs(RegisterCompanyRef);
+          setUserList(data.docs.map((doc)=>(
+          {
+            ...doc.data(),id:doc.id
+          })))
+        }
+        RegisteredCompanies();
+    
+         
     }, [])
 
-    const firebaseConfig = {
-        apiKey: "AIzaSyBU4EKHBp5L7GTOl7eCDVqMYed_ZMA99QA",
-        authDomain: "hack36-83483.firebaseapp.com",
-        projectId: "hack36-83483",
-        storageBucket: "hack36-83483.appspot.com",
-        messagingSenderId: "568739059463",
-        appId: "1:568739059463:web:cf5878aa066dd2fd2517a2",
-        measurementId: "G-843SRHH96X"
-    };
-    const app = initializeApp(firebaseConfig);
 
-    const db = getFirestore(app);
+
+    
     const provider = new ethers.providers.Web3Provider(window.ethereum)
     const signer = provider.getSigner()
     
@@ -112,8 +122,22 @@ function Login({ setIsAuth, isAuth }) {
                         localStorage.setItem("isAuth", true);
                         setIsAuth(true);
                         console.log(isAuth)
-                        navigate("/Register")
+
+                        userList.map((user1)=>
+                        {
+                          if(user1.account1===wallet_address)
+                          {
+                            navigate("/Home")
+                            console.log(true)
+                            setUserRegistered(true)
+                          }
+                          else
+                          {
+                            navigate("/Register")
+                          }
+                        })
                         window.alert("Logged In")
+                        // navigate("/Register")
                         console.log(wallet_address)
                         return wallet_address
                     }

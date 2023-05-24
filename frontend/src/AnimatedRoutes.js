@@ -17,16 +17,16 @@ import EditProfile from "./components/EditProfile";
 import Founders from "./components/Founders";
 import BuyPanel from "./components/BuyPanel";
 function AnimatedRoutes({ setIsAuth, isAuth,setNavbar,navbar }) {
-  // const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"))
+  const [userRegistered, setUserRegistered] = useState(false)
   const location = useLocation();
   return (
     <AnimatePresence>
       <Routes location={location} key={location.pathname}>
         <Route path="/Home" element={<Home isAuth={isAuth} />} />
         <Route path="/SignUp" element={<SignUp isAuth={isAuth} />} />
-        <Route path="/SignIn" element={<Login setIsAuth={setIsAuth} isAuth={isAuth} />} />
+        <Route path="/SignIn" element={<Login setIsAuth={setIsAuth} isAuth={isAuth} setUserRegistered={setUserRegistered}  />} />
         <Route path="/" element={<About isAuth={isAuth} />} />
-        <Route path="/Register" element={<RegisterCompany isAuth={isAuth} />} />
+        <Route path="/Register" element={<RegisterCompany isAuth={isAuth} userRegistered={userRegistered} setUserRegistered={setUserRegistered} />} />
         <Route path="/Offset" element={<Offset isAuth={isAuth} />} />
         <Route path="/CarbonExchange" element={<CarbonExchange isAuth={isAuth} />} />
         <Route path="/OffsetBuy" element={<OffsetDescription isAuth={isAuth} />} />
