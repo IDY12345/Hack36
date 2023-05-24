@@ -25,30 +25,31 @@ function OffsetDescription() {
               7770012715
             </div>
             <div className='Company-Panel2'>
+
+              <div className='VideoChatIcon'>
+                <i class="fas fa-comment-dots"></i>
+              </div></div>
+            <div className='Company-Panel2'>
               <div className='VideoChatIcon'>
                 <Link to="/VideoChat">
                   <i class="fa-solid fa-video"></i>
                 </Link>
-              </div></div>
-            <div className='Company-Panel2'>
-              <div className='VideoChatIcon'>
-                <i class="fas fa-comment-dots"></i>
               </div>
             </div>
           </div>
           <div className='Description-Flex'>
             <div className='Product-Image'></div>
             <div className='Product-Description-Description'>
-            <p className='Product-Name-Description'>
-              Product Name
-            </p>
-            <p className='Description-Description'>Description</p>
-            <p className='Cost-Description'>Cost = 10 Eth</p>
-            <button className='Buy-Now-Description'>Buy Now</button>
+              <p className='Product-Name-Description'>
+                Product Name
+              </p>
+              <p className='Description-Description'>Description</p>
+              <p className='Cost-Description'>Cost = 10 Eth</p>
+              <button className='Buy-Now-Description'>Buy Now</button>
             </div>
-            
+
           </div>
-          
+
         </div>
         <button onClick={DateFunc}>Date</button>
       </div>
