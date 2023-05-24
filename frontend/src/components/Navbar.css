@@ -263,7 +263,8 @@
     cursor: pointer;
     color: #75975e;
     font-weight: 500;
-    height: 15px;
+    height: 35px;
+    margin-left: 20px;
 }
 
 .Profile-Content Link:hover {

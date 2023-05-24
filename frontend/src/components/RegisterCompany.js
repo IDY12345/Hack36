@@ -14,7 +14,7 @@ import { addDoc, collection, getFirestore, setDoc, doc } from "firebase/firestor
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
-function RegisterCompany({ isAuth }) {
+function RegisterCompany({ isAuth , userRegistered , setUserRegistered}) {
   const provider = new ethers.providers.Web3Provider(window.ethereum)
   const signer = provider.getSigner()
 
@@ -86,11 +86,13 @@ function RegisterCompany({ isAuth }) {
     if (companyName && establishment && companyEmail && companyConatct && CIN && name && DOB && contact && email && webLink && twitter && linkedin) {
       const docRef = await addDoc(RegisterCompanyRef, { companyName, companyEmail, companyConatct, establishment, name, contact, email, DOB, account1, date, webLink, linkedin, twitter })
       console.log(`Company Name:${companyName},Contact:${companyConatct},email:${companyEmail},establishment: ${establishment},CIN:${CIN} DocRef:${docRef.id}`);
+      setUserRegistered(true)
       navigate("/Home")
     }
   }
   return (
     <motion.div className='Register' animate={{ opacity: 1 }} initial={{ opacity: 0 }} exit={{ opacity: 0 }} transition={{ duration: 1 }}>
+      {!userRegistered?(
       <form onSubmit={handleSubmit}>
         <br></br>
         <br></br>
@@ -198,6 +200,7 @@ function RegisterCompany({ isAuth }) {
 
         </div>
       </form>
+      ):(<><h1>You Have Already Registered Your Company</h1></>)}
     </motion.div>
   )
 }
