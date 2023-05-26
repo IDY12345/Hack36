@@ -150,7 +150,9 @@ function Login({ setIsAuth, isAuth,setUserRegistered}) {
     return (
         <div>
             <div className='Login-meta'>
+                <div className='Login-div'>
                 <button onClick={handleLogin} className='Login-button'>Login with wallet</button>
+                </div>
             </div>
         </div>
     )

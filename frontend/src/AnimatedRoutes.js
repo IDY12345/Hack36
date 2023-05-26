@@ -17,8 +17,8 @@ import EditProfile from "./components/EditProfile";
 import Founders from "./components/Founders";
 import BuyPanel from "./components/BuyPanel";
 import UpdateComponent from "./components/UpdateComponent";
-function AnimatedRoutes({ setIsAuth, isAuth,setNavbar,navbar }) {
-  const [userRegistered, setUserRegistered] = useState(false)
+import Modal from "./components/Modal";
+function AnimatedRoutes({ setIsAuth, isAuth,setNavbar,navbar ,userRegistered,setUserRegistered}) {
   const location = useLocation();
   return (
     <AnimatePresence>
@@ -39,6 +39,7 @@ function AnimatedRoutes({ setIsAuth, isAuth,setNavbar,navbar }) {
         <Route path="/Founders" element={<Founders />} />
         <Route path="/Buypanel" element={<BuyPanel /> } />
         <Route path="/UpdateComponent" element={<UpdateComponent /> } />
+        <Route path="/Modal" element={<Modal />} />
       </Routes>
     </AnimatePresence>
   )

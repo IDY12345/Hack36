@@ -44,22 +44,23 @@ function Offset({isAuth}) {
       <br></br>
       <br></br>
       <form onSubmit={handleSubmit} className='Dewang'>
+        <br></br>
+        <br></br>
         <h2 className='Green'>Green Organization Registration</h2>
-
-            <div className='Offset-info'>
-              <div>
+              <div className='Offset-info'>
+                <h2>Company Name</h2>
                 <input type='text' placeholder='Company Name' required className='Offset-Name' onChange={(event) => {
                   setCompanyName(event.target.value)
                 }} />
               </div>
-              <div>
+              <div className='Offset-info'>
+                <h2>Product Name</h2>
                 <input type='text' placeholder='Product Name' required className='Offset-Name' onChange={(event) => {
                   setProductName(event.target.value)
                 }} />
               </div>
-
-            </div>
             <div className='Offset-info'>
+              <h2>Product Description</h2>
               <textarea placeholder='Product Description' required className='Offset-Name1' onChange={(event) => {
                 setDescription(event.target.value)
               }} />
