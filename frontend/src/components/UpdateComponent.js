@@ -12,7 +12,6 @@ function UpdateComponent() {
     const [error, setError] = useState(false)
     const db = getFirestore(app);
     const updateRef = collection(db, "Update")
-
     const handleOffset = async (e) => {
         const date = new Date()
         e.preventDefault()
@@ -22,11 +21,13 @@ function UpdateComponent() {
 
         if (last && now) {
             const docRef1 = await addDoc(updateRef, { last, now, date })
+            navigate("/")
+            window.alert("You have Updated the Carbon Emission for this month")
             console.log(last,now,updated)
         }
     }
   return (
-    <form>
+    <form onSubmit={handleOffset}>
     <div className='Carbon-Credits-Update'>
         <h2 className='CCU'>Carbon Credits Update</h2>
         <div className='Input-Flex'>
@@ -52,6 +53,7 @@ function UpdateComponent() {
             
         </div>
         <button className='Update-btn'>Update</button>
+        <button>Date</button>
     </div>
     </form>
   )

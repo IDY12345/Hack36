@@ -4,7 +4,7 @@ import './Navbar.css'
 import AnimatedRoutes from '../AnimatedRoutes'
 import { ConnectButton } from "web3uikit"
 
-function Navbar({ setIsAuth, isAuth,setNavbar,navbar }) {
+function Navbar({ setIsAuth, isAuth,setNavbar,navbar,userRegistered,setUserRegistered }) {
 
   const signUserOut = () => {
     localStorage.clear();
@@ -52,7 +52,7 @@ function Navbar({ setIsAuth, isAuth,setNavbar,navbar }) {
                         </button>
 
                         <div className="Services-Content">
-                          <Link to="/Register"><button className="Service1">Register Company</button></Link>
+                          <Link to={userRegistered?"/Modal":"/Register"}><button className="Service1">Register Company</button></Link>
                           <Link to="/Offset"><button className="Service2">Green Organisation Registration</button></Link>
                         </div>
                       </div>
@@ -92,7 +92,7 @@ function Navbar({ setIsAuth, isAuth,setNavbar,navbar }) {
             </div>
           </div>):(<div></div>)}
         </nav>
-        <AnimatedRoutes setIsAuth={setIsAuth} isAuth={isAuth} setNavbar={setNavbar} navbar={navbar} />
+        <AnimatedRoutes setIsAuth={setIsAuth} isAuth={isAuth} setNavbar={setNavbar} navbar={navbar} userRegistered={userRegistered} setUserRegistered={setUserRegistered} />
       </Router>
     </div>
   )

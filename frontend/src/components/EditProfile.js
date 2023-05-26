@@ -24,8 +24,6 @@ function EditProfile({isAuth}) {
           navigate("/SignIn")
       }
 
-
-
       const getPosts = async () => {
           const data = await getDocs(docRef);
           setPostList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
@@ -42,7 +40,6 @@ function EditProfile({isAuth}) {
   const account1 = accounts[0]
 
   return (
-    <form>
       <div className= 'Profile-Outer1'  >
           <div className='Profile-Inner1'>
               <div className='Panel-Flex1'>
@@ -52,6 +49,12 @@ function EditProfile({isAuth}) {
                       </div>
                       <h3 className='Establishment-Date1'>Since 1999</h3>
                       <button className='Edit-Button-Profile1'>Save Changes</button>
+                      <div className='Update-Carbon-Emission-Div'>
+                      <h3 className='Update-Carbon-Emission'>Please Update Your Carbon Emssion</h3>
+                      </div>
+                      <Link to="/UpdateComponent">
+                      <button className='Edit-Button-Profile1'>Update</button>
+                      </Link>
                   </div>
                   <div className='Profile-Pro-Flex1'>
                   <div className='Profile-Name1'>
@@ -81,15 +84,10 @@ function EditProfile({isAuth}) {
                       </div>
                   </div>
                   </div>
-                  <UpdateComponent />
                   </div>
-                  
-              </div>
-              
+                </div>
           </div>
-          
       </div>
-      </form>
 )}
 
 export default EditProfile

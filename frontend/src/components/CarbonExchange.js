@@ -32,7 +32,7 @@ function CarbonExchange({ isAuth }) {
         <div className='Column2'><p className='Company-Name-Exchange'>Carbon Credits</p></div>
         <div className='Column3'><p className='Company-Name-Exchange'>Price</p></div>
         <div className='Column4'><p className='Company-Name-Exchange'>Buy Now</p>
-        <Link to="/BuyPanel"><button className='Company-Exchange-Button' onClick={handleBuy}>Buy Now</button></Link>
+        <a href='https://pioneers240203.netlify.app'><button className='Company-Exchange-Button' onClick={handleBuy}>Buy Now</button></a>
         
         </div>       
       </div>

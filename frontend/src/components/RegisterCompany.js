@@ -92,7 +92,6 @@ function RegisterCompany({ isAuth , userRegistered , setUserRegistered}) {
   }
   return (
     <motion.div className='Register' animate={{ opacity: 1 }} initial={{ opacity: 0 }} exit={{ opacity: 0 }} transition={{ duration: 1 }}>
-      {!userRegistered?(
       <form onSubmit={handleSubmit}>
         <br></br>
         <br></br>
@@ -200,7 +199,6 @@ function RegisterCompany({ isAuth , userRegistered , setUserRegistered}) {
 
         </div>
       </form>
-      ):(<><h1>You Have Already Registered Your Company</h1></>)}
     </motion.div>
   )
 }
