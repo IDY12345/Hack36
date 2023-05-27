@@ -39,7 +39,6 @@ the right to emit one tonne of carbon dioxide
 or the equivalent amount of different
 greenhouse gas.</p>
       </div>
-      <Graph />
     </div>
   )
 }

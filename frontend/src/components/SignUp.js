@@ -13,6 +13,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { initializeApp } from "firebase/app";
 import { getFirestore, doc, setDoc, addDoc } from "firebase/firestore";
 import { ethers } from 'ethers';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import './Sign.css'
 
 const firebaseConfig = {
   apiKey: "AIzaSyBU4EKHBp5L7GTOl7eCDVqMYed_ZMA99QA",
@@ -91,22 +93,17 @@ export default function SignUp({isAuth}) {
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-            <LockOutlinedIcon />
+          <Avatar sx={{ m: 1, bgcolor: 'primary.main' }}>
+           <AccountCircleIcon />
           </Avatar>
-          <Typography component="h1" variant="h5">
+          <Typography component="h1" variant="h4">
             Sign up
           </Typography>
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-            >
-              Sign Up using metamask
-            </Button>
-            <Grid container justifyContent="flex-end">
+              <button className='Sign-Up-Metamask'>
+              Sign Up using Metamask
+              </button>
+            <Grid container justifyContent="flex-end" className='Already'>
               <Grid item>
                 <Link to="/SignIn" variant="body2">
                   Already have an account? Sign in

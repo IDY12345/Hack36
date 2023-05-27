@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { getDocs, doc, collection, getFirestore } from 'firebase/firestore'
+import { getDocs, doc, collection, getFirestore, getDoc } from 'firebase/firestore'
 import { app } from '../firebase';
 import { ethers } from "ethers"
 import { Link, useNavigate } from 'react-router-dom';
@@ -13,17 +13,16 @@ function Profile({ isAuth }) {
     const [updated, setUpdated] = useState(0)
     const db = getFirestore(app);
     const docRef = collection(db, "Register Company");
-
     const updateRef = collection(db, "Update")
     const [error, setError] = useState(false)
     const navigate = useNavigate()
+    let account_address="";
+    let id1=""
     useEffect(() => {
 
         if (!isAuth) {
             navigate("/SignIn")
         }
-
-
 
         const getPosts = async () => {
             const data = await getDocs(docRef);
@@ -32,8 +31,24 @@ function Profile({ isAuth }) {
 
         getPosts();
 
+        // const usersRegFun=async()=>
+        // {
+        //     const account=await provider.listAccounts()
+        //     account=accounts[0]
+        //     postList.map((user1)=>
+        //     {
+        //         if(user1.account1===account)
+        //         {
+        //             id1=user1.id;
+        //         }
+        //     })
+        // }
+        // usersRegFun();
 
+        // console.log(docSnap.data())
     })
+
+    
 
     const handleOffset = async (e) => {
         const date = new Date()
@@ -47,6 +62,12 @@ function Profile({ isAuth }) {
             navigate("/Home")
         }
     }
+
+    // const docRef1=doc(db,"Register Company",id1)
+
+    // const docSnap=getDoc(docRef1)
+
+   
     const [sell, setSell] = useState(false)
 
     const provider = new ethers.providers.Web3Provider(window.ethereum)
@@ -60,6 +81,7 @@ function Profile({ isAuth }) {
     //         console.log(post.account1)
     //     }
     //   })
+
     return (
         <div className={sell ? 'Profile-Outer active' : 'Profile-Outer'} >
             <div className='Profile-Inner'>
@@ -90,7 +112,7 @@ function Profile({ isAuth }) {
                             <p className='BCC'>
                                 Sell Carbon Credits
                             </p>
-                            <button className='CN-btn'>Sell</button>
+                           <Link to="/Sell"><button className='CN-btn'>Sell</button></Link> 
                         </div>
                     </div>
                     <div className='Profile-Pro-Flex'>
@@ -101,7 +123,7 @@ function Profile({ isAuth }) {
                     <div className='Basic'>
                         <h2 className='Basic-Detail'>Basics : </h2>
                         <p className='Name-of-the-company'>Name of the Company</p>
-                        <div className='Name-Box'>Name Of The Company</div>
+                        <div className='Name-Box'>Name of the Company</div>
                         <p className='Name-of-the-company'>Owner of the Company</p>
                         <div className='Name-Box'>Owner Of The Company</div>
                         <p className='Name-of-the-company'>E-Mail address</p>
@@ -120,7 +142,6 @@ function Profile({ isAuth }) {
                         <div className='Name-Box'>Profile Username</div>
                         </div>
                     </div>
-                    
                     </div>
                     </div>
                 </div>

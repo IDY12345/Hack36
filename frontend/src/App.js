@@ -13,13 +13,14 @@ export default function App() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"))
   const [userRegistered, setUserRegistered] = useState(false)
   const [navbar, setNavbar] = useState(localStorage.getItem("navbar"))
+  const [isRegistered, setIsRegistered] = useState(window.localStorage.getItem("isRegistered"))
   return (
 
 
     <div>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'></link>
-      <Navbar setIsAuth={setIsAuth} isAuth={isAuth} setNavbar={setNavbar} navbar={navbar} userRegistered={userRegistered} setUserRegistered={setUserRegistered} />
+      <Navbar setIsAuth={setIsAuth} isAuth={isAuth} setNavbar={setNavbar} navbar={navbar} userRegistered={userRegistered} setUserRegistered={setUserRegistered} isRegistered={isRegistered} setIsRegistered={setIsRegistered} />
       <Footer />
     </div>
   )

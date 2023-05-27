@@ -5,11 +5,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { collection, query, where, onSnapshot } from "firebase/firestore";
 import { firestore } from "../firebase"
-import {app} from "../firebase"
+import { app } from "../firebase"
 import './Register.css';
-import { addDoc,setDoc ,doc, getDocs} from "firebase/firestore";
+import { addDoc, setDoc, doc, getDocs } from "firebase/firestore";
 import { useNavigate } from 'react-router-dom';
 import Footer from './Footer'
+import { ConnectButton } from "web3uikit"
 
 // const firebaseConfig = {
 //     apiKey: "AIzaSyBU4EKHBp5L7GTOl7eCDVqMYed_ZMA99QA",
@@ -64,9 +65,10 @@ import Footer from './Footer'
 
 
 
-function Login({ setIsAuth, isAuth,setUserRegistered}) {
+function Login({ setIsAuth, isAuth, setUserRegistered, userRegistered,isRegistered,setIsRegistered }) {
     const [userList, setUserList] = useState([])
-
+    const [theMistake, setTheMistake] = useState(false)
+    const [connect, setConnect] = useState(false)
     const db = getFirestore(app);
     const RegisterCompanyRef = collection(db, "Register Company")
 
@@ -75,31 +77,53 @@ function Login({ setIsAuth, isAuth,setUserRegistered}) {
             navigate("/Home")
         }
 
-        const RegisteredCompanies=async()=>
-        {
-          const data=await getDocs(RegisterCompanyRef);
-          setUserList(data.docs.map((doc)=>(
-          {
-            ...doc.data(),id:doc.id
-          })))
+        connectfun();
+
+        const RegisteredCompanies = async () => {
+            const data = await getDocs(RegisterCompanyRef);
+            setUserList(data.docs.map((doc) => (
+                {
+                    ...doc.data(), id: doc.id
+                })))
         }
         RegisteredCompanies();
+
+        window.addEventListener('beforeunload', handleBeforeUnload);
+
+        return () => {
+        
+          window.removeEventListener('beforeunload', handleBeforeUnload);
+        };
     
-         
+
     }, [])
 
-
-
-    
     const provider = new ethers.providers.Web3Provider(window.ethereum)
     const signer = provider.getSigner()
-    
+
 
     const message = "You agree to login with your mask "
 
 
     const navigate = useNavigate()
+    const connectfun = async () => {
+        const accounts = await provider.listAccounts();
+        if (accounts.length !== 0) {
+            console.log(accounts)
+            setConnect(true)
+        }
+        else {
+            setConnect(false);
+          }
+      
+    }
+
+    const handleBeforeUnload = () => {
+        window.ethereum.disconnect();
+      };    
+
     async function handleLogin() {
+
         if (!window.ethereum) {
             window.alert("Please add a wallet")
             return
@@ -120,6 +144,7 @@ function Login({ setIsAuth, isAuth,setUserRegistered}) {
                     const db_address = ethers.utils.verifyMessage(message, user[0].signature)
                     if (db_address === wallet_address) {
                         localStorage.setItem("isAuth", true);
+                        console.log("wallet address : ", wallet_address)
                         setIsAuth(true);
                         console.log(isAuth)
 
@@ -130,14 +155,17 @@ function Login({ setIsAuth, isAuth,setUserRegistered}) {
                             navigate("/Home")
                             console.log(true)
                             setUserRegistered(true)
+                            localStorage.setItem("isRegistered", true);
+                            setIsRegistered(true)
                           }
                           else
                           {
                             navigate("/Register")
                           }
+                          return wallet_address
                         })
+
                         window.alert("Logged In")
-                        // navigate("/Register")
                         console.log(wallet_address)
                         return wallet_address
                     }
@@ -151,7 +179,13 @@ function Login({ setIsAuth, isAuth,setUserRegistered}) {
         <div>
             <div className='Login-meta'>
                 <div className='Login-div'>
-                <button onClick={handleLogin} className='Login-button'>Login with wallet</button>
+                    {!connect ? (
+                        <div className='Connect-Button'>
+                            <ConnectButton className='CB'/>
+                        </div>) : (
+                        <button onClick={handleLogin} className='Login-button'>Login with wallet</button>
+                    )}
+
                 </div>
             </div>
         </div>
