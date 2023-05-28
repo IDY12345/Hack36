@@ -23,39 +23,35 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.Login-button:hover{
+.Login-button:hover {
     opacity: 100%;
 }
 
-.Login-div
-{
+.Login-div {
     border-radius: 15px;
     width: 50%;
     height: 800px;
     border: solid black;
-    background-image: url("C:\Users\HP\OneDrive\Desktop\Web3athon\Hack36\frontend\public\Assets\Climate1.jpg");
+    /* background-image: url("C:\Users\HP\OneDrive\Desktop\Web3athon\Hack36\frontend\public\Assets\Climate1.jpg"); */
     background-size: cover;
     text-align: center;
 }
 
-.Connect-Button
-{
+.Connect-Button {
     width: 100%;
     margin-left: 40%;
     margin-top: 50%;
 }
 
-.Sign-Up-Metamask
-{
+.Sign-Up-Metamask {
     width: 400px;
     height: 32px;
     font-size: 24px;
     background-color: #7bbfd6;
-    border-radius:10px;
+    border-radius: 10px;
 }
 
-.Already
-{
+.Already {
     margin-top: 15%;
     font-size: 25px;
 }
