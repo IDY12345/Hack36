@@ -3,59 +3,68 @@ import './Footer.css'
 
 function Footer() {
   return (
-    <div className='Footer'>
-       <div class="footer">
-   <div class="contain">
-   <div class="col">
-     <h2>Company</h2>
-    <ul>
-       <li>About us</li>
-       <li> Our Mission</li>
-       <li>Services</li>
-     </ul>
-   </div>
-   <div class="col">
-     <h2>Products</h2>
-     <ul>
-       <li>SEO</li>
-       <li>Content Development</li>
-       <li>Digital Marketing</li>
-     </ul>
-   </div>
-   <div class="col">
-     <h2>Team</h2>
-     <ul>
-       <li> frontend Team</li>
-       <li> backend Team</li>
-       <li>Content Team</li>
-     </ul>
-   </div>
-   <div class="col">
-     <h2>Resources</h2>
-     <ul>
-       <li>Webmail</li>
-       <li>Web templates</li>
-       <li>Email templates</li>
-     </ul>
-   </div>
-   <div class="col">
-     <h2>Contact</h2>
-     <ul>
-      <li>+91 9853XXXXXXX</li>
-       <li>033 2464 XXXX</li>
-       <li>abc@gmail.com</li>
-     </ul>
-  </div>
-   <div class="col address">
-     <h2>Address </h2>
-     <ul>
-     <li> akurdi,pune</li>
-  </ul>
-   </div>
- <div class="clearfix"></div>
- </div>
- </div>
-    </div>
+
+    <footer class="footer-distributed">
+    
+          <div class="footer-left">
+    
+            <h3>Company<span>logo</span></h3>
+    
+            <p class="footer-links">
+              <a href="#" class="link-1">HOME</a>
+              
+              <a href="#">INFO</a>
+            
+              <a href="#">ABOUT</a>
+            
+              <a href="#">TEAM</a>
+              
+              <a href="#"></a>
+              
+              <a href="#">CONTACT</a>
+            </p>
+    
+            <p class="footer-company-name">Company Name © 2023</p>
+          </div>
+    
+          <div class="footer-center">
+    
+            <div>
+              <i class="fa fa-map-marker"></i>
+              <p><span>DYPIEMR, Akurdi 423422</span> Pune,Maharashtra</p>
+            </div>
+    
+            <div>
+              <i class="fa fa-phone"></i>
+              <p>+91 989353532534</p>
+            </div>
+    
+            <div>
+              <i class="fa fa-envelope"></i>
+              <p><a href="mailto:support@company.com">abc@company.com</a></p>
+            </div>
+    
+          </div>
+    
+          <div class="footer-right">
+    
+            <p class="footer-company-about">
+              <span>About the company</span>
+              Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+            </p>
+    
+            <div class="footer-icons">
+    
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+              <a href="#"><i class="fa fa-github"></i></a>
+    
+            </div>
+    
+          </div>
+    
+        </footer>
   )
 }
 
