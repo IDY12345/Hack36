@@ -26,7 +26,7 @@
     width: 100%;
     height: 10%;
     color: black;
-    border-bottom: solid 2px black;
+    border-bottom: solid 4px #C1BBBB;
 }
 
 .Basic {
@@ -181,7 +181,7 @@
 
 .Owner-Name-Details
 {
-    border-top: solid 2px black;
+    border-top: solid 4px #C1BBBB;
     margin-top: 2%;
 }
 
@@ -205,6 +205,11 @@
 
 .Social-Media-Company
 {
-    border-top: solid 2px black;
+    border-top: solid 4px #C1BBBB;
     margin-top: 2%;
+}
+
+.Pop-Up
+{
+    height: 500px;
 }

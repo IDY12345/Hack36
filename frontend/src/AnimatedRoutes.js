@@ -17,17 +17,18 @@ import EditProfile from "./components/EditProfile";
 import Founders from "./components/Founders";
 import BuyPanel from "./components/BuyPanel";
 import UpdateComponent from "./components/UpdateComponent";
-function AnimatedRoutes({ setIsAuth, isAuth,setNavbar,navbar }) {
-  const [userRegistered, setUserRegistered] = useState(false)
+import Modal from "./components/Modal";
+import Sell from "./components/Sell";
+function AnimatedRoutes({ setIsAuth, isAuth,setNavbar,navbar ,userRegistered,setUserRegistered,isRegistered,setIsRegistered}) {
   const location = useLocation();
   return (
     <AnimatePresence>
       <Routes location={location} key={location.pathname}>
         <Route path="/Home" element={<Home isAuth={isAuth} />} />
         <Route path="/SignUp" element={<SignUp isAuth={isAuth} />} />
-        <Route path="/SignIn" element={<Login setIsAuth={setIsAuth} isAuth={isAuth} setUserRegistered={setUserRegistered}  />} />
+        <Route path="/SignIn" element={<Login setIsAuth={setIsAuth} isAuth={isAuth} setUserRegistered={setUserRegistered} userRegistered={userRegistered} isRegistered={isRegistered} setIsRegistered={setIsRegistered}  />} />
         <Route path="/" element={<About isAuth={isAuth} />} />
-        <Route path="/Register" element={<RegisterCompany isAuth={isAuth} userRegistered={userRegistered} setUserRegistered={setUserRegistered} />} />
+        <Route path="/Register" element={<RegisterCompany isAuth={isAuth} userRegistered={userRegistered} setUserRegistered={setUserRegistered} isRegistered={isRegistered}  setIsRegistered={setIsRegistered} />} />
         <Route path="/Offset" element={<Offset isAuth={isAuth} />} />
         <Route path="/CarbonExchange" element={<CarbonExchange isAuth={isAuth} />} />
         <Route path="/OffsetBuy" element={<OffsetDescription isAuth={isAuth} />} />
@@ -39,6 +40,8 @@ function AnimatedRoutes({ setIsAuth, isAuth,setNavbar,navbar }) {
         <Route path="/Founders" element={<Founders />} />
         <Route path="/Buypanel" element={<BuyPanel /> } />
         <Route path="/UpdateComponent" element={<UpdateComponent /> } />
+        <Route path="/Modal" element={<Modal />} />
+        <Route path="/Sell" element ={<Sell />} />
       </Routes>
     </AnimatePresence>
   )

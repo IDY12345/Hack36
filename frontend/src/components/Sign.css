@@ -3,17 +3,59 @@
     justify-content: center;
     display: flex;
     align-items: center;
-    height: 92vh;
+    height: 1000px;
     /* background-color: black; */
 }
 
 
 .Login-button {
-    width: 250px;
+    width: 300px;
     color: white;
-    height: 30px;
-    font-size: 20px;
-    background-color: #44924C;
+    height: 50px;
+    font-size: 28px;
+    background-color: black;
     border-radius: 10px;
     cursor: pointer;
+    margin-top: 50%;
+    border: solid 4px white;
+    opacity: 75%;
+    font-weight: 800;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Login-button:hover{
+    opacity: 100%;
+}
+
+.Login-div
+{
+    border-radius: 15px;
+    width: 50%;
+    height: 800px;
+    border: solid black;
+    background-image: url("C:\Users\HP\OneDrive\Desktop\Web3athon\Hack36\frontend\public\Assets\Climate1.jpg");
+    background-size: cover;
+    text-align: center;
+}
+
+.Connect-Button
+{
+    width: 100%;
+    margin-left: 40%;
+    margin-top: 50%;
+}
+
+.Sign-Up-Metamask
+{
+    width: 400px;
+    height: 32px;
+    font-size: 24px;
+    background-color: #7bbfd6;
+    border-radius:10px;
+}
+
+.Already
+{
+    margin-top: 15%;
+    font-size: 25px;
 }
