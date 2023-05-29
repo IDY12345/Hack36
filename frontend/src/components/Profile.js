@@ -176,23 +176,23 @@ function Profile({ isAuth }) {
                     <div className='Basic'>
                         <h2 className='Basic-Detail'>Basics : </h2>
                         <p className='Name-of-the-company'>Name of the Company</p>
-                        <div className='Name-Box'>{companyName}</div>
+                        <div className='Name-Box'><p className='Company-Paragraph'>{companyName}</p></div>
                         <p className='Name-of-the-company'>Owner of the Company</p>
-                        <div className='Name-Box'>{name}</div>
+                        <div className='Name-Box'><p className='Company-Paragraph'>{name}</p></div>
                         <p className='Name-of-the-company'>E-Mail address</p>
-                        <div className='Name-Box'>{email}</div>
+                        <div className='Name-Box'><p className='Company-Paragraph'>{email}</p></div>
                         <p className='Name-of-the-company'>Contact</p>
-                        <div className='Name-Box'>{contact}</div>
+                        <div className='Name-Box'><p className='Company-Paragraph'>{contact}</p></div>
                     </div>
                     <div className='Social-Links'>
                         <div className='Social-Links-Pro'>
                         <h2>Social-Panel</h2>
                         <p className='Name-of-the-company'>Website Link of the Company</p>
-                        <div className='Name-Box'>{web}</div>
+                        <div className='Name-Box'><p className='Company-Paragraph'>{web}</p></div>
                         <p className='Name-of-the-company'>Twitter Profile:</p>
-                        <div className='Name-Box'>{twitter}</div>
+                        <div className='Name-Box'><p className='Company-Paragraph'>{twitter}</p></div>
                         <p className='Name-of-the-company'>LinkedIn Profile:</p>
-                        <div className='Name-Box'>{linkedIn}</div>
+                        <div className='Name-Box'><p className='Company-Paragraph'>{linkedIn}</p></div>
                         </div>
                     </div>
                     </div>

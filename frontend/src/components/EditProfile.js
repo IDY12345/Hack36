@@ -12,6 +12,13 @@ function EditProfile({isAuth}) {
   const [last, setLast] = useState(0)
   const [first, setFirst] = useState(0)
   const [updated, setUpdated] = useState(0)
+  const [companyName, setcompanyName] = useState("")
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [contact, setContact] = useState("")
+  const [web, setWeb] = useState("")
+  const [twitter, setTwitter] = useState("")
+  const [linkedIn, setLinkedIn] = useState("")
   const db = getFirestore(app);
   const docRef = collection(db, "Register Company");
 
@@ -31,6 +38,28 @@ function EditProfile({isAuth}) {
 
       getPosts();
 
+      const Posting=async()=>
+      {
+          const accounts=await provider.listAccounts()
+         const account_address=accounts[0]
+      postList.map((posts)=>
+      {
+          const account=posts.account1
+          if(account===account_address)
+          {
+              console.log(posts.account1)
+              console.log("wallet_address : " ,account_address)
+              setcompanyName(posts.companyName)
+              setName(posts.name)
+              setEmail(posts.email)
+              setContact(posts.contact)
+              setWeb(posts.webLink)
+              setTwitter(posts.twitter)
+              setLinkedIn(posts.linkedin)
+          }
+      })
+  }
+  Posting();
 
   })
 
@@ -64,23 +93,23 @@ function EditProfile({isAuth}) {
                   <div className='Basic1'>
                       <h2 className='Basic-Detail1'>Basics : </h2>
                       <p className='Name-of-the-company1'>Name of the Company</p>
-                      <div className='Name-Box-11'>Name Of The Company</div>
+                      <div className='Name-Box-11'>{companyName}</div>
                       <p className='Name-of-the-company1'>Owner of the Company</p>
-                      <div className='Name-Box-11'>Owner Of The Company</div>
+                      <div className='Name-Box-11'>{name}</div>
                       <p className='Name-of-the-company1'>E-Mail address</p>
-                      <input className='Name-Box1' placeholder='xyz@123' />
+                      <input className='Name-Box1' placeholder={email} />
                       <p className='Name-of-the-company1'>Contact</p>
-                      <input className='Name-Box1' placeholder='952XXXXX23' />
+                      <input className='Name-Box1' placeholder={contact} />
                   </div>
                   <div className='Social-Links1'>
                       <div className='Social-Links-Pro1'>
                       <h2>Social-Panel</h2>
                       <p className='Name-of-the-company1'>Website Link of the Company</p>
-                      <input className='Name-Box1' placeholder='https://website.com' />
+                      <input className='Name-Box1' placeholder={web} />
                       <p className='Name-of-the-company1'>Twitter Profile:</p>
-                      <input className='Name-Box1' placeholder='Profile-Username' />
+                      <input className='Name-Box1' placeholder={twitter} />
                       <p className='Name-of-the-company1'>LinkedIn Profile:</p>
-                      <input className='Name-Box1' placeholder='Profile-Username' />
+                      <input className='Name-Box1' placeholder={linkedIn} />
                       </div>
                   </div>
                   </div>

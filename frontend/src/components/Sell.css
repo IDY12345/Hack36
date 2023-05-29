@@ -37,7 +37,12 @@
     border-right: solid 3px white;
     align-items: center;
     display: flex;
-    margin-left: 10px;
+    text-align: center;
+}
+
+.Sell-Company-Name-Paragraph
+{
+    text-align: center;
 }
 
 .BCC-Sell
