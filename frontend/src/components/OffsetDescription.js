@@ -21,8 +21,10 @@ function OffsetDescription() {
           <div className='Navigation-Panel'>
             <div className='Company-Panel'><p className='Company-Name-Panel'>Company Name</p></div>
             <div className='Company-Panel'>
+              <div className='Company-Name-Panel1'>
               ishaanyeole123@gmail.com
               7770012715
+              </div>
             </div>
             <div className='Company-Panel2'>
 

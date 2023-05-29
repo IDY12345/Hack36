@@ -3,7 +3,7 @@ import './Founders.css'
 function Founders() {
     return (
         <div className='Founder-Tree'>
-            <h1>Founders</h1>
+            <h1 className='Founders-Title'>Founders</h1>
             <div className='Founder-Outer'>
                 <div className='Founder-Box1'>
                     <div className='Founder-Info'>
@@ -48,7 +48,7 @@ function Founders() {
                     <div className='Founder-Info'>
                         <div className='Circle-Info'>
                         <div className='Circle1'>
-                            <img src='\Assets\Ishaan-photo.jpg' alt='' className='Founder-Image' />
+                            <img src='Assets\Samruddhi-Image.jpg' alt='' className='Founder-Image' />
                         </div>
                         <p className='Founder-Name'>Samruddhi Nimbalkar</p>
                         <div className='Designation-div'>
@@ -86,7 +86,7 @@ function Founders() {
                     <div className='Founder-Info'>
                         <div className='Circle-Info'>
                             <div className='Circle1'>
-                                <img src='\Assets\Ishaan-photo.jpg' alt='' className='Founder-Image' />
+                                <img src='\Assets\Dewang-Image.jpg' alt='' className='Founder-Image' />
                                 
                             </div>
                             <p className='Founder-Name'>Dewang Mhatre</p>

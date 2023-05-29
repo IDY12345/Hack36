@@ -1,61 +1,70 @@
 import React from 'react'
 import './Footer.css'
-
+import { Link } from 'react-router-dom'
 function Footer() {
   return (
-    <div className='Footer'>
-       <div class="footer">
-   <div class="contain">
-   <div class="col">
-     <h2>Company</h2>
-    <ul>
-       <li>About us</li>
-       <li> Our Mission</li>
-       <li>Services</li>
-     </ul>
-   </div>
-   <div class="col">
-     <h2>Products</h2>
-     <ul>
-       <li>SEO</li>
-       <li>Content Development</li>
-       <li>Digital Marketing</li>
-     </ul>
-   </div>
-   <div class="col">
-     <h2>Team</h2>
-     <ul>
-       <li> frontend Team</li>
-       <li> backend Team</li>
-       <li>Content Team</li>
-     </ul>
-   </div>
-   <div class="col">
-     <h2>Resources</h2>
-     <ul>
-       <li>Webmail</li>
-       <li>Web templates</li>
-       <li>Email templates</li>
-     </ul>
-   </div>
-   <div class="col">
-     <h2>Contact</h2>
-     <ul>
-      <li>+91 9853XXXXXXX</li>
-       <li>033 2464 XXXX</li>
-       <li>abc@gmail.com</li>
-     </ul>
-  </div>
-   <div class="col address">
-     <h2>Address </h2>
-     <ul>
-     <li> akurdi,pune</li>
-  </ul>
-   </div>
- <div class="clearfix"></div>
- </div>
- </div>
-    </div>
+
+    <footer class="footer-distributed">
+    
+          <div class="footer-left">
+    
+            <h3 className='Logo-Footer'><img src='Assets\logo3.png' alt='' width={100} height={100}/><span className='Pioneers-Footer'>PIONEERS</span></h3>
+    
+            <p class="footer-links">
+              <a href="Home" class="link-1">HOME</a>
+              
+              <a href="CarbonCredits">INFO</a>
+            
+             <a href="/">ABOUT</a>
+            
+              <a href="Founders">TEAM</a>
+              
+              <a href="#"></a>
+              
+              <a href="SignIn">LOGIN</a>
+            </p>
+    
+            <a href='/'><p class="footer-company-name">Pioneers © 2023</p></a>
+          </div>
+    
+          <div class="footer-center">
+    
+            <div>
+              <i class="fa fa-map-marker"></i>
+              <p><span>DYPIEMR, Akurdi 423422</span> Pune,Maharashtra</p>
+            </div>
+    
+            <div>
+              <i class="fa fa-phone"></i>
+              <p>+91 989353532534</p>
+            </div>
+    
+            <div>
+              <i class="fa fa-envelope"></i>
+              <p><a href="mailto:support@company.com">pioneers010323@gmail.com</a></p>
+            </div>
+    
+          </div>
+    
+          <div class="footer-right">
+    
+            <p class="footer-company-about">
+              <span>About the company</span>
+            <p className='Footer-Slogan'>The One Stop Destination For All Carbon Trades.</p>
+            </p>
+    
+            <div class="footer-icons">
+    
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    
+            </div>
+    
+          </div>
+    
+        </footer>
   )
 }
 

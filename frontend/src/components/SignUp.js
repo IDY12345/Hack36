@@ -13,6 +13,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { initializeApp } from "firebase/app";
 import { getFirestore, doc, setDoc, addDoc } from "firebase/firestore";
 import { ethers } from 'ethers';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import './Sign.css'
 
 const firebaseConfig = {
   apiKey: "AIzaSyBU4EKHBp5L7GTOl7eCDVqMYed_ZMA99QA",
@@ -72,6 +74,7 @@ export default function SignUp({isAuth}) {
       });
 
       await window.alert("Signed Up successfully")
+      window.location.pathname("/SignIn")
     } catch (error) {
       console.log(error)
       window.alert("Looks like wallet is not connected please connect your wallet")
@@ -80,43 +83,25 @@ export default function SignUp({isAuth}) {
   };
 
   return (
-    <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs">
-        <CssBaseline />
-        <Box
-          sx={{
-            marginTop: 8,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}
-        >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-            <LockOutlinedIcon />
-          </Avatar>
-          <Typography component="h1" variant="h5">
-            Sign up
-          </Typography>
-          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-            >
-              Sign Up using metamask
-            </Button>
-            <Grid container justifyContent="flex-end">
-              <Grid item>
-                <Link to="/SignIn" variant="body2">
+    <div className='Sign-Up-Page'>
+      <div className='Sign-Up-Page-Inner'>
+        <div className='ACI'>
+        <Avatar>
+          <AccountCircleIcon />
+        </Avatar>
+        </div>
+          <h3 className='Sign-Up-h3'>Sign Up</h3>
+          <form onSubmit={handleSubmit}>
+              <button className='Sign-Up-Metamask'>
+              Sign Up using Metamask
+              </button>
+          </form>
+              <div className='Already-Have-An-Account'>
+                <Link to="/SignIn">
                   Already have an account? Sign in
                 </Link>
-              </Grid>
-            </Grid>
-          </Box>
-        </Box>
-        <Copyright sx={{ mt: 5 }} />
-      </Container>
-    </ThemeProvider>
+                </div>
+        </div>
+    </div>
   );
 }

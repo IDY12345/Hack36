@@ -3,37 +3,90 @@
     justify-content: center;
     display: flex;
     align-items: center;
-    height: 92vh;
+    height: 1000px;
     /* background-color: black; */
 }
 
 
 .Login-button {
     width: 300px;
-    color: black;
+    color: white;
     height: 50px;
     font-size: 28px;
-    background-color: #97f81c;
+    background-color: black;
     border-radius: 10px;
     cursor: pointer;
-    margin-top: 40%;
+    margin-top: 50%;
     border: solid 4px white;
     opacity: 75%;
     font-weight: 800;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.Login-button:hover{
+.Login-button:hover {
     opacity: 100%;
 }
 
-.Login-div
-{
+.Login-div {
     border-radius: 15px;
     width: 50%;
-    height: 400px;
+    height: 800px;
     border: solid black;
-    background-image: url("C:\Users\HP\OneDrive\Desktop\Web3athon\Hack36\frontend\public\Assets\Blue-Earth.jpg");
+    background-image: url("C:\Users\HP\OneDrive\Desktop\Web3athon\Hack36\frontend\public\Assets\Climate1.jpg");
     background-size: cover;
     text-align: center;
+}
+
+.Connect-Button {
+    width: 100%;
+    margin-left: 40%;
+    margin-top: 50%;
+}
+
+.Sign-Up-Metamask {
+    width: 400px;
+    height: 32px;
+    font-size: 24px;
+    background-color: #7bbfd6;
+    border-radius: 10px;
+}
+
+.Already {
+    margin-top: 15%;
+    font-size: 25px;
+}
+
+.Sign-Up-Page
+{
+    background-color: #A7A7A7;
+    height: 600px;
+}
+
+.Sign-Up-Page-Inner
+{
+    position: absolute;
+    width: 40%;
+    height: 400px;
+    background-color: white;
+    margin-left: 30%;
+    margin-top: 7.5%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.Already-Have-An-Account
+{
+    margin-top: 50px;
+}
+
+.Sign-Up-h3
+{
+    font-size: 35px;
+}
+
+.ACI
+{
+    margin-top: 20px;
+    margin-left: 46.5%;
+    font-size: 30px;
 }

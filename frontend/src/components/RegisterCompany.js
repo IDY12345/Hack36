@@ -14,7 +14,7 @@ import { addDoc, collection, getFirestore, setDoc, doc } from "firebase/firestor
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
-function RegisterCompany({ isAuth , userRegistered , setUserRegistered}) {
+function RegisterCompany({ isAuth , userRegistered , setUserRegistered,isRegistered,setIsRegistered}) {
   const provider = new ethers.providers.Web3Provider(window.ethereum)
   const signer = provider.getSigner()
 
@@ -37,6 +37,7 @@ function RegisterCompany({ isAuth , userRegistered , setUserRegistered}) {
   const RegisterCompanyRef = collection(db, "Register Company")
   const [errorName, setErrorName] = useState(false)
   const [sinVerified, setCinVerified] = useState(false)
+  const [Register, setRegister] = useState(window.localStorage.getItem("Register"))
   let navigate = useNavigate()
 
   useEffect(() => {
@@ -87,6 +88,8 @@ function RegisterCompany({ isAuth , userRegistered , setUserRegistered}) {
       const docRef = await addDoc(RegisterCompanyRef, { companyName, companyEmail, companyConatct, establishment, name, contact, email, DOB, account1, date, webLink, linkedin, twitter })
       console.log(`Company Name:${companyName},Contact:${companyConatct},email:${companyEmail},establishment: ${establishment},CIN:${CIN} DocRef:${docRef.id}`);
       setUserRegistered(true)
+      setIsRegistered(true)
+      setRegister(true);
       navigate("/Home")
     }
   }

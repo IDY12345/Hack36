@@ -6,11 +6,11 @@ function Info() {
             <div className='The-Box'>
                 <div className='Who-are-we'>
                     <p className='Who'>Who are we ?</p>
-                    <p className='Who-Info'>We are a coalition formed with the best of experts from the industry who have teamed together to ensure that India’s journey to develop the National ETS and a robust Domestic Carbon Market is well structured with the right policy advocacy and regulatory framework.</p>
+                    <p className='Who-Info'>We are a coalition formed with the best of our knowledge  who have teamed together to ensure that India’s journey to develop the Domestic Carbon Market is well structured with the right policy advocacy and regulatory framework.</p>
                 </div>
                 <div className='Who-are-we'>
                     <p className='Who'>What do we do ?</p>
-                    <p className='Who-Info'>We aim to ensure that all stakeholders in carbon offsets, starting from the farmers in the remotest villagers to the MSMEs to the large industries come together to formulate strategic steps that can empower the country’s stride to a net zero future. We are enabling this with our concrete efforts to develop a robust carbon markets in India.</p>
+                    <p className='Who-Info'>We aim to ensure that all stakeholders in carbon offsets, starting from the farmers in the remotest villagers to the MSMEs to the large industries come together to formulate strategic steps that can empower the country’s stride to a net zero future. We are enabling this with our concrete efforts to develop a robust carbon market in India.</p>
                 </div>
             </div>
             <div className='Box-1'>

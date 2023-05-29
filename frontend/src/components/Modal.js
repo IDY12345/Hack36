@@ -8,13 +8,14 @@ function Modal({ setOpenModal }) {
     <div className="modalBackground">
       <div className="modalContainer">
         <div className="titleCloseBtn">
+            <Link to="/Home">
           <button
             onClick={() => {
               setOpenModal(false);
             }}
           >
             X
-          </button>
+          </button></Link>
         </div>
         <div className="title">
           <h1>Your Company has been Registered</h1>
