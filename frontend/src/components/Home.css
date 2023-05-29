@@ -7,21 +7,26 @@
 
 .Container
 {
-    width: 250px;
-    height: 200px;
+    width: 400px;
+    height: 300px;
     border: solid black;
     border-radius: 25px;
     margin-left: 50px;
     margin-top: 40px;
+    background-image: linear-gradient(135deg,black,#44572C);
+    color: white;
 }
 
 .Image1
 {
+    margin-left: 75px;
+    margin-top: 35px;
     width: 250px;
-    height: 75%;
-    border-top-right-radius: 22.5px;
-    border-top-left-radius: 22.5px;
+    height: 65%;
+    border-radius: 10px;
     border: none;
+    background-color: white;
+    
 }
 
 .Company-button
@@ -31,4 +36,7 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    color: white;
+    text-align: center;
+    align-items: center;
 }

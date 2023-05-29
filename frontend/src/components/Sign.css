@@ -55,3 +55,38 @@
     margin-top: 15%;
     font-size: 25px;
 }
+
+.Sign-Up-Page
+{
+    background-color: #A7A7A7;
+    height: 600px;
+}
+
+.Sign-Up-Page-Inner
+{
+    position: absolute;
+    width: 40%;
+    height: 400px;
+    background-color: white;
+    margin-left: 30%;
+    margin-top: 7.5%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.Already-Have-An-Account
+{
+    margin-top: 50px;
+}
+
+.Sign-Up-h3
+{
+    font-size: 35px;
+}
+
+.ACI
+{
+    margin-top: 20px;
+    margin-left: 46.5%;
+    font-size: 30px;
+}
