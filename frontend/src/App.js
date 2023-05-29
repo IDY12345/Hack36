@@ -11,7 +11,7 @@ import React, { useState } from "react";
 
 export default function App() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"))
-  const [userRegistered, setUserRegistered] = useState(false)
+  const [userRegistered, setUserRegistered] = useState(window.localStorage.getItem("userRegistered"))
   const [navbar, setNavbar] = useState(localStorage.getItem("navbar"))
   const [isRegistered, setIsRegistered] = useState(window.localStorage.getItem("isRegistered"))
   return (

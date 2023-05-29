@@ -37,7 +37,7 @@ function RegisterCompany({ isAuth , userRegistered , setUserRegistered,isRegiste
   const RegisterCompanyRef = collection(db, "Register Company")
   const [errorName, setErrorName] = useState(false)
   const [sinVerified, setCinVerified] = useState(false)
-
+  const [Register, setRegister] = useState(window.localStorage.getItem("Register"))
   let navigate = useNavigate()
 
   useEffect(() => {
@@ -89,6 +89,7 @@ function RegisterCompany({ isAuth , userRegistered , setUserRegistered,isRegiste
       console.log(`Company Name:${companyName},Contact:${companyConatct},email:${companyEmail},establishment: ${establishment},CIN:${CIN} DocRef:${docRef.id}`);
       setUserRegistered(true)
       setIsRegistered(true)
+      setRegister(true);
       navigate("/Home")
     }
   }

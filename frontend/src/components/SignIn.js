@@ -98,6 +98,13 @@ function Login({ setIsAuth, isAuth, setUserRegistered, userRegistered,isRegister
 
     }, [])
 
+    for(let i=0;i<5;i++)
+    {
+        
+    }
+
+    let flag=0;
+
     const provider = new ethers.providers.Web3Provider(window.ethereum)
     const signer = provider.getSigner()
 
@@ -152,18 +159,29 @@ function Login({ setIsAuth, isAuth, setUserRegistered, userRegistered,isRegister
                         {
                           if(user1.account1===wallet_address)
                           {
+                            console.log(user1.account1===wallet_address)
                             navigate("/Home")
                             console.log(true)
                             setUserRegistered(true)
+                            console.log(userRegistered)
                             localStorage.setItem("isRegistered", true);
                             setIsRegistered(true)
+                            localStorage.setItem("userRegistered",true);
+                            flag++;
                           }
-                          else
-                          {
-                            navigate("/Register")
-                          }
+
+
                           return wallet_address
                         })
+
+                        if(flag>0)
+                        {
+                            navigate("/Home")
+                        }
+
+                        else{
+                            navigate("/Register")
+                        }
 
                         window.alert("Logged In")
                         console.log(wallet_address)
