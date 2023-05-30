@@ -21,10 +21,12 @@ function EditProfile({isAuth}) {
   const [linkedIn, setLinkedIn] = useState("")
   const db = getFirestore(app);
   const docRef = collection(db, "Register Company");
-
   const updateRef = collection(db, "Update")
   const [error, setError] = useState(false)
+  const [webLink, setWebLink] = useState("")
+  const [Id, setId] = useState("")
   const navigate = useNavigate()
+  let id1=""
   useEffect(() => {
 
       if (!isAuth) {
@@ -56,6 +58,7 @@ function EditProfile({isAuth}) {
               setWeb(posts.webLink)
               setTwitter(posts.twitter)
               setLinkedIn(posts.linkedin)
+              setId(posts.account1)
           }
       })
   }
@@ -63,12 +66,14 @@ function EditProfile({isAuth}) {
 
   })
 
+
   const provider = new ethers.providers.Web3Provider(window.ethereum)
   const signer = provider.getSigner()
   const accounts = provider.listAccounts();
   const account1 = accounts[0]
 
   return (
+    <form >
       <div className= 'Profile-Outer1'  >
           <div className='Profile-Inner1'>
               <div className='Panel-Flex1'>
@@ -97,26 +102,45 @@ function EditProfile({isAuth}) {
                       <p className='Name-of-the-company1'>Owner of the Company</p>
                       <div className='Name-Box-11'>{name}</div>
                       <p className='Name-of-the-company1'>E-Mail address</p>
-                      <input className='Name-Box1' placeholder={email} />
+                      <input className='Name-Box1' placeholder={email} onChange={(event)=>
+                    {
+                        setEmail(event.target.value)
+                    }} />
                       <p className='Name-of-the-company1'>Contact</p>
-                      <input className='Name-Box1' placeholder={contact} />
+                      <input className='Name-Box1' maxLength={10} minLength={10} placeholder={contact} onChange={(event)=>
+                    {
+                        setContact(event.target.value)
+                    }} />
                   </div>
                   <div className='Social-Links1'>
                       <div className='Social-Links-Pro1'>
                       <h2>Social-Panel</h2>
                       <p className='Name-of-the-company1'>Website Link of the Company</p>
-                      <input className='Name-Box1' placeholder={web} />
+                      <input className='Name-Box1' placeholder={web} onChange={(event)=>
+                    {
+                        setWebLink(event.target.value)
+                    }}/>
                       <p className='Name-of-the-company1'>Twitter Profile:</p>
-                      <input className='Name-Box1' placeholder={twitter} />
+                      <input className='Name-Box1' placeholder={twitter} onChange={(event)=>
+                    {
+                        setTwitter(event.target.value)
+                    }} />
                       <p className='Name-of-the-company1'>LinkedIn Profile:</p>
-                      <input className='Name-Box1' placeholder={linkedIn} />
+                      <input className='Name-Box1' placeholder={linkedIn} onChange={(event)=>
+                    {
+                        setLinkedIn(event.target.value)
+                    }} />
                       </div>
                   </div>
                   </div>
+                 
                   </div>
                 </div>
           </div>
+          
       </div>
+      </form>
+      
 )}
 
 export default EditProfile

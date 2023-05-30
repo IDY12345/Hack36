@@ -2,7 +2,7 @@ import React, { useState,useEffect } from 'react'
 import './Home.css'
 import { motion } from 'framer-motion'
 import { Link, useNavigate } from 'react-router-dom'
-import { getFirestore,getDocs } from 'firebase/firestore'
+import { getFirestore,getDocs, collection } from 'firebase/firestore'
 import { app } from '../firebase'
 import { ethers } from 'ethers'
 function Home({isAuth}) {
@@ -13,7 +13,7 @@ function Home({isAuth}) {
   const navigate= useNavigate()
   const [organisation, setOrganisation] = useState([])
   const db=getFirestore(app)
-  const offsetBuyRef=(db,"Green");
+  const offsetBuyRef=collection(db,"Green");
   useEffect(() => {
 
     if(!isAuth)
@@ -21,24 +21,27 @@ function Home({isAuth}) {
       navigate("/SignIn")
     }
 
-    const getPosts = async () => {
-      const data = await getDocs(offsetBuyRef);
-      setOrganisation(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    const OffsetHandle=async()=>
+    {
+      const data=await getDocs(offsetBuyRef)
+      setOrganisation(data.docs.map((doc)=>({...doc.data(),id:doc.id})))
     };
-
-    getPosts();
     
+    OffsetHandle();
   })
-  console.log(organisation)
+
   return (
     <motion.div className='Home1' animate={{ opacity: 1 }} initial={{ opacity: 0 }} exit={{ opacity: 0 }} transition={{ duration: 1 }}>
-      <div>
-      <Link to="/OffsetBuy">
+      <div className='All-Offsets'>
+        {organisation.map((post)=>
+        {
+
+          return(
         <div className='Container'>
             <img src="Assets\logo1.png" className='Image1' alt="" />
-            <button className='Company-button'><h2>Name</h2></button>
+            <Link to={`/OffsetBuy/${post.id}`}><button className='Company-button'><h2>Name</h2></button></Link>
           </div>
-      </Link>
+          ) })}
      </div>
     </motion.div>
   )
