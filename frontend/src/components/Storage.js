@@ -53,7 +53,7 @@ function Storage() {
       {modalOpen && (
         <Modal1 setModalOpen={setModalOpen} contract={contract}></Modal1>
       )}
-      <div className="App">
+      <div className="App-Storage">
         <h1>Decentralized docs holder</h1>
         <div class="bg"></div>
         <div class="bg bg2"></div>
