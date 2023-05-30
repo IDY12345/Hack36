@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import VideoChat from '../VideoChat'
 import VideoChatIcon from '@mui/icons-material/VideoChat';
 import "./OffsetDescription.css"
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import { getFirestore, doc, getDoc } from 'firebase/firestore';
+import { app } from '../firebase';
 function OffsetDescription() {
+  const [companyName, setCompanyName] = useState("")
+  const [productName, setProductName] = useState("")
+  const [description, setDescription] = useState("")
+  const [cost, setCost] = useState(0)
+  const [carbonReduction, setCarbonReduction] = useState(0)
+  const { id } = useParams()
 
   const DateFunc = () => {
     const date1 = new Date().getDate()
@@ -13,21 +21,41 @@ function OffsetDescription() {
     console.log(diff)
   }
 
-  return (
+  const db = getFirestore(app)
 
+  useEffect(() => {
+
+
+    const getGreen = async () => {
+      const docRef = doc(db, "Green", id);
+      const docSnap = await getDoc(docRef);
+      console.log(docSnap.data())
+      setCompanyName(docSnap.data().companyName)
+      setProductName(docSnap.data().productName)
+      setDescription(docSnap.data().description)
+      setCarbonReduction(docSnap.data().carbonReduction)
+      setCost(docSnap.data().cost)
+      console.log(companyName)
+    }
+
+    getGreen();
+  })
+
+
+
+  return (
     <>
       <div>
         <div className='Description-Box'>
           <div className='Navigation-Panel'>
-            <div className='Company-Panel'><p className='Company-Name-Panel'>Company Name</p></div>
+            <div className='Company-Panel'><p className='Company-Name-Panel'>{companyName}</p></div>
             <div className='Company-Panel'>
               <div className='Company-Name-Panel1'>
-              ishaanyeole123@gmail.com
-              7770012715
+               <p>ishaanyeole123@gmail.com</p>
+                <p>7770012715</p>
               </div>
             </div>
             <div className='Company-Panel2'>
-
               <div className='VideoChatIcon'>
                 <i class="fas fa-comment-dots"></i>
               </div></div>
@@ -40,24 +68,28 @@ function OffsetDescription() {
             </div>
           </div>
           <div className='Description-Flex'>
+            <div className='Product-Image-div'>
             <div className='Product-Image'></div>
+            </div>
             <div className='Product-Description-Description'>
               <p className='Product-Name-Description'>
-                Product Name
+                {productName}
               </p>
-              <p className='Description-Description'>Description</p>
-              <p className='Cost-Description'>Cost = 10 Eth</p>
+              <p className='Description-Description'>
+                {description}
+              </p>
+              <p className='Carbon-Reduction-Paragraph'>
+                Carbon Reduction = 
+                {carbonReduction} metric ton
+              </p>
+              <p className='Cost-Description'>Cost = {cost} Eth</p>
               <button className='Buy-Now-Description'>Buy Now</button>
+
             </div>
-
           </div>
-
         </div>
-        <button onClick={DateFunc}>Date</button>
       </div>
-
     </>
-
   )
 }
 

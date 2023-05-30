@@ -40,3 +40,15 @@
     text-align: center;
     align-items: center;
 }
+
+.All-Offsets
+{
+    width: 100%;
+    display: flex;
+}
+
+.Link-Offsets
+{
+    width: 100%;
+    display: flex;
+}

@@ -41,7 +41,7 @@ function Footer() {
     
             <div>
               <i class="fa fa-envelope"></i>
-              <p><a href="mailto:support@company.com">pioneers010323@gmail.com</a></p>
+              <p><a href="mailto:pioneers010323@gmail.com">pioneers010323@gmail.com</a></p>
             </div>
     
           </div>
