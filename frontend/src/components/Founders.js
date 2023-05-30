@@ -27,7 +27,7 @@ function Founders() {
                     <div className='Founder-Info'>
                         <div className='Circle-Info'>
                         <div className='Circle1'>
-                            <img src='\Assets\Ishaan-photo.jpg' alt='' className='Founder-Image' />
+                            <img src='\Assets\Bhavya-Image.jpg' alt='' className='Founder-Image' />
                         </div>
                         <p className='Founder-Name'>Bhavya Pratap Singh</p>
                         <div className='Designation-div'>
@@ -68,11 +68,11 @@ function Founders() {
                     <div className='Founder-Info'>
                         <div className='Circle-Info'>
                         <div className='Circle1'>
-                            <img src='\Assets\Ishaan-photo.jpg' alt='' className='Founder-Image' />
+                            <img src='\Assets\Ninad-Image.jpg' alt='' className='Founder-Image' />
                         </div>
                         <p className='Founder-Name'>Ninad Trivedi</p>
                         <div className='Designation-div'>
-                        <p className='Designation'>Frontend ,Blockchain and Backend Developer</p>
+                        <p className='Designation1'>Frontend ,Blockchain and Backend Developer</p>
                         </div>
                         </div>
                         <div className='Founder-Details'>

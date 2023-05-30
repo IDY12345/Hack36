@@ -39,10 +39,11 @@ function Home({isAuth}) {
           return(
         <div className='Container'>
             <img src="Assets\logo1.png" className='Image1' alt="" />
-            <Link to={`/OffsetBuy/${post.id}`}><button className='Company-button'><h2>Name</h2></button></Link>
+            <Link to={`/OffsetBuy/${post.id}`}><button className='Company-button'><h2>{post.companyName}</h2></button></Link>
           </div>
           ) })}
      </div>
+     <Link to={"/Storage"}>Add Docs</Link>
     </motion.div>
   )
 }
