@@ -43,7 +43,6 @@ function Home({isAuth}) {
           </div>
           ) })}
      </div>
-     <Link to={"/Storage"}>Add Docs</Link>
     </motion.div>
   )
 }

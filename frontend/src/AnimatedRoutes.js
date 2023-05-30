@@ -21,6 +21,7 @@ import Modal from "./components/Modal";
 import Sell from "./components/Sell";
 import TransferFrontend from "./TransferFrontend";
 import Storage from "./components/Storage"
+import SwapPage from "./components/SwapPage";
 function AnimatedRoutes({ setIsAuth, isAuth, setNavbar, navbar, userRegistered, setUserRegistered, isRegistered, setIsRegistered }) {
   const location = useLocation();
   return (
@@ -46,6 +47,7 @@ function AnimatedRoutes({ setIsAuth, isAuth, setNavbar, navbar, userRegistered, 
         <Route path="/Sell" element={<Sell />} />
         <Route path="/TransferFrontend" element={<TransferFrontend />}></Route>
         <Route path="/Storage" element={<Storage />} />
+        <Route path="/Swap" element={<SwapPage />} />
       </Routes>
     </AnimatePresence>
   )

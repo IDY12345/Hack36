@@ -20,6 +20,8 @@ export default function App() {
     <div>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'></link>
+      <link href='https://fonts.googleapis.com/css?family=Keania One' rel='stylesheet'></link>
+      <link href='https://fonts.googleapis.com/css?family=Squada One' rel='stylesheet'></link>
       <Navbar setIsAuth={setIsAuth} isAuth={isAuth} setNavbar={setNavbar} navbar={navbar} userRegistered={userRegistered} setUserRegistered={setUserRegistered} isRegistered={isRegistered} setIsRegistered={setIsRegistered} />
       <Footer />
     </div>

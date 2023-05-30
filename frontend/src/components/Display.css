@@ -1,4 +1,4 @@
-/* .image-list {
+.image-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 10px;
@@ -34,10 +34,14 @@
   display: block;
   margin: auto;
   height: 30px;
-  width: 330px;
+  width: 400px;
   text-align: center;
+  border-radius: 10px;
+  border: none;
 }
 
-input[type="text"]:focus {
+
+.address[type="text"]:focus {
   background-color: lightblue;
-} */
+  outline: none;
+}
