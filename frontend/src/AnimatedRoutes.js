@@ -32,7 +32,7 @@ function AnimatedRoutes({ setIsAuth, isAuth, setNavbar, navbar, userRegistered, 
         <Route path="/Register" element={<RegisterCompany isAuth={isAuth} userRegistered={userRegistered} setUserRegistered={setUserRegistered} isRegistered={isRegistered} setIsRegistered={setIsRegistered} />} />
         <Route path="/Offset" element={<Offset isAuth={isAuth} />} />
         <Route path="/CarbonExchange" element={<CarbonExchange isAuth={isAuth} />} />
-        <Route path="/OffsetBuy" element={<OffsetDescription isAuth={isAuth} />} />
+        <Route path="/OffsetBuy/:id" element={<OffsetDescription isAuth={isAuth} />} />
         <Route path="/CarbonCredits" element={<CarbonCredits />} />
         <Route path="/Climate" element={<Climate />} />
         <Route path="/VideoChat" element={<VideoChat />}></Route>

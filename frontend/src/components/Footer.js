@@ -1,6 +1,6 @@
 import React from 'react'
 import './Footer.css'
-
+import { Link } from 'react-router-dom'
 function Footer() {
   return (
 
@@ -8,23 +8,23 @@ function Footer() {
     
           <div class="footer-left">
     
-            <h3>Company<span>logo</span></h3>
+            <h3 className='Logo-Footer'><img src='Assets\logo3.png' alt='' width={100} height={100}/><span className='Pioneers-Footer'>PIONEERS</span></h3>
     
             <p class="footer-links">
-              <a href="#" class="link-1">HOME</a>
+              <a href="Home" class="link-1">HOME</a>
               
-              <a href="#">INFO</a>
+              <a href="CarbonCredits">INFO</a>
             
-              <a href="#">ABOUT</a>
+             <a href="/">ABOUT</a>
             
-              <a href="#">TEAM</a>
+              <a href="Founders">TEAM</a>
               
               <a href="#"></a>
               
-              <a href="#">CONTACT</a>
+              <a href="SignIn">LOGIN</a>
             </p>
     
-            <p class="footer-company-name">Company Name © 2023</p>
+            <a href='/'><p class="footer-company-name">Pioneers © 2023</p></a>
           </div>
     
           <div class="footer-center">
@@ -41,7 +41,7 @@ function Footer() {
     
             <div>
               <i class="fa fa-envelope"></i>
-              <p><a href="mailto:support@company.com">abc@company.com</a></p>
+              <p><a href="mailto:pioneers010323@gmail.com">pioneers010323@gmail.com</a></p>
             </div>
     
           </div>
@@ -50,15 +50,15 @@ function Footer() {
     
             <p class="footer-company-about">
               <span>About the company</span>
-              Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+            <p className='Footer-Slogan'>The One Stop Destination For All Carbon Trades.</p>
             </p>
     
             <div class="footer-icons">
     
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-              <a href="#"><i class="fa fa-github"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
     
             </div>
     

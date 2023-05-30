@@ -15,72 +15,64 @@
     background-size: cover;
 }
 
-.Table
-{
-    width: 90%;
-    height: 800px;
+table{
     border: solid 5px black;
-    border-radius: 28px;
+    border-radius: 20px;
     margin-left: 5%;
-    margin-top: 10%;
-}
-
-.Column1
-{
-    position: absolute;
-    width: 20%;
-    height: 800px;
-    border-right: solid 4px black;
-}
-
-.Column2
-{
-    position: absolute;
-    margin-left: 20%;
-    width: 25%;
-    height: 800px;
-    border-right: solid 4px black;
-}
-
-.Column3
-{
-    position: absolute;
-    margin-left: 45%;
-    width: 25%;
-    height: 800px;
-    border-right: solid 4px black;
-}
-
-.Column4
-{
-    position: absolute;
-    margin-left: 70%;
-    width: 20%;
-}
-
-.Row1
-{
-    position: absolute;
     width: 90%;
-    height: 20%;
-    border-bottom: solid 4px black;
+    height: auto;
 }
 
-.Company-Name-Exchange
+tr{
+    width: 100%;
+    height: 100px;
+}
+
+th
 {
+    border: solid 3px black;
+    height: 10%;
     font-size: 25px;
-    text-align: center;
-    margin-top: 20%
+    border-radius: 10px;
 }
 
-.Company-Exchange-Button
-{
-    width: 40%;
-    font-size: 20px;
-    margin-top: 20%;
-    margin-left: 30%;
-    border: solid 1px black;
+td{
+    border: solid 3px black; 
+    font-size: 25px;
     border-radius: 10px;
-    color: white;
+    text-align: center;
+}
+
+.Carbon-Credits-Iamge-Flex
+{
+    border: solid 3px black; 
+    font-size: 25px;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+}
+
+.Buy-Now-Panel-Button
+{
+    width: 125px;
+    height: 30px;
+    font-size: 20px;
     background-color: #44924C;
+    color: white;
+    align-items: center;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+}
+
+.CC-Buy-Panel-Row
+{
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+}
+
+.Sell-Panel-Carbon-Credits
+{
+    margin-left: 40%;
 }

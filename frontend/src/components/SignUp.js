@@ -74,6 +74,7 @@ export default function SignUp({isAuth}) {
       });
 
       await window.alert("Signed Up successfully")
+      window.location.pathname("/SignIn")
     } catch (error) {
       console.log(error)
       window.alert("Looks like wallet is not connected please connect your wallet")
@@ -82,38 +83,25 @@ export default function SignUp({isAuth}) {
   };
 
   return (
-    <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs">
-        <CssBaseline />
-        <Box
-          sx={{
-            marginTop: 8,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}
-        >
-          <Avatar sx={{ m: 1, bgcolor: 'primary.main' }}>
-           <AccountCircleIcon />
-          </Avatar>
-          <Typography component="h1" variant="h4">
-            Sign up
-          </Typography>
-          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+    <div className='Sign-Up-Page'>
+      <div className='Sign-Up-Page-Inner'>
+        <div className='ACI'>
+        <Avatar>
+          <AccountCircleIcon />
+        </Avatar>
+        </div>
+          <h3 className='Sign-Up-h3'>Sign Up</h3>
+          <form onSubmit={handleSubmit}>
               <button className='Sign-Up-Metamask'>
               Sign Up using Metamask
               </button>
-            <Grid container justifyContent="flex-end" className='Already'>
-              <Grid item>
-                <Link to="/SignIn" variant="body2">
+          </form>
+              <div className='Already-Have-An-Account'>
+                <Link to="/SignIn">
                   Already have an account? Sign in
                 </Link>
-              </Grid>
-            </Grid>
-          </Box>
-        </Box>
-        <Copyright sx={{ mt: 5 }} />
-      </Container>
-    </ThemeProvider>
+                </div>
+        </div>
+    </div>
   );
 }

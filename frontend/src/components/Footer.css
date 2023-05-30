@@ -4,6 +4,24 @@
   font-family: Open Sans;
 }
 
+.Logo-Footer
+{
+	display: flex;
+}
+
+.Pioneers-Footer
+{
+	margin-top: 5%;
+	font-weight: 600;
+}
+
+.Footer-Slogan
+{
+	color: white;
+	font-size: 18px;
+	color:  lightseagreen;
+}
+
 section {
   width: 100%;
   display: inline-block;
@@ -76,6 +94,7 @@ section {
 /* Footer Center */
 
 .footer-distributed .footer-center{
+	margin-top: 2%;
 	width: 35%;
 }
 
@@ -134,6 +153,7 @@ section {
 /* Footer Right */
 
 .footer-distributed .footer-right{
+	margin-top: 2%;
 	width: 20%;
 }
 
