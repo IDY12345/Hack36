@@ -91,7 +91,6 @@ function Login({ setIsAuth, isAuth, setUserRegistered, userRegistered,isRegister
         window.addEventListener('beforeunload', handleBeforeUnload);
 
         return () => {
-        
           window.removeEventListener('beforeunload', handleBeforeUnload);
         };
     
@@ -118,6 +117,7 @@ function Login({ setIsAuth, isAuth, setUserRegistered, userRegistered,isRegister
         if (accounts.length !== 0) {
             console.log(accounts)
             setConnect(true)
+            window.location.pathname("/SignIn")
         }
         else {
             setConnect(false);

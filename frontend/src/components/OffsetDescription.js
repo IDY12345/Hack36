@@ -10,6 +10,7 @@ function OffsetDescription() {
   const [productName, setProductName] = useState("")
   const [description, setDescription] = useState("")
   const [cost, setCost] = useState(0)
+  const [carbonReduction, setCarbonReduction] = useState(0)
   const { id } = useParams()
 
   const DateFunc = () => {
@@ -32,6 +33,7 @@ function OffsetDescription() {
       setCompanyName(docSnap.data().companyName)
       setProductName(docSnap.data().productName)
       setDescription(docSnap.data().description)
+      setCarbonReduction(docSnap.data().carbonReduction)
       setCost(docSnap.data().cost)
       console.log(companyName)
     }
@@ -49,8 +51,8 @@ function OffsetDescription() {
             <div className='Company-Panel'><p className='Company-Name-Panel'>{companyName}</p></div>
             <div className='Company-Panel'>
               <div className='Company-Name-Panel1'>
-                ishaanyeole123@gmail.com
-                7770012715
+               <p>ishaanyeole123@gmail.com</p>
+                <p>7770012715</p>
               </div>
             </div>
             <div className='Company-Panel2'>
@@ -66,7 +68,9 @@ function OffsetDescription() {
             </div>
           </div>
           <div className='Description-Flex'>
+            <div className='Product-Image-div'>
             <div className='Product-Image'></div>
+            </div>
             <div className='Product-Description-Description'>
               <p className='Product-Name-Description'>
                 {productName}
@@ -74,8 +78,13 @@ function OffsetDescription() {
               <p className='Description-Description'>
                 {description}
               </p>
+              <p className='Carbon-Reduction-Paragraph'>
+                Carbon Reduction = 
+                {carbonReduction} metric ton
+              </p>
               <p className='Cost-Description'>Cost = {cost} Eth</p>
               <button className='Buy-Now-Description'>Buy Now</button>
+
             </div>
           </div>
         </div>

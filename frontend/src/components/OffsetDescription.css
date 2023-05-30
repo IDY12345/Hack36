@@ -6,13 +6,13 @@
 
 .Description-Box
 {
-    width: 50%;
-    height: 600px;
-    margin-left: 25%;
-    margin-top: 5%;
+    width: 100%;
+    height: auto;
+    margin-top: 2.5%;
     border-radius: 20px;
     color: white;
     background-image: linear-gradient(135deg,black 30%,#44572c);
+    margin-bottom: 7%;
 }
 
 .Navigation-Panel
@@ -25,37 +25,49 @@
 
 .Company-Panel
 {
-    width: 35%;
+    width: 40%;
     border-right: solid 3px white;
-    height: 100%;
+    height: auto;
+    font-size: 30px;
     align-items: center;
 }
 
 .Company-Name-Panel
 {
     text-align: center;
-    font-size: 25px;
+    font-size: 35px;
+    font-weight: bold;
     align-items: center;
+    height: auto;
 }
 
 .Company-Name-Panel1
 {
     text-align: center;
-    font-size: 16px;
+    font-size: 20px;
     align-items: center;
+    height: auto;
 }
 
 .Company-Panel2
 {
-    width: 15%;
+    width: 10%;
     border-right: solid 3px white;
-    height: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.Product-Image-div
+{
+    width: 30%;
+    margin-left: 5%;
 }
 
 .Product-Image
 {
-    width: 50%;
-    height: 45%;
+    width: 85%;
+    height: 55%;
     border: solid 2px white;
     border-radius: 50%;
     margin-left: 5%;
@@ -67,13 +79,14 @@
 .Description-Flex
 {
     width:100%;
-    height: 100%;
+    height: auto;
     display: flex;
 }
 
 .Product-Description-Description
 {
-    margin-left: 0%;
+    margin-left: 5%;
+    width: 45%;
 }
 
 .Product-Name-Description
@@ -85,13 +98,21 @@
 {
     font-size: 20px;
     width: 90%;
-    height: 40%;
+    height: auto;
     
+}
+
+.Carbon-Reduction-Paragraph
+{
+    font-size: 28px;
+    font-weight: 600;
+    color: aqua;
 }
 
 .Cost-Description
 {
     font-size: 30px;
+    font-weight: bold;
 }
 
 #dots
@@ -109,4 +130,5 @@
     background-color: #A7FE62;
     font-size: 15px;
     font-weight: 900;
+    margin-bottom: 30px;
 }
