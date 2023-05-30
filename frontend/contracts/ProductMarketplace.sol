@@ -11,14 +11,13 @@ contract ProductMarketplace {
     IERC20 public erc20Token;
     ERC20 public wethToken;
     address public owner;
-    uint256 public conversionRate = 100; // 100 ERC20 tokens = 1 WETH
+    uint256 public conversionRate; // 100 ERC20 tokens = 1 WETH
 
-    mapping(address => uint256) public productPrices;
 
+    mapping(address => uint256) public AddressToConversionRate; // Price of 1 CC set by green organization 
     event ProductPurchased(
         address indexed sender,
-        uint256 erc20Amount,
-        uint256 wethAmount
+        uint256 erc20Amount
     );
 
     constructor(address _erc20TokenAddress, address _wethTokenAddress) {
@@ -27,12 +26,12 @@ contract ProductMarketplace {
         owner = msg.sender;
     }
 
-    function setProductPrice(uint256 _price) external {
-        productPrices[msg.sender] = _price;
+    function setCcPrice(uint256 _price) external {
+        AddressToConversionRate[msg.sender] = _price;
     }
 
     function buyProduct(uint256 _quantity) external {
-        uint256 productPrice = productPrices[msg.sender];
+        uint256 productPrice = AddressToConversionRate[msg.sender];
         require(productPrice > 0, "Product price not set");
 
         uint256 totalPrice = productPrice * _quantity;
@@ -42,14 +41,18 @@ contract ProductMarketplace {
         );
 
         erc20Token.safeTransferFrom(msg.sender, address(this), totalPrice);
-        uint256 wethAmount = totalPrice / conversionRate;
-        wethToken.transfer(msg.sender, wethAmount);
+        wethToken.transfer(msg.sender, totalPrice);
 
-        emit ProductPurchased(msg.sender, totalPrice, wethAmount);
+        emit ProductPurchased(msg.sender, totalPrice);
     }
 
     function withdrawTokens(address _tokenAddress, uint256 _amount) external {
         require(msg.sender == owner, "Only the contract owner can withdraw tokens");
         IERC20 token = IERC20(_tokenAddress);
         token.safeTransfer(owner, _amount);}
+        
+        function getPricePerCc() view public returns  (uint256) {
+    return AddressToConversionRate[msg.sender];
 }
+}
+
