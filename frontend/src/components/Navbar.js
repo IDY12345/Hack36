@@ -54,6 +54,8 @@ function Navbar({ setIsAuth, isAuth,setNavbar,navbar,userRegistered,setUserRegis
                         <div className="Services-Content">
                           <Link to={isRegistered?"/Modal":"/Register"}><button className="Service1">Register Company</button></Link>
                           <Link to="/Offset"><button className="Service2">Green Organisation Registration</button></Link>
+                          <Link to="/Swap"><button className="Service2">Swap Token</button></Link>
+                          <Link to="/Storage"><button className="Service2">Document Storage</button></Link>
                         </div>
                       </div>
                     )}

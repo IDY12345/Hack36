@@ -4,27 +4,31 @@
     margin-left: 40%;
 }
 
-.Description-Box
-{
+.quantity-input {
+    height: 15px;
+    position: relative;
+    top: 22px;
+    left: 14px;
+}
+
+.Description-Box {
     width: 100%;
     height: auto;
     margin-top: 2.5%;
     border-radius: 20px;
     color: white;
-    background-image: linear-gradient(135deg,black 30%,#44572c);
+    background-image: linear-gradient(135deg, black 30%, #44572c);
     margin-bottom: 7%;
 }
 
-.Navigation-Panel
-{
+.Navigation-Panel {
     width: 100%;
     height: 10%;
     border-bottom: solid 3px white;
     display: flex;
 }
 
-.Company-Panel
-{
+.Company-Panel {
     width: 40%;
     border-right: solid 3px white;
     height: auto;
@@ -32,8 +36,7 @@
     align-items: center;
 }
 
-.Company-Name-Panel
-{
+.Company-Name-Panel {
     text-align: center;
     font-size: 35px;
     font-weight: bold;
@@ -41,16 +44,14 @@
     height: auto;
 }
 
-.Company-Name-Panel1
-{
+.Company-Name-Panel1 {
     text-align: center;
     font-size: 20px;
     align-items: center;
     height: auto;
 }
 
-.Company-Panel2
-{
+.Company-Panel2 {
     width: 10%;
     border-right: solid 3px white;
     height: auto;
@@ -58,14 +59,12 @@
     align-items: center;
 }
 
-.Product-Image-div
-{
+.Product-Image-div {
     width: 30%;
     margin-left: 5%;
 }
 
-.Product-Image
-{
+.Product-Image {
     width: 85%;
     height: 55%;
     border: solid 2px white;
@@ -76,52 +75,44 @@
     margin-right: 5%;
 }
 
-.Description-Flex
-{
-    width:100%;
+.Description-Flex {
+    width: 100%;
     height: auto;
     display: flex;
 }
 
-.Product-Description-Description
-{
+.Product-Description-Description {
     margin-left: 5%;
     width: 45%;
 }
 
-.Product-Name-Description
-{
+.Product-Name-Description {
     font-size: 40px;
 }
 
-.Description-Description
-{
+.Description-Description {
     font-size: 20px;
     width: 90%;
     height: auto;
-    
+
 }
 
-.Carbon-Reduction-Paragraph
-{
+.Carbon-Reduction-Paragraph {
     font-size: 28px;
     font-weight: 600;
     color: aqua;
 }
 
-.Cost-Description
-{
+.Cost-Description {
     font-size: 30px;
     font-weight: bold;
 }
 
-#dots
-{
+#dots {
     color: black;
 }
 
-.Buy-Now-Description
-{
+.Buy-Now-Description {
     width: 100px;
     height: 30px;
     margin-left: 10%;

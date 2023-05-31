@@ -15,6 +15,7 @@ contract ProductMarketplace {
 
 
     mapping(address => uint256) public AddressToConversionRate; // Price of 1 CC set by green organization 
+
     event ProductPurchased(
         address indexed sender,
         uint256 erc20Amount
@@ -39,7 +40,7 @@ contract ProductMarketplace {
             erc20Token.allowance(msg.sender, address(this)) >= totalPrice,
             "Insufficient allowance"
         );
-
+ 
         erc20Token.safeTransferFrom(msg.sender, address(this), totalPrice);
         wethToken.transfer(msg.sender, totalPrice);
 

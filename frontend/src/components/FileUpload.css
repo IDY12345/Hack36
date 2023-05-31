@@ -1,8 +1,8 @@
-/* .top {
+.top {
   margin: 40px;
 }
 
-input[type="file"] {
+#file-upload[type="file"] {
   display: none;
 }
 
@@ -46,6 +46,3 @@ input[type="file"] {
   color: #666666;
 }
 
-div {
-  padding: 5px 10px;
-} */

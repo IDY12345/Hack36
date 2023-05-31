@@ -1,4 +1,4 @@
-/* .modalBackground {
+.modalBackground {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
@@ -79,6 +79,6 @@
   text-align: center;
 }
 
-input[type="text"]:focus {
+.address[type="text"]:focus {
   background-color: lightblue;
-} */
+}
