@@ -11,8 +11,8 @@ module.exports = {
     networks: {
         hardhat: {},
         goerli: {
-            url: "https://eth-goerli.g.alchemy.com/v2/oqeOc94obCxkJEpe3KNrK3MzHE6Y3pmy",
-            accounts: [`0x11a1cea1dd86cc5e6f48ba97a0e9651f7ec2fd9f38943c13ccfb4d6c88c4cb36`]
+            url: "https://eth-goerli.g.alchemy.com/v2/BvQ8bEoXvE-AZnOoswN0nFkhfYEg8Lr3",
+            accounts: [`5a972752a68fdab77079d2f9229e24eac70de35fd3502b5fd4c6faef5073bcbc`]
         }
     },
 };

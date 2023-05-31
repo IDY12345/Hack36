@@ -5,6 +5,9 @@ import "./OffsetDescription.css"
 import { Link, useParams } from 'react-router-dom';
 import { getFirestore, doc, getDoc } from 'firebase/firestore';
 import { app } from '../firebase';
+import { ethers } from 'ethers';
+import { abi } from '../Abi.js';
+
 function OffsetDescription() {
   const [companyName, setCompanyName] = useState("")
   const [productName, setProductName] = useState("")
@@ -12,6 +15,7 @@ function OffsetDescription() {
   const [cost, setCost] = useState(0)
   const [carbonReduction, setCarbonReduction] = useState(0)
   const { id } = useParams()
+  const [quantity, setQuantity] = useState(0)
 
   const DateFunc = () => {
     const date1 = new Date().getDate()
@@ -24,7 +28,6 @@ function OffsetDescription() {
   const db = getFirestore(app)
 
   useEffect(() => {
-
 
     const getGreen = async () => {
       const docRef = doc(db, "Green", id);
@@ -40,8 +43,15 @@ function OffsetDescription() {
 
     getGreen();
   })
+  const contractAddress = "0x831049d3eC5D52BC7171E40FeCEfB4Cf23db02ec"
+  const _abi = abi
+  const provider = new ethers.providers.Web3Provider(window.ethereum)
+  const signer = provider.getSigner()
+  const contract = new ethers.Contract(contractAddress, _abi, signer);
 
-
+  const handleBuying = async () => {
+    await contract.buyProduct()
+  }
 
   return (
     <>
@@ -51,7 +61,7 @@ function OffsetDescription() {
             <div className='Company-Panel'><p className='Company-Name-Panel'>{companyName}</p></div>
             <div className='Company-Panel'>
               <div className='Company-Name-Panel1'>
-               <p>ishaanyeole123@gmail.com</p>
+                <p>ishaanyeole123@gmail.com</p>
                 <p>7770012715</p>
               </div>
             </div>
@@ -69,7 +79,7 @@ function OffsetDescription() {
           </div>
           <div className='Description-Flex'>
             <div className='Product-Image-div'>
-            <div className='Product-Image'></div>
+              <div className='Product-Image'></div>
             </div>
             <div className='Product-Description-Description'>
               <p className='Product-Name-Description'>
@@ -79,11 +89,15 @@ function OffsetDescription() {
                 {description}
               </p>
               <p className='Carbon-Reduction-Paragraph'>
-                Carbon Reduction = 
+                Carbon Reduction =
                 {carbonReduction} metric ton
               </p>
               <p className='Cost-Description'>Cost = {cost} Eth</p>
-              <button className='Buy-Now-Description'>Buy Now</button>
+              <div style={{ display: "flex" }}>
+                <p>Quantity of Carbon Credits : </p>
+                <input className="quantity-input" onChange={(e) => { setQuantity(e.target.value) }} ></input>
+              </div>
+              <button className='Buy-Now-Description' onClick={handleBuying}>Buy Now</button>
 
             </div>
           </div>
