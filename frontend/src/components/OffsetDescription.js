@@ -8,14 +8,21 @@ import { app } from '../firebase';
 import { ethers } from 'ethers';
 import { abi } from '../Abi.js';
 
+
+
 function OffsetDescription() {
   const [companyName, setCompanyName] = useState("")
   const [productName, setProductName] = useState("")
   const [description, setDescription] = useState("")
+  const [quantity, setQuantity] = useState("")
   const [cost, setCost] = useState(0)
   const [carbonReduction, setCarbonReduction] = useState(0)
   const { id } = useParams()
-  const [quantity, setQuantity] = useState(0)
+  const contractAddress = "0x2e7623575950d4A4C0302D5eEEBf74a34fA8E1D2"
+  const _abi = abi
+  const provider = new ethers.providers.Web3Provider(window.ethereum)
+  const signer = provider.getSigner()
+  const contract = new ethers.Contract(contractAddress, _abi, signer);
 
   const DateFunc = () => {
     const date1 = new Date().getDate()
@@ -43,11 +50,7 @@ function OffsetDescription() {
 
     getGreen();
   })
-  const contractAddress = "0x831049d3eC5D52BC7171E40FeCEfB4Cf23db02ec"
-  const _abi = abi
-  const provider = new ethers.providers.Web3Provider(window.ethereum)
-  const signer = provider.getSigner()
-  const contract = new ethers.Contract(contractAddress, _abi, signer);
+
 
   const handleBuying = async () => {
     await contract.buyProduct()
@@ -97,6 +100,7 @@ function OffsetDescription() {
                 <p>Quantity of Carbon Credits : </p>
                 <input className="quantity-input" onChange={(e) => { setQuantity(e.target.value) }} ></input>
               </div>
+              <input></input>
               <button className='Buy-Now-Description' onClick={handleBuying}>Buy Now</button>
 
             </div>

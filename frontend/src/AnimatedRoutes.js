@@ -19,7 +19,6 @@ import BuyPanel from "./components/BuyPanel";
 import UpdateComponent from "./components/UpdateComponent";
 import Modal from "./components/Modal";
 import Sell from "./components/Sell";
-import TransferFrontend from "./TransferFrontend";
 import Storage from "./components/Storage"
 import SwapPage from "./components/SwapPage";
 function AnimatedRoutes({ setIsAuth, isAuth, setNavbar, navbar, userRegistered, setUserRegistered, isRegistered, setIsRegistered }) {
@@ -45,7 +44,6 @@ function AnimatedRoutes({ setIsAuth, isAuth, setNavbar, navbar, userRegistered, 
         <Route path="/UpdateComponent" element={<UpdateComponent />} />
         <Route path="/Modal" element={<Modal />} />
         <Route path="/Sell" element={<Sell />} />
-        <Route path="/TransferFrontend" element={<TransferFrontend />}></Route>
         <Route path="/Storage" element={<Storage />} />
         <Route path="/Swap" element={<SwapPage />} />
       </Routes>
