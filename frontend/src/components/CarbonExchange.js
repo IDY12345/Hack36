@@ -16,7 +16,7 @@ function CarbonExchange({ isAuth }) {
   const db = getFirestore(app)
   const SellRefDoc1 = collection(db, "Sell")
   const navigate = useNavigate()
-  const contractAddress = "0x2e7623575950d4A4C0302D5eEEBf74a34fA8E1D2"
+  const contractAddress = "0x8016f7C87A9A2272b229928bB3CdfF5B6bCd4d22"
   const _abi = abi
   const provider = new ethers.providers.Web3Provider(window.ethereum)
   const signer = provider.getSigner()
@@ -24,7 +24,12 @@ function CarbonExchange({ isAuth }) {
 
   const handleBuy = async () => {
     console.log((quantity.toString()))
-    await contract.buy({ value: ethers.utils.parseUnits(quantity.toString(), "ether") })
+    const tx = {
+      value: ethers.utils.parseEther(quantity),
+      gasLimit: 30000,
+      nonce: undefined
+    };
+    await contract.buy(tx)
   }
   useEffect(() => {
     if (!isAuth) {

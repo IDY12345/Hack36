@@ -296,8 +296,8 @@
       ]
     },
     "D:\\Hack36_Version1\\frontend\\contracts\\carboncredit.sol": {
-      "lastModificationDate": 1685532242346,
-      "contentHash": "5516a65e1ef777ba2ee715e062b08d1a",
+      "lastModificationDate": 1685554568344,
+      "contentHash": "707f9a124ba885b99c0521b939617b49",
       "sourceName": "contracts/carboncredit.sol",
       "solcConfig": {
         "version": "0.8.18",

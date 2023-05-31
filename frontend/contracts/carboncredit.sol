@@ -74,7 +74,7 @@ contract carboncredit is IERC20 {
 }
 
 
-contract DEX {
+contract DEX is carboncredit {
 
     event Bought(uint256 amount);
     event Sold(uint256 amount);
