@@ -32,7 +32,7 @@ function Home({ isAuth }) {
     <motion.div className='Home1' animate={{ opacity: 1 }} initial={{ opacity: 0 }} exit={{ opacity: 0 }} transition={{ duration: 1 }}>
       <div className='All-Offsets'>
         {organisation.map((post) => {
-          console.log(post)
+
           return (
             <div className='Container'>
               <img src="Assets\logo1.png" className='Image1' alt="" />
