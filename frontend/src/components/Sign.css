@@ -32,7 +32,7 @@
     width: 50%;
     height: 800px;
     border: solid black;
-    /* background-image: url("C:\Users\HP\OneDrive\Desktop\Web3athon\Hack36\frontend\public\Assets\Climate1.jpg"); */
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/hack36-83483.appspot.com/o/Climate1.jpg?alt=media&token=14da166d-1483-4c67-9384-8d92fbc438de&_gl=1*1qntakl*_ga*Mzc1NjIzNTI0LjE2NDczNDY1MDI.*_ga_CW55HF8NVT*MTY4NTUzNzE0OS44MS4wLjE2ODU1MzcxNDkuMC4wLjA.");
     background-size: cover;
     text-align: center;
 }

@@ -158,7 +158,7 @@ function Profile({ isAuth }) {
                             </p>
                             <div className='Number-CC'>
                                 <p className='CC-Total'>1000</p>
-                                <p className='Eth'>Eth</p>
+                                <p className='Ethereum-Profile'>Eth</p>
                             </div>
                         </div>
                         <div className='ETW1'>
