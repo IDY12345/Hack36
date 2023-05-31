@@ -187,7 +187,7 @@ function RegisterCompany({ isAuth , userRegistered , setUserRegistered,isRegiste
               </div>
               <div className='Register-Company-Name'>
                 <h3 className='Company-Name-Title'>Linked-In Profile<span className='Star'>*</span></h3>
-                <input type='Link' placeholder='Profile-Username' required className='Company-Name' maxLength={10} onChange={(event) => {
+                <input type='Link' placeholder='Profile-Username' required className='Company-Name'  onChange={(event) => {
                   setLinkedin(event.target.value)
                 }} />
               </div>
